@@ -3255,13 +3255,13 @@ setTimeout(function () {
     counters.push(requestAnimationFrame(frame));
   }
 
+  /* Основной рынок русскоязычный, поэтому по умолчанию открываем русскую версию
+     независимо от языка браузера. Выбор посетителя запоминается и имеет приоритет. */
   function detectLang() {
     var saved = null;
     try { saved = window.localStorage.getItem(STORAGE_KEY); } catch (e) {}
     if (saved && i18n[saved]) return saved;
-
-    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "ru";
-    return String(nav).toLowerCase().indexOf("ru") === 0 ? "ru" : "en";
+    return "ru";
   }
 
   /* --- Переключатель языка --- */
