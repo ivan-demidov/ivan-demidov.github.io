@@ -1,0 +1,3515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Иван Демидов — менеджер спортивных проектов</title>
+<meta name="description" content="Иван Демидов — менеджер в спортивной организации. Исследование рынка атрибутики, требования и ТЗ для подрядчиков, ведение проектов, операционка спортивных площадок и мероприятий.">
+<meta name="author" content="Иван Демидов">
+<meta name="theme-color" content="#08080c">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Иван Демидов">
+<meta property="og:title" content="Иван Демидов — менеджер спортивных проектов">
+<meta property="og:description" content="Исследование рынка атрибутики, требования и ТЗ для подрядчиков, ведение проектов, операционка спортивных площадок и мероприятий.">
+<meta property="og:image" content="assets/photos/hero-bg.webp">
+<meta property="og:url" content="https://example.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Иван Демидов — менеджер спортивных проектов">
+<meta name="twitter:description" content="Исследование рынка атрибутики, требования и ТЗ для подрядчиков, ведение проектов, операционка спортивных площадок и мероприятий.">
+<meta name="twitter:image" content="assets/photos/hero-bg.webp">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080c'/%3E%3Crect x='19' y='17' width='5' height='30' fill='%234fe8c4'/%3E%3Cpath d='M30 17h6.5C44 17 49 23 49 32s-5 15-12.5 15H30zm5.2 5v20h1.1c4.4 0 7.4-3.6 7.4-10s-3-10-7.4-10z' fill='%23f2f3f5'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080c'/%3E%3Crect x='19' y='17' width='5' height='30' fill='%234fe8c4'/%3E%3Cpath d='M30 17h6.5C44 17 49 23 49 32s-5 15-12.5 15H30zm5.2 5v20h1.1c4.4 0 7.4-3.6 7.4-10s-3-10-7.4-10z' fill='%23f2f3f5'/%3E%3C/svg%3E">
+
+<link rel="preload" href="assets/fonts/golos-text-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/unbounded-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* ============================================================
+   ШРИФТЫ — локальные. Внешних запросов страница не делает:
+   Google Fonts в ряде сетей отвечает медленно или не отвечает вовсе.
+   unicode-range оставлен, поэтому браузер качает только нужное
+   подмножество: кириллицу или латиницу, а не всё сразу.
+   ============================================================ */
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/golos-text-400-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/golos-text-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/golos-text-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/golos-text-500-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/golos-text-500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/golos-text-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/golos-text-600-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/golos-text-600-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/golos-text-600-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/golos-text-700-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/golos-text-700-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/golos-text-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/unbounded-700-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/unbounded-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+/* ============================================================
+   ДИЗАЙН-ТОКЕНЫ
+   ============================================================ */
+:root{
+  /* Поверхности — глубокий сине-чёрный, а не нейтральный чёрный */
+  --bg:            #08080c;
+  --bg-1:          #0f0f16;
+  --bg-2:          #15151e;
+
+  /* Линии */
+  --line:          rgba(255,255,255,.07);
+  --line-2:        rgba(255,255,255,.13);
+
+  /* Стекло: только навигация и шторки */
+  --glass:         rgba(13,13,20,.58);
+  --glass-strong:  rgba(11,11,17,.76);
+  --glass-blur:    blur(24px) saturate(180%);
+  --glass-edge:    inset 0 1px 0 rgba(255,255,255,.07);
+
+  /* Текст */
+  --fg:            #f2f3f5;
+  --fg-2:          #a9aab6;
+  --fg-3:          #7c7d8c;
+
+  /* Единственный акцент. Разрешён только в трёх ролях:
+     главное действие, критичное число, состояние ошибки. */
+  --accent:        #4fe8c4;
+  --accent-ink:    #05130f;
+
+  /* Шкала отступов — кратна 4px */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-7:  32px;
+  --s-8:  40px;
+  --s-9:  56px;
+
+  /* Радиусы */
+  --r-xs:   6px;
+  --r-sm:   12px;
+  --r-md:   20px;
+  --r-full: 999px;
+
+  /* Тени */
+  --sh-2: 0 8px 24px -12px rgba(0,0,0,.7);
+
+  /* Раскладка */
+  --maxw: 1180px;
+  --pad:  clamp(16px, 5vw, 40px);
+  --header-h: 64px;
+
+  /* Движение */
+  --dur:     260ms;
+  --dur-in:  700ms;
+  --ease:    cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+
+  /* Типографика */
+  --font-display: "Unbounded", "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ============================================================
+   БАЗА
+   ============================================================ */
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + var(--s-6));
+}
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, .96rem + .18vw, 1.0625rem);
+  line-height: 1.65;
+  font-weight: 400;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Плёночное зерно — едва заметная текстура поверх всей страницы */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+  opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4{
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1, h2{
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -.035em;
+}
+
+h3, h4{
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -.015em;
+}
+
+p{ margin: 0; }
+ul{ margin: 0; padding: 0; list-style: none; }
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--r-xs);
+}
+
+::selection{
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* ============================================================
+   ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ
+   ============================================================ */
+.wrap{
+  width: min(100% - (var(--pad) * 2), var(--maxw));
+  margin-inline: auto;
+}
+
+.skip-link{
+  position: absolute;
+  top: var(--s-2);
+  left: var(--s-2);
+  z-index: 200;
+  padding: var(--s-3) var(--s-5);
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+.skip-link:focus-visible{ transform: translateY(0); }
+
+.icon{
+  width: 1em; height: 1em;
+  flex: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* ============================================================
+   КНОПКИ
+   ============================================================ */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-6);
+  border-radius: var(--r-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .9375rem;
+  letter-spacing: -.01em;
+  border: 1px solid transparent;
+  transition: background-color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              transform var(--dur) var(--ease);
+}
+.btn .icon{
+  font-size: 1.125em;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.btn--primary{
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn--primary:hover{ background: #6ff2d3; box-shadow: 0 10px 24px -14px rgba(0,0,0,.9); }
+.btn:hover .icon{ transform: translateX(3px); }
+
+.btn--ghost{
+  border-color: var(--line-2);
+  color: var(--fg);
+}
+.btn--ghost:hover{
+  border-color: var(--fg-3);
+  background: var(--bg-2);
+}
+
+.btn--sm{
+  padding: var(--s-2) var(--s-5);
+  font-size: .875rem;
+}
+
+.btn:active{ transform: translateY(1px); }
+
+/* ============================================================
+   ШАПКА
+   ============================================================ */
+/* Стекло только здесь и в мобильной шторке: под ними реально проезжает контент.
+   На карточках blur — дорогой способ нарисовать серый прямоугольник. */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid transparent;
+  box-shadow: var(--glass-edge);
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.header.is-stuck{
+  background: var(--glass-strong);
+  border-bottom-color: var(--line);
+}
+
+/* Без поддержки backdrop-filter стекло вырождается в сплошной фон */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  .header, .header.is-stuck, .mobile-nav{ background: var(--bg); }
+}
+
+.progress{
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.progress__bar{
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--fg-3);
+}
+
+.header__inner{
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  min-height: var(--header-h);
+}
+
+.brand{
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9375rem;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+  margin-right: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.brand__dot{
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--fg-3);
+  align-self: center;
+  flex: none;
+}
+
+.nav{ display: none; }
+
+.nav__list{
+  display: flex;
+  align-items: center;
+  gap: var(--s-6);
+}
+.nav__link{
+  position: relative;
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--fg-2);
+  padding-block: var(--s-2);
+  transition: color var(--dur) var(--ease);
+}
+.nav__link::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--fg);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+.nav__link:hover,
+.nav__link.is-active{ color: var(--fg); }
+.nav__link.is-active::after,
+.nav__link:hover::after{ transform: scaleX(1); }
+
+.header__tools{
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex: none;
+}
+
+@media (max-width: 380px){
+  .brand{ font-size: .8125rem; }
+  .header__inner{ gap: var(--s-3); }
+  .header__tools{ gap: var(--s-2); }
+  .lang__btn{ padding: 5px var(--s-2); }
+}
+
+.lang{
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  background: var(--bg-1);
+}
+.lang__btn{
+  padding: 5px var(--s-3);
+  border-radius: var(--r-full);
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--fg-3);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.lang__btn[aria-pressed="true"]{
+  background: var(--fg);
+  color: var(--bg);
+}
+.lang__btn:hover{ color: var(--fg); }
+.lang__btn[aria-pressed="true"]:hover{ color: var(--bg); }
+
+.header__cta{ display: none; }
+
+.burger{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  font-size: 20px;
+  color: var(--fg);
+}
+.burger .icon--close{ display: none; }
+.burger[aria-expanded="true"] .icon--menu{ display: none; }
+.burger[aria-expanded="true"] .icon--close{ display: block; }
+
+.mobile-nav{
+  display: none;
+  border-top: 1px solid var(--line);
+  background: var(--glass-strong);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-edge);
+  padding-block: var(--s-4) var(--s-6);
+}
+.mobile-nav.is-open{ display: block; }
+.mobile-nav__list{
+  display: grid;
+  gap: var(--s-1);
+}
+.mobile-nav__link{
+  display: block;
+  padding: var(--s-3) var(--s-2);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--fg-2);
+  border-bottom: 1px solid var(--line);
+}
+.mobile-nav__link:hover{ color: var(--fg); }
+.mobile-nav__cta{ margin-top: var(--s-5); width: 100%; justify-content: center; }
+
+@media (min-width: 1080px){
+  .nav{ display: block; margin-right: auto; }
+  .header__cta{ display: inline-flex; }
+  .burger{ display: none; }
+  .mobile-nav{ display: none !important; }
+  .header__inner{ gap: var(--s-6); }
+  .brand{ margin-right: 0; }
+  .nav__list{ gap: var(--s-4); }
+  .nav__link{ font-size: .8125rem; }
+}
+
+@media (min-width: 1320px){
+  .header__inner{ gap: var(--s-8); }
+  .nav__list{ gap: var(--s-6); }
+  .nav__link{ font-size: .875rem; }
+}
+
+/* ============================================================
+   СЕКЦИИ
+   ============================================================ */
+.section{
+  position: relative;
+  padding-block: clamp(56px, 9vw, 112px);
+  border-top: 1px solid var(--line);
+}
+
+.kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--fg-3);
+  margin-bottom: var(--s-4);
+}
+.kicker::before{
+  content: "";
+  width: 20px; height: 1px;
+  background: var(--line-2);
+  flex: none;
+}
+
+.section__title{
+  font-size: clamp(1.5rem, 1rem + 2.6vw, 2.5rem);
+  max-width: 22ch;
+}
+
+.section__lead{
+  margin-top: var(--s-5);
+  max-width: 62ch;
+  color: var(--fg-2);
+  font-size: clamp(1rem, .95rem + .3vw, 1.1875rem);
+}
+
+.section__head{ margin-bottom: clamp(32px, 5vw, 64px); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding-block: clamp(48px, 8vw, 104px) clamp(56px, 9vw, 112px);
+  border-top: 0;
+}
+
+.hero__bg{
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+.hero__bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  opacity: .34;
+  filter: grayscale(1) contrast(1.14) brightness(.92);
+  will-change: transform;
+}
+.hero__scrim{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(8,8,12,.30) 0%, rgba(8,8,12,.70) 56%, var(--bg) 100%);
+}
+
+.hero__id{
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  margin-bottom: clamp(24px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+/* Портрет — компактный круг с акцентным кольцом */
+.avatar{
+  position: relative;
+  width: clamp(80px, 15vw, 116px);
+  aspect-ratio: 1;
+  flex: none;
+}
+.avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  filter: grayscale(.25) contrast(1.06);
+  box-shadow: var(--sh-2);
+}
+.avatar__ring{
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  border-top-color: var(--fg-3);
+  border-right-color: transparent;
+}
+
+.hero__status{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-2) var(--s-5);
+  border: 1px solid var(--fg-3);
+  background: var(--bg-2);
+  border-radius: var(--r-full);
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+/* Точка — единственный цветной элемент плашки: индикатор «статус активен» */
+.hero__status-dot{
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+@media (max-width: 560px){
+  .hero__status{
+    font-size: .8125rem;
+    padding: var(--s-3) var(--s-4);
+    gap: var(--s-2);
+    line-height: 1.35;
+    border-radius: var(--r-md);
+    /* фраза длинная и переносится — точка держится первой строки, а не центра блока */
+    align-items: flex-start;
+  }
+  .hero__status-dot{ margin-top: .3em; }
+  .hero__id{ gap: var(--s-4); }
+}
+
+.hero__name{
+  font-size: clamp(2.25rem, 1rem + 6.2vw, 5rem);
+  letter-spacing: -.045em;
+  margin-bottom: var(--s-6);
+}
+
+/* Пословесный выезд заголовка */
+.hero__name .word{
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: .08em;
+}
+.hero__name .word > span{ display: inline-block; }
+
+.hero__role{
+  font-family: var(--font-body);
+  font-size: clamp(1.0625rem, .95rem + .7vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+  color: var(--fg);
+  padding-left: var(--s-6);
+  border-left: 2px solid var(--line-2);
+  margin-bottom: var(--s-7);
+  max-width: 36ch;
+}
+
+.hero__lead{
+  color: var(--fg-2);
+  font-size: clamp(1rem, .95rem + .35vw, 1.1875rem);
+  max-width: 54ch;
+  margin-bottom: var(--s-8);
+}
+
+.hero__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-8);
+}
+
+.hero__facts{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: var(--s-6);
+  padding-top: var(--s-8);
+  border-top: 1px solid var(--line);
+  max-width: 640px;
+}
+.hero__facts > div{ position: relative; padding-left: var(--s-4); }
+.hero__facts > div::before{
+  content: "";
+  position: absolute;
+  left: 0; top: .35em; bottom: .35em;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line-2);
+}
+.fact__value{
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.125rem);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.fact__label{
+  display: block;
+  margin-top: var(--s-1);
+  font-size: .8125rem;
+  line-height: 1.4;
+  color: var(--fg-3);
+}
+
+@media (max-width: 419px){
+  .hero__actions .btn{ width: 100%; justify-content: center; }
+}
+
+/* ============================================================
+   О СЕБЕ
+   ============================================================ */
+.about__grid{
+  display: grid;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+.about__grid > *{ min-width: 0; }
+.about__text{ display: grid; gap: var(--s-5); }
+.about__text p{
+  color: var(--fg-2);
+  font-size: clamp(1rem, .96rem + .3vw, 1.125rem);
+}
+.about__text strong{ color: var(--fg); font-weight: 600; }
+
+figure.photo{
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--bg-1);
+}
+figure.photo img{ width: 100%; height: auto; }
+figure.photo figcaption{
+  padding: var(--s-4) var(--s-5);
+  font-size: .8125rem;
+  line-height: 1.5;
+  color: var(--fg-3);
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 860px){
+  .about__grid{ grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+}
+
+/* ============================================================
+   ЧЕМ ЗАНИМАЮСЬ
+   ============================================================ */
+.cards > *, .stack > *, .goals > *, .contact__links > *, .tasks > *{ min-width: 0; }
+
+.cards{
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.card{
+  padding: var(--s-7);
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  will-change: transform;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease),
+              transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease);
+}
+.card:hover{
+  border-color: var(--line-2);
+  background: var(--bg-2);
+  transform: translateY(-4px);
+  box-shadow: var(--sh-2);
+}
+.card:hover .card__icon{
+  border-color: var(--line-2);
+  color: var(--fg);
+}
+.card__icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: var(--r-sm);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--fg-2);
+  font-size: 21px;
+  margin-bottom: var(--s-6);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.card__title{
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin-bottom: var(--s-3);
+}
+.card__text{
+  color: var(--fg-2);
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   РАБОТЫ
+   ============================================================ */
+.cases{ display: grid; gap: var(--s-5); }
+
+.case{
+  position: relative;
+  padding: clamp(24px, 4vw, 40px);
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.case:hover{ border-color: var(--line-2); background: var(--bg-2); }
+
+.case__head{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-bottom: var(--s-5);
+  margin-bottom: var(--s-6);
+  border-bottom: 1px solid var(--line);
+}
+.case__num{
+  font-family: var(--font-display);
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--fg-3);
+}
+.case__title{
+  font-size: clamp(1.25rem, 1.05rem + .9vw, 1.75rem);
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.case__org{
+  font-size: .8125rem;
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+
+.case__rows{ display: grid; gap: var(--s-5); }
+
+.case__row{
+  display: grid;
+  gap: var(--s-1);
+  align-content: start;
+  min-width: 0;
+}
+.case__label{
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--fg-3);
+}
+.case__value{
+  color: var(--fg-2);
+  font-size: .9375rem;
+  line-height: 1.62;
+  overflow-wrap: anywhere;
+}
+.case__row--result .case__value{ color: var(--fg); }
+
+.case__tools{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-1);
+}
+
+.case__link{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-6);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .875rem;
+  color: var(--fg);
+  border-bottom: 1px solid var(--line-2);
+  padding-bottom: 2px;
+  transition: border-color var(--dur) var(--ease);
+}
+.case__link:hover{ border-bottom-color: var(--fg); }
+
+@media (min-width: 800px){
+  .case__rows{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--s-8); }
+}
+
+/* ============================================================
+   ТЕГИ
+   ============================================================ */
+.tag{
+  display: inline-flex;
+  align-items: center;
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  background: var(--bg-2);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  font-size: .8125rem;
+  line-height: 1.5;
+  color: var(--fg-2);
+  overflow-wrap: anywhere;
+}
+
+/* ============================================================
+   ОБРАЗОВАНИЕ И ДОКУМЕНТЫ
+   ============================================================ */
+.creds{
+  scroll-margin-top: calc(var(--header-h) + var(--s-6));
+  margin-top: clamp(40px, 6vw, 72px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.creds__title{
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: var(--fg);
+  margin-bottom: var(--s-6);
+}
+.creds__list{ display: grid; gap: var(--s-5); max-width: 76ch; }
+.creds__row{ display: grid; gap: var(--s-1); min-width: 0; }
+@media (min-width: 720px){
+  .creds__row{ grid-template-columns: 13rem minmax(0, 1fr); gap: var(--s-6); align-items: baseline; }
+}
+.creds__label{ font-size: .875rem; color: var(--fg-3); }
+.creds__value{
+  margin: 0;
+  font-size: .9375rem;
+  line-height: 1.55;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+
+/* ============================================================
+   МАТЕРИАЛЫ
+   ============================================================ */
+.docs{ max-width: 62rem; }
+
+.docs__list{ display: grid; gap: var(--s-1); }
+
+/* Категории раскрываются нативным <details> — работает и без JS */
+.cat{
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--bg-1);
+  overflow: hidden;
+}
+.cat + .cat{ margin-top: var(--s-2); }
+
+.cat__head{
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -.015em;
+  transition: background-color var(--dur) var(--ease);
+}
+.cat__head::-webkit-details-marker{ display: none; }
+.cat__head:hover{ background: var(--bg-2); }
+
+.cat__name{ flex: 1; min-width: 0; }
+.cat__count{
+  flex: none;
+  min-width: 22px;
+  padding: 2px var(--s-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  font-size: .75rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--fg-3);
+}
+.cat__chev{
+  flex: none;
+  font-size: 20px;
+  color: var(--fg-3);
+  transition: transform var(--dur) var(--ease-out);
+}
+.cat[open] .cat__chev{ transform: rotate(180deg); }
+
+.cat__body{ padding: 0 var(--s-4) var(--s-4); }
+
+/* ---------- Запрос доступа к отзыву ---------- */
+.request{
+  margin-bottom: clamp(32px, 4vw, 48px);
+  padding: clamp(24px, 3.5vw, 36px);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  background: var(--bg-1);
+}
+.request__intro{
+  display: flex;
+  gap: var(--s-5);
+  align-items: flex-start;
+  margin-bottom: var(--s-7);
+}
+.request__icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  flex: none;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-xs);
+  color: var(--fg-2);
+  font-size: 19px;
+}
+.request__title{
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  margin-bottom: var(--s-2);
+}
+.request__text{
+  color: var(--fg-2);
+  font-size: .9375rem;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.request__form{
+  display: grid;
+  gap: var(--s-4);
+  align-items: end;
+}
+@media (min-width: 760px){
+  .request__form{ grid-template-columns: repeat(3, minmax(0, 1fr)) auto; }
+}
+.field{ display: grid; gap: var(--s-2); margin: 0; min-width: 0; }
+.field__label{ font-size: .8125rem; color: var(--fg-3); }
+.field__input{
+  width: 100%;
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-xs);
+  background: var(--bg-2);
+  color: var(--fg);
+  font: inherit;
+  font-size: .9375rem;
+  transition: border-color var(--dur) var(--ease);
+}
+.field__input:hover{ border-color: var(--fg-3); }
+.field__input:focus{ outline: none; border-color: var(--accent); }
+.field__input[aria-invalid="true"]{ border-color: var(--accent); }
+.request__submit{ justify-content: center; }
+@media (max-width: 759px){ .request__submit{ width: 100%; } }
+
+.request__status{
+  margin-top: var(--s-4);
+  font-size: .875rem;
+  color: var(--accent);
+  min-height: 1.4em;
+}
+.request__hint{
+  margin-top: var(--s-3);
+  font-size: .8125rem;
+  line-height: 1.55;
+  color: var(--fg-3);
+  overflow-wrap: anywhere;
+}
+
+.doc{
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-4);
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  min-width: 0;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.doc:hover{ border-color: var(--line-2); background: var(--bg-1); }
+
+.doc__icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xs);
+  background: var(--bg-1);
+  color: var(--fg-3);
+  font-size: 18px;
+}
+.doc__body{ min-width: 0; flex: 1; }
+.doc__name{
+  display: block;
+  font-size: .9375rem;
+  line-height: 1.4;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+.doc__meta{
+  display: block;
+  margin-top: 2px;
+  font-size: .8125rem;
+  color: var(--fg-3);
+}
+.doc__arrow{
+  flex: none;
+  font-size: 18px;
+  color: var(--fg-3);
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease-out);
+}
+.doc:hover .doc__arrow, .doc:focus-visible .doc__arrow{ opacity: 1; transform: none; }
+
+/* Отзыв ФНЛ — самый весомый документ, выделен рамкой */
+.doc--featured{
+  border-color: var(--line-2);
+  background: var(--bg-1);
+}
+.doc--featured .doc__icon{ border-color: var(--line-2); color: var(--fg); }
+.doc--featured .doc__name{ font-weight: 600; }
+
+/* ============================================================
+   ТАЙМЛАЙН ОПЫТА
+   ============================================================ */
+.timeline{
+  position: relative;
+  display: grid;
+  gap: var(--s-9);
+  padding-left: var(--s-7);
+}
+.timeline::before{
+  content: "";
+  position: absolute;
+  left: 5px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: var(--line-2);
+}
+
+.tl{ position: relative; }
+.tl::before{
+  content: "";
+  position: absolute;
+  left: calc(var(--s-7) * -1);
+  top: 8px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--line-2);
+  transition: transform var(--dur) var(--ease-out);
+}
+.js .tl:not(.is-visible)::before{ transform: scale(.3); }
+
+.tl__period{
+  display: inline-block;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--fg-2);
+  margin-bottom: var(--s-3);
+}
+.tl__role{
+  font-size: clamp(1.125rem, 1rem + .7vw, 1.5rem);
+  margin-bottom: var(--s-2);
+}
+.tl__meta{
+  max-width: 76ch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-4);
+  margin-bottom: var(--s-5);
+}
+.tl__org{
+  font-size: .9375rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+.tl__dur{
+  font-size: .8125rem;
+  color: var(--fg-3);
+}
+.tl__points{ display: grid; gap: var(--s-3); max-width: 76ch; }
+.tl__points li{
+  position: relative;
+  padding-left: var(--s-5);
+  color: var(--fg-2);
+  font-size: .9375rem;
+  line-height: 1.62;
+}
+.tl__points li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: .72em;
+  width: 6px; height: 1px;
+  background: var(--line-2);
+}
+
+@media (min-width: 900px){
+  .timeline{ padding-left: var(--s-9); }
+  .timeline::before{ left: 5px; }
+  .tl::before{ left: calc(var(--s-9) * -1); }
+}
+
+/* ============================================================
+   СТЕК
+   ============================================================ */
+.stack{
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+.stack__group{
+  padding: var(--s-6);
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  transition: border-color var(--dur) var(--ease);
+}
+.stack__group:hover{ border-color: var(--line-2); }
+.stack__title{
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: var(--fg);
+  margin-bottom: var(--s-5);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--line);
+}
+.stack__tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+.stack__tags .tag:hover{ border-color: var(--line-2); color: var(--fg); }
+
+/* Последняя группа занимает остаток строки, чтобы не висела одиноким блоком */
+@media (min-width: 900px){
+  .stack__group:last-child{ grid-column: 1 / -1; }
+}
+
+/* ============================================================
+   КУДА ДВИГАЮСЬ
+   ============================================================ */
+.goals{
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+.goal{
+  padding: var(--s-7);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--bg-1);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease-out);
+}
+.goal:hover{ border-color: var(--line-2); transform: translateY(-3px); }
+.goal__icon{
+  color: var(--fg-3);
+  font-size: 22px;
+  margin-bottom: var(--s-5);
+  display: block;
+}
+.goal__title{
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--fg-3);
+  margin-bottom: var(--s-3);
+}
+.goal__text{
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -.015em;
+  line-height: 1.45;
+  color: var(--fg);
+}
+.tasks{
+  margin-top: var(--s-8);
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+.tasks li{
+  position: relative;
+  padding: var(--s-4) var(--s-5) var(--s-4) var(--s-9);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--bg-1);
+  color: var(--fg-2);
+  font-size: .9375rem;
+  line-height: 1.55;
+}
+.tasks li::before{
+  content: "";
+  position: absolute;
+  left: var(--s-5); top: 1.85em;
+  width: 14px; height: 1px;
+  background: var(--line-2);
+}
+
+/* ============================================================
+   ГАЛЕРЕЯ
+   ============================================================ */
+.gallery{
+  columns: 1;
+  column-gap: var(--s-4);
+}
+@media (min-width: 620px){ .gallery{ columns: 2; } }
+@media (min-width: 1000px){ .gallery{ columns: 3; } }
+
+.shot{
+  break-inside: avoid;
+  margin: 0 0 var(--s-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--bg-1);
+  transition: border-color var(--dur) var(--ease);
+}
+.shot:hover{ border-color: var(--line-2); }
+.shot img{
+  width: 100%;
+  height: auto;
+  transition: transform 420ms var(--ease-out), filter var(--dur) var(--ease);
+  filter: saturate(.92);
+}
+.shot:hover img{ transform: scale(1.05); filter: saturate(1.05); }
+.shot figcaption{
+  padding: var(--s-3) var(--s-4);
+  font-size: .8125rem;
+  line-height: 1.45;
+  color: var(--fg-2);
+  border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.shot figcaption b{
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: .875rem;
+  color: var(--fg);
+  letter-spacing: -.01em;
+}
+.shot figcaption span{ color: var(--fg-3); }
+
+/* ============================================================
+   КОНТАКТЫ
+   ============================================================ */
+.contact{ border-bottom: 1px solid var(--line); }
+
+.contact__title{
+  font-size: clamp(1.75rem, 1rem + 3.4vw, 3.25rem);
+  letter-spacing: -.04em;
+  max-width: 18ch;
+}
+.contact__lead{
+  margin-top: var(--s-6);
+  max-width: 52ch;
+  color: var(--fg-2);
+  font-size: clamp(1rem, .95rem + .35vw, 1.1875rem);
+}
+
+.contact__links{
+  margin-top: clamp(32px, 5vw, 56px);
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.contact__link{
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--bg-1);
+  min-width: 0;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.contact__link:hover{
+  border-color: var(--line-2);
+  background: var(--bg-2);
+}
+.contact__link .icon{ font-size: 20px; color: var(--fg-3); }
+.contact__link-body{ min-width: 0; }
+.contact__link-label{
+  display: block;
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--fg-3);
+}
+.contact__link-value{
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -.01em;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+
+.contact__actions{
+  margin-top: var(--s-7);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+}
+/* ============================================================
+   ПОДВАЛ
+   ============================================================ */
+.footer{
+  padding-block: var(--s-9);
+  color: var(--fg-3);
+  font-size: .875rem;
+}
+.footer__inner{
+  display: grid;
+  gap: var(--s-6);
+}
+.footer__brand{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9375rem;
+  color: var(--fg);
+  letter-spacing: -.02em;
+}
+.footer__copy{ margin-top: var(--s-2); }
+.footer__links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-6);
+}
+.footer__links a{
+  color: var(--fg-2);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  overflow-wrap: anywhere;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.footer__links a:hover{ color: var(--fg); border-bottom-color: var(--line-2); }
+
+@media (min-width: 760px){
+  .footer__inner{
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+  .footer__links{ justify-content: flex-end; }
+}
+
+/* ============================================================
+   ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ
+   ============================================================ */
+/* Появление при скролле: сдвиг вверх + лёгкое приближение */
+.js [data-reveal]{
+  opacity: 0;
+  transform: translateY(28px) scale(.985);
+  transition: opacity var(--dur-in) var(--ease-out),
+              transform var(--dur-in) var(--ease-out);
+}
+.js [data-reveal].is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+/* Вход первого экрана — своя очередь, стартует сразу после загрузки шрифтов */
+.js [data-anim]{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 620ms var(--ease-out), transform 620ms var(--ease-out);
+  transition-delay: calc((var(--anim-i, 0) - 1) * 90ms);
+}
+.js .hero.is-ready [data-anim]{
+  opacity: 1;
+  transform: none;
+}
+
+/* Заголовок выезжает по словам */
+.js .hero__name[data-split] .word > span{
+  transform: translateY(105%);
+  transition: transform 820ms var(--ease-out);
+  transition-delay: calc(var(--word-i, 0) * 70ms + 120ms);
+}
+.js .hero.is-ready .hero__name[data-split] .word > span{ transform: none; }
+
+/* Кольцо вокруг портрета раскрывается при входе */
+.js .avatar__ring{
+  opacity: 0;
+  transform: scale(.78);
+  transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out);
+  transition-delay: 220ms;
+}
+.js .hero.is-ready .avatar__ring{ opacity: 1; transform: none; }
+
+.js .avatar img{
+  transform: scale(.92);
+  transition: transform 900ms var(--ease-out);
+  transition-delay: 120ms;
+}
+.js .hero.is-ready .avatar img{ transform: none; }
+
+@media (prefers-reduced-motion: no-preference){
+  html{ scroll-behavior: smooth; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js [data-reveal]{ opacity: 1 !important; transform: none !important; }
+  .js [data-anim]{ opacity: 1 !important; transform: none !important; }
+  .js .word > span{ opacity: 1 !important; transform: none !important; }
+  .js .avatar__ring{ opacity: 1 !important; transform: none !important; }
+  .js .avatar img{ opacity: 1 !important; transform: none !important; }
+  .js .tl:not(.is-visible)::before{ transform: none !important; }
+  .card:hover, .goal:hover{ transform: none !important; }
+  .shot:hover img{ transform: none !important; }
+  .progress{ display: none; }
+}
+
+/* ============================================================
+   ПЕЧАТЬ
+   ============================================================ */
+@media print{
+  :root{
+    --bg: #fff; --bg-1: #fff; --bg-2: #fff; --bg-3: #fff;
+    --fg: #000; --fg-2: #222; --fg-3: #444;
+    --line: #bbb; --line-2: #999;
+    --glass: #fff; --glass-strong: #fff; --glass-blur: none; --glass-edge: none;
+    --accent: #0d6b58; --accent-ink: #fff;
+  }
+  html, body{ background: #fff !important; color: #000 !important; }
+  body{ font-size: 11pt; line-height: 1.45; }
+
+  .header, .mobile-nav, .burger, .lang, .skip-link, .progress,
+  .hero__bg, .hero__scrim, .hero__actions, .contact__actions,
+  .gallery, .nav, .doc__arrow, .cat__chev, .request__form,
+  .request__status{ display: none !important; }
+
+  /* Категории раскрываются перед печатью скриптом — CSS для <details> тут бессилен */
+  .cat{ border: 1px solid #bbb !important; background: #fff !important; page-break-inside: avoid; }
+  .cat__head{ padding: 6pt 8pt; }
+  .request{ border: 1px solid #bbb !important; background: #fff !important; padding: 8pt; page-break-inside: avoid; }
+  .doc{ padding: 3pt 4pt; }
+  .doc__icon{ display: none !important; }
+
+  body::after{ display: none !important; }
+
+  .js [data-reveal]{ opacity: 1 !important; transform: none !important; }
+  .js [data-anim]{ opacity: 1 !important; transform: none !important; }
+  .js .word > span{ opacity: 1 !important; transform: none !important; }
+  .js .avatar__ring{ opacity: 1 !important; transform: none !important; }
+  .js .avatar img{ opacity: 1 !important; transform: none !important; }
+
+  .section, .hero{
+    padding-block: 12pt;
+    border-top: 1px solid #bbb;
+    page-break-inside: avoid;
+  }
+  .card, .case, .stack__group, .goal, .tasks li, .contact__link, figure.photo{
+    background: #fff !important;
+    border: 1px solid #bbb !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  .hero__id{ gap: 8pt; margin-bottom: 8pt; }
+  .avatar{ width: 26mm; }
+  .avatar img{ filter: none !important; box-shadow: none !important; }
+  .avatar__ring{ border-color: #bbb !important; }
+  .hero__facts > div::before{ background: #777 !important; }
+
+  .hero__name{ font-size: 24pt; }
+  .section__title, .contact__title{ font-size: 16pt; }
+  .case__title, .tl__role{ font-size: 12pt; }
+
+  a{ color: #000 !important; text-decoration: underline; }
+  a[href^="http"]::after,
+  a[href^="mailto:"]::after,
+  a[href^="tel:"]::after{
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #444;
+    word-break: break-all;
+  }
+  a[href^="#"]::after{ content: ""; }
+
+  .footer{ page-break-inside: avoid; padding-block: 12pt; }
+  .footer__inner{ display: block; }
+  .footer__links{ justify-content: flex-start; gap: 4pt 12pt; margin-top: 6pt; }
+  .contact__links{ grid-template-columns: 1fr; gap: 4pt; }
+  .contact__link{ padding: 6pt 8pt; }
+  .cards, .stack, .goals, .tasks{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6pt; }
+  .case__rows{ gap: 6pt 12pt; }
+}
+</style>
+</head>
+
+<body>
+<script>
+document.documentElement.className += " js";
+setTimeout(function () {
+  var h = document.getElementById("hero");
+  if (h) h.classList.add("is-ready");
+}, 1500);
+</script>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">К основному содержанию</a>
+
+<!-- ========== 1. ШАПКА ========== -->
+<header class="header" id="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#hero">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span data-i18n="brand">Иван Демидов</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация" data-i18n-aria-label="a11y.nav">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#about" data-i18n="nav.about">О себе</a></li>
+        <li><a class="nav__link" href="#work" data-i18n="nav.work">Работы</a></li>
+        <li><a class="nav__link" href="#docs" data-i18n="nav.docs">Материалы</a></li>
+        <li><a class="nav__link" href="#experience" data-i18n="nav.experience">Опыт</a></li>
+        <li><a class="nav__link" href="#education" data-i18n="nav.education">Образование</a></li>
+        <li><a class="nav__link" href="#next" data-i18n="nav.next">Куда двигаюсь</a></li>
+        <li><a class="nav__link" href="#photos" data-i18n="nav.photos">Стадионы</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__tools">
+      <div class="lang" role="group" aria-label="Язык сайта" data-i18n-aria-label="a11y.lang">
+        <button class="lang__btn" type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <a class="btn btn--ghost btn--sm header__cta" href="#contact" data-i18n="nav.cta">Связаться</a>
+
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню" data-i18n-aria-label="a11y.menu">
+        <svg class="icon icon--menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon icon--close" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span class="progress__bar" id="progress-bar"></span></div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="wrap">
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="#about" data-i18n="nav.about">О себе</a></li>
+        <li><a class="mobile-nav__link" href="#services" data-i18n="nav.services">Чем занимаюсь</a></li>
+        <li><a class="mobile-nav__link" href="#work" data-i18n="nav.work">Работы</a></li>
+        <li><a class="mobile-nav__link" href="#docs" data-i18n="nav.docs">Материалы</a></li>
+        <li><a class="mobile-nav__link" href="#experience" data-i18n="nav.experience">Опыт</a></li>
+        <li><a class="mobile-nav__link" href="#education" data-i18n="nav.education">Образование</a></li>
+        <li><a class="mobile-nav__link" href="#stack" data-i18n="nav.stack">Инструменты</a></li>
+        <li><a class="mobile-nav__link" href="#next" data-i18n="nav.next">Куда двигаюсь</a></li>
+        <li><a class="mobile-nav__link" href="#photos" data-i18n="nav.photos">Стадионы</a></li>
+      </ul>
+      <a class="btn btn--primary mobile-nav__cta" href="#contact" data-i18n="nav.cta">Связаться</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ========== 2. ПЕРВЫЙ ЭКРАН ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/photos/hero-bg.webp" alt="" width="1400" height="789" fetchpriority="high" decoding="async">
+    </div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <div class="wrap hero__body">
+      <div class="hero__id" data-anim="1">
+        <div class="avatar">
+          <img src="assets/photos/portrait.webp" width="750" height="1000" decoding="async" fetchpriority="high"
+               alt="Портрет Ивана Демидова" data-i18n-alt="hero.portrait.alt">
+          <span class="avatar__ring" aria-hidden="true"></span>
+        </div>
+        <p class="hero__status">
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.status">В активном поиске постоянного места работы</span>
+        </p>
+      </div>
+
+      <h1 class="hero__name" data-split data-anim="2" data-i18n="hero.name">Иван Демидов</h1>
+
+      <p class="hero__role" data-anim="3" data-i18n="hero.role">Менеджер спортивных проектов: цифровизация, атрибутика и работа спортивных площадок</p>
+
+      <p class="hero__lead" data-anim="4" data-i18n="hero.lead">Веду спортивные проекты от исследования рынка и написания технического задания до координации подрядчиков и работы площадки в день мероприятия.</p>
+
+      <div class="hero__actions" data-anim="5">
+          <a class="btn btn--primary" href="#contact"><span data-i18n="hero.cta1">Написать мне</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#work" data-i18n="hero.cta2">Посмотреть работы</a>
+        </div>
+
+      <dl class="hero__facts" data-anim="6">
+        <div>
+          <dd class="fact__value" data-count data-i18n="hero.fact1.value">73</dd>
+          <dt class="fact__label" data-i18n="hero.fact1.label">клуба ФНЛ в исследовании ассортимента и каналов продаж</dt>
+        </div>
+        <div>
+          <dd class="fact__value" data-count data-i18n="hero.fact2.value">3,8</dd>
+          <dt class="fact__label" data-i18n="hero.fact2.label">года опыта в спортивной индустрии — от стюардинга до цифровизации лиги</dt>
+        </div>
+        <div>
+          <dd class="fact__value" data-count data-i18n="hero.fact3.value">80</dd>
+          <dt class="fact__label" data-i18n="hero.fact3.label">страниц функциональных требований к «Маркетплейсу ФНЛ»</dt>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ========== 3. О СЕБЕ ========== -->
+  <section class="section" id="about">
+    <div class="wrap about__grid">
+      <div data-reveal>
+        <p class="kicker" data-i18n="about.kicker">О себе</p>
+        <h2 class="section__title" data-i18n="about.title">Спорт как индустрия: продукт, процессы, площадка</h2>
+
+        <div class="about__text" style="margin-top: var(--s-7)">
+          <p data-i18n="about.p1">Я работаю в спортивной индустрии со стороны организации: отвечаю за процессы на своём участке и довожу задачи до результата. Мне одинаково интересны и продуктовая часть — что и как продавать болельщику, — и операционная: как сделать так, чтобы в день матча всё работало по таймингу.</p>
+          <p data-i18n="about.p2">За последние годы прошёл три разные роли: стажировку в департаменте цифровизации ФНЛ, администрирование спортивного пространства WIN BOX и руководство группой стюардов на матчах РПЛ, Кубка России и КХЛ. Это дало мне и штабной опыт — исследование, требования, документооборот, — и полевой, где ошибки видны сразу.</p>
+          <p data-i18n="about.p3">Многозадачный и целеустремлённый: спокойно веду несколько направлений параллельно и не бросаю задачу на середине. Люблю футбол и теннис — езжу на матчи и турниры, чтобы смотреть, как устроен зрительский опыт изнутри. В работе <strong>активно использую ИИ</strong>: он закрывает рутину с документами, аналитикой и подготовкой материалов.</p>
+        </div>
+      </div>
+
+      <figure class="photo" data-reveal>
+        <img src="assets/photos/san-mames.webp" width="1400" height="788" loading="lazy" decoding="async"
+             alt="Иван Демидов за столом пресс-конференции на стадионе Сан-Мамес" data-i18n-alt="about.photo.alt">
+        <figcaption data-i18n="about.photo.caption">Сан-Мамес, экскурсия по стадиону, 2024</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========== 4. ЧЕМ ЗАНИМАЮСЬ ========== -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="svc.kicker">Чем занимаюсь</p>
+        <h2 class="section__title" data-i18n="svc.title">Четыре задачи, которые я закрываю целиком</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-reveal>
+          <span class="card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+          </span>
+          <h3 class="card__title" data-i18n="svc.1.title">Исследование рынка и ассортимента</h3>
+          <p class="card__text" data-i18n="svc.1.text">Разбираю, что продают конкуренты, через какие каналы и по какой логике. Свожу разрозненную картину по десяткам клубов в одну таблицу, из которой уже видно продуктовое решение.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <span class="card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+          </span>
+          <h3 class="card__title" data-i18n="svc.2.title">Требования и ТЗ для подрядчиков</h3>
+          <p class="card__text" data-i18n="svc.2.text">Перевожу бизнес-задачу на язык, по которому подрядчик может оценить сроки и бюджет, а разработка — начать работу без десяти уточняющих созвонов.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <span class="card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="18" rx="1.5"/><rect x="14" y="3" width="7" height="11" rx="1.5"/></svg>
+          </span>
+          <h3 class="card__title" data-i18n="svc.3.title">Ведение проекта и документооборот</h3>
+          <p class="card__text" data-i18n="svc.3.text">Держу проект в одном месте: задачи, статусы, отчётность, переписка с подрядчиками и заказчиком. Готовлю и защищаю результаты перед руководством.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <span class="card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+          </span>
+          <h3 class="card__title" data-i18n="svc.4.title">Операционка площадок и мероприятий</h3>
+          <p class="card__text" data-i18n="svc.4.text">Отвечаю за то, чтобы в день события всё шло по плану: бронирование, инвентарь, гости, тайминг, работа команды на участке и отчётность по итогам.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. РАБОТЫ ========== -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="work.kicker">Работы</p>
+        <h2 class="section__title" data-i18n="work.title">Три задачи и что из них вышло</h2>
+      </div>
+
+      <div class="cases">
+
+        <article class="case" data-reveal>
+          <div class="case__head">
+            <span class="case__num" data-i18n="case1.num">01</span>
+            <h3 class="case__title" data-i18n="case1.title">Маркетплейс ФНЛ: атрибутика 73 клубов в одном месте</h3>
+            <span class="case__org" data-i18n="case1.org">ФНЛ, 2025–2026</span>
+          </div>
+
+          <div class="case__rows">
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.task">Задача</span>
+              <span class="case__value" data-i18n="case1.task">73 клуба лиги продавали атрибутику разрозненно: у лиги не было единой картины по ассортименту и каналам продаж, а значит, не на чем было строить общий маркетплейс.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.did">Что сделал</span>
+              <span class="case__value" data-i18n="case1.did">Провёл исследование ассортимента и каналов продаж всех 73 клубов ФНЛ. На его основе подготовил функциональные требования и техническое задание для подрядчиков, вёл документооборот и отчётность по проекту, взаимодействовал с подрядчиками, заказчиками и командой разработки, готовил и представлял результаты.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.stack">Инструменты</span>
+              <span class="case__value">
+                <span class="case__tools">
+                  <span class="tag" data-i18n="tag.bitrix">Битрикс24</span>
+                  <span class="tag" data-i18n="tag.ai">ИИ-инструменты</span>
+                  <span class="tag" data-i18n="tag.sources">Официальные источники ФНЛ и клубов</span>
+                  <span class="tag" data-i18n="tag.cms">CMS-панель</span>
+                  <span class="tag" data-i18n="tag.research">Исследование рынка</span>
+                  <span class="tag" data-i18n="tag.reqs">Функциональные требования</span>
+                  <span class="tag" data-i18n="tag.spec">Техническое задание</span>
+                  <span class="tag" data-i18n="tag.present">Презентации</span>
+                </span>
+              </span>
+            </p>
+            <p class="case__row case__row--result">
+              <span class="case__label" data-i18n="label.result">Результат</span>
+              <span class="case__value" data-i18n="case1.result">Написаны функциональные требования к будущему «Маркетплейсу ФНЛ» — около 80 страниц документации. Требования и ТЗ переданы подрядчикам и команде разработки, начало разработки запланировано на следующий сезон. По итогам работы получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.</span>
+            </p>
+          </div>
+
+          <a class="case__link" href="#contact"><span data-i18n="case1.link">Запросить материалы и рекомендацию</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="case" data-reveal>
+          <div class="case__head">
+            <span class="case__num" data-i18n="case2.num">02</span>
+            <h3 class="case__title" data-i18n="case2.title">WIN BOX: спортивное пространство в режиме нон-стоп</h3>
+            <span class="case__org" data-i18n="case2.org">Эй Энд Эй Спортс (Рус), 2025–2026</span>
+          </div>
+
+          <div class="case__rows">
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.task">Задача</span>
+              <span class="case__value" data-i18n="case2.task">Площадка одновременно работала на поток клиентов, партнёров и событий: брони, инвентарь, показы для потенциальных заказчиков, VIP-гости и отчётность — всё это нужно было держать под контролем в одни и те же часы.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.did">Что сделал</span>
+              <span class="case__value" data-i18n="case2.did">Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию, выдавал спортивное оборудование и инвентарь. Координировал мероприятия — трансляции Формулы-1, автограф-сессии, шоу-программы — и сопровождал VIP-гостей. Управлял бронированием через админ-панель и вёл отчётность по посещаемости для компании-партнёра площадки.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.stack">Инструменты</span>
+              <span class="case__value">
+                <span class="case__tools">
+                  <span class="tag" data-i18n="tag.adminpanel">Админ-панель бронирования</span>
+                  <span class="tag" data-i18n="tag.reporting">Отчётность по посещаемости</span>
+                  <span class="tag" data-i18n="tag.present">Презентации</span>
+                  <span class="tag" data-i18n="tag.eventcoord">Координация мероприятий</span>
+                </span>
+              </span>
+            </p>
+            <p class="case__row case__row--result">
+              <span class="case__label" data-i18n="label.result">Результат</span>
+              <span class="case__value" data-i18n="case2.result">Провёл более 200 мероприятий на площадке. Посещаемость стабильно росла всё лето, к осени пошла на спад.</span>
+            </p>
+          </div>
+
+          <a class="case__link" href="#contact"><span data-i18n="case2.link">Расскажу подробнее</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="case" data-reveal>
+          <div class="case__head">
+            <span class="case__num" data-i18n="case3.num">03</span>
+            <h3 class="case__title" data-i18n="case3.title">Старший стюард на матчах РПЛ, Кубка России и КХЛ</h3>
+            <span class="case__org" data-i18n="case3.org">Ивент-Сэйфети, 2022–2023</span>
+          </div>
+
+          <div class="case__rows">
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.task">Задача</span>
+              <span class="case__value" data-i18n="case3.task">На матчах с большим потоком зрителей и жёстким таймингом нужен не набор людей на позициях, а управляемый участок, за который кто-то отвечает головой.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.did">Что сделал</span>
+              <span class="case__value" data-i18n="case3.did">Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка. Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.stack">Инструменты</span>
+              <span class="case__value">
+                <span class="case__tools">
+                  <span class="tag" data-i18n="tag.teamlead">Руководство группой</span>
+                  <span class="tag" data-i18n="tag.radio">Радиосвязь</span>
+                  <span class="tag" data-i18n="tag.plans">Схемы объекта</span>
+                  <span class="tag" data-i18n="tag.safety">Регламенты безопасности</span>
+                  <span class="tag" data-i18n="tag.timing">Работа по таймингу</span>
+                </span>
+              </span>
+            </p>
+            <p class="case__row case__row--result">
+              <span class="case__label" data-i18n="label.result">Результат</span>
+              <span class="case__value" data-i18n="case3.result">Отвечал за закреплённый участок с группой около 15 стюардов на матчах РПЛ, Кубка России и КХЛ. Работа шла по схемам объекта и на радиосвязи с остальными участками.</span>
+            </p>
+          </div>
+
+          <a class="case__link" href="#contact"><span data-i18n="case3.link">Расскажу подробнее</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== МАТЕРИАЛЫ ========== -->
+  <section class="section" id="docs">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="docs.kicker">Материалы</p>
+        <h2 class="section__title" data-i18n="docs.title">Что я делал: документы и работы</h2>
+      </div>
+
+      <div class="request" data-reveal>
+        <div class="request__intro">
+          <span class="request__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          </span>
+          <div>
+            <h3 class="request__title" data-i18n="req.title">Отзыв о стажировке от исполнительного директора ФНЛ</h3>
+            <p class="request__text" data-i18n="req.text">Официальный документ с печатью и подписью. Высылаю лично: оставьте контакты, и я пришлю его вам.</p>
+          </div>
+        </div>
+
+        <form class="request__form" id="ref-form" novalidate>
+          <p class="field">
+            <label class="field__label" for="req-name" data-i18n="req.name">Имя</label>
+            <input class="field__input" id="req-name" name="name" type="text" required autocomplete="name">
+          </p>
+          <p class="field">
+            <label class="field__label" for="req-company" data-i18n="req.company">Компания</label>
+            <input class="field__input" id="req-company" name="company" type="text" required autocomplete="organization">
+          </p>
+          <p class="field">
+            <label class="field__label" for="req-contact" data-i18n="req.contact">Email или телефон</label>
+            <input class="field__input" id="req-contact" name="contact" type="text" required autocomplete="email">
+          </p>
+          <button class="btn btn--primary request__submit" type="submit"><span data-i18n="req.submit">Запросить отзыв</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <p class="request__status" id="ref-status" role="status" aria-live="polite"></p>
+        <p class="request__hint" data-i18n="req.hint">Кнопка откроет почтовый клиент с готовым письмом. Можно и напрямую: ivandemidov18@icloud.com или @demidov_ivan1 в Telegram.</p>
+      </div>
+
+      <div class="docs">
+        <details class="cat" open>
+          <summary class="cat__head">
+            <span class="cat__name" data-i18n="c1">Маркетплейс ФНЛ: требования</span>
+            <span class="cat__count">4</span>
+            <svg class="icon cat__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="cat__body">
+            <ul class="docs__list">
+              <li>
+                <a class="doc" href="assets/docs/fnl-marketplace-requirements.docx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d3">Функциональные требования к маркетплейсу</span>
+                    <span class="doc__meta">DOCX · 315 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/fnl-requirements-home.docx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d4">Требования к главной странице</span>
+                    <span class="doc__meta">DOCX · 220 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/fnl-requirements-product-card.docx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d5">Требования к карточке товара</span>
+                    <span class="doc__meta">DOCX · 94 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/fnl-marketplace-features.docx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d6">Перечень функций маркетплейса</span>
+                    <span class="doc__meta">DOCX · 10.5 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary class="cat__head">
+            <span class="cat__name" data-i18n="c2">Исследование рынка атрибутики</span>
+            <span class="cat__count">3</span>
+            <svg class="icon cat__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="cat__body">
+            <ul class="docs__list">
+              <li>
+                <a class="doc" href="assets/docs/fnl-shops-research.xlsx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 13 6 6M15 13l-6 6"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d7">Исследование магазинов 73 клубов ФНЛ</span>
+                    <span class="doc__meta">XLSX · 45 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/fnl-research-conclusions.docx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d8">Выводы по исследованию магазинов</span>
+                    <span class="doc__meta">DOCX · 16 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/fnl-marketplace-presentation.pptx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><circle cx="12" cy="16" r="3"/><path d="M12 13v3h3"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d2">Презентация проекта «Маркетплейс ФНЛ»</span>
+                    <span class="doc__meta">PPTX · 13.4 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary class="cat__head">
+            <span class="cat__name" data-i18n="c3">Аналитика посещаемости</span>
+            <span class="cat__count">2</span>
+            <svg class="icon cat__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="cat__body">
+            <ul class="docs__list">
+              <li>
+                <a class="doc" href="assets/docs/fnl-attendance-league.xlsx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 13 6 6M15 13l-6 6"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d9">Требования к визуализации посещаемости ФНЛ</span>
+                    <span class="doc__meta">XLSX · 12 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/fnl-attendance-regions.xlsx" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 13 6 6M15 13l-6 6"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="d10">Требования к визуализации посещаемости по регионам</span>
+                    <span class="doc__meta">XLSX · 12 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary class="cat__head">
+            <span class="cat__name" data-i18n="c4">Спонсорство и партнёрства</span>
+            <span class="cat__count">3</span>
+            <svg class="icon cat__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="cat__body">
+            <ul class="docs__list">
+              <li>
+                <a class="doc" href="assets/docs/case-huawei-dragons.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u1">Коммерческое предложение ХК «Шанхай Дрэгонс» — Huawei</span>
+                    <span class="doc__meta">PDF · 2.5 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/case-chelyabinsk-rmk.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u2">Партнёрство ФК «Челябинск» и РМК</span>
+                    <span class="doc__meta">PDF · 4.2 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/case-redbull-f1.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u3">Разбор партнёрства Red Bull и Формулы-1</span>
+                    <span class="doc__meta">PDF · 155 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cat">
+          <summary class="cat__head">
+            <span class="cat__name" data-i18n="c5">Разборы клубов и событий</span>
+            <span class="cat__count">4</span>
+            <svg class="icon cat__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="cat__body">
+            <ul class="docs__list">
+              <li>
+                <a class="doc" href="assets/docs/case-zenit-media.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u4">Анализ медиаактивности ФК «Зенит»</span>
+                    <span class="doc__meta">PDF · 85 <span data-i18n="unit.kb">КБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/case-bc-zenit.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u5">Разбор БК «Зенит» Санкт-Петербург</span>
+                    <span class="doc__meta">PDF · 3.4 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/case-usopen-quality.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u6">Менеджмент качества спортивного проекта: US Open 2025</span>
+                    <span class="doc__meta">PDF · 1.4 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="doc" href="assets/docs/case-hamburger-sv.pdf" download>
+                  <span class="doc__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v6"/><path d="M14 18h1.5a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5H14z"/></svg></span>
+                  <span class="doc__body">
+                    <span class="doc__name" data-i18n="u7">Разбор ФК «Гамбург» (HSV)</span>
+                    <span class="doc__meta">PDF · 9.5 <span data-i18n="unit.mb">МБ</span></span>
+                  </span>
+                  <svg class="icon doc__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== 6. ОПЫТ ========== -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="exp.kicker">Опыт</p>
+        <h2 class="section__title" data-i18n="exp.title">Путь: от трибуны к управлению процессами</h2>
+      </div>
+
+      <div class="timeline">
+
+        <article class="tl" data-reveal>
+          <p class="tl__period" data-i18n="exp1.period">Декабрь 2025 — Май 2026</p>
+          <h3 class="tl__role" data-i18n="exp1.role">Стажёр департамента цифровизации</h3>
+          <div class="tl__meta">
+            <span class="tl__org" data-i18n="exp1.org">Ассоциация профессиональных футбольных клубов «Футбольная национальная лига» (ФНЛ)</span>
+            <span class="tl__dur" data-i18n="exp1.dur">6 месяцев</span>
+          </div>
+          <ul class="tl__points">
+            <li data-i18n="exp1.p1">Провёл исследование ассортимента и каналов продаж атрибутики 73 клубов ФНЛ.</li>
+            <li data-i18n="exp1.p2">Подготовил функциональные требования и техническое задание для подрядчиков по проекту «Маркетплейс ФНЛ».</li>
+            <li data-i18n="exp1.p3">Вёл документооборот и отчётность по проекту через Битрикс24.</li>
+            <li data-i18n="exp1.p4">Взаимодействовал с подрядчиками, заказчиками и командой разработки.</li>
+            <li data-i18n="exp1.p5">Готовил и представлял результаты исследований и требований.</li>
+            <li data-i18n="exp1.p6">По итогам стажировки получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.</li>
+          </ul>
+        </article>
+
+        <article class="tl" data-reveal>
+          <p class="tl__period" data-i18n="exp2.period">Июнь 2025 — Январь 2026</p>
+          <h3 class="tl__role" data-i18n="exp2.role">Администратор спортивного пространства WIN BOX</h3>
+          <div class="tl__meta">
+            <span class="tl__org" data-i18n="exp2.org">Эй Энд Эй Спортс (Рус)</span>
+            <span class="tl__dur" data-i18n="exp2.dur">8 месяцев</span>
+          </div>
+          <ul class="tl__points">
+            <li data-i18n="exp2.p1">Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию.</li>
+            <li data-i18n="exp2.p2">Выдавал спортивное оборудование и инвентарь, отвечал за его сохранность и оборот.</li>
+            <li data-i18n="exp2.p3">Координировал мероприятия на площадке: трансляции Формулы-1, автограф-сессии, шоу-программы.</li>
+            <li data-i18n="exp2.p4">Сопровождал VIP-гостей.</li>
+            <li data-i18n="exp2.p5">Управлял бронированием через собственную админ-панель площадки.</li>
+            <li data-i18n="exp2.p6">Вёл отчётность по посещаемости для компании-партнёра площадки.</li>
+          </ul>
+        </article>
+
+
+        <article class="tl" data-reveal>
+          <p class="tl__period" data-i18n="exp3.period">Сентябрь 2023 — Январь 2025</p>
+          <h3 class="tl__role" data-i18n="exp3.role">Администратор</h3>
+          <div class="tl__meta">
+            <span class="tl__org" data-i18n="exp3.org">Московская федерация футбола</span>
+            <span class="tl__dur" data-i18n="exp3.dur">1 год 5 месяцев</span>
+          </div>
+          <ul class="tl__points">
+            <li data-i18n="exp3.p1">Организовывал детские и студенческие футбольные турниры.</li>
+            <li data-i18n="exp3.p2">Вёл учёт спортивного инвентаря.</li>
+            <li data-i18n="exp3.p3">Развивал медиаприсутствие студенческого турнира: готовил контент для Telegram-канала.</li>
+          </ul>
+        </article>
+
+        <article class="tl" data-reveal>
+          <p class="tl__period" data-i18n="exp4.period">Февраль 2022 — Июнь 2023</p>
+          <h3 class="tl__role" data-i18n="exp4.role">Старший стюард</h3>
+          <div class="tl__meta">
+            <span class="tl__org" data-i18n="exp4.org">Ивент-Сэйфети</span>
+            <span class="tl__dur" data-i18n="exp4.dur">1 год 5 месяцев</span>
+          </div>
+          <ul class="tl__points">
+            <li data-i18n="exp4.p1">Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка.</li>
+            <li data-i18n="exp4.p2">Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.</li>
+            <li data-i18n="exp4.p3">Работал в условиях большого потока людей и строгого тайминга мероприятий.</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="creds" id="education" data-reveal>
+        <h3 class="creds__title" data-i18n="creds.title">Образование и документы</h3>
+        <dl class="creds__list">
+          <div class="creds__row">
+            <dt class="creds__label" data-i18n="creds.1.label">Высшее образование</dt>
+            <dd class="creds__value" data-i18n="creds.1.value">Финансовый университет при Правительстве РФ, «Менеджмент в спорте», 2026. Тема диплома — роль букмекерских компаний в российском спорте</dd>
+          </div>
+          <div class="creds__row">
+            <dt class="creds__label" data-i18n="creds.2.label">Дополнительное обучение</dt>
+            <dd class="creds__value" data-i18n="creds.2.value">Курс «Путь в спорте: обзор индустрии», Факультет, 2026</dd>
+          </div>
+          <div class="creds__row">
+            <dt class="creds__label" data-i18n="creds.3.label">Водительские права</dt>
+            <dd class="creds__value" data-i18n="creds.3.value">Категория B</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. СТЕК И ИНСТРУМЕНТЫ ========== -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="stack.kicker">Стек и инструменты</p>
+        <h2 class="section__title" data-i18n="stack.title">Чем работаю каждый день</h2>
+      </div>
+
+      <div class="stack">
+        <div class="stack__group" data-reveal>
+          <h3 class="stack__title" data-i18n="stack.g1.title">Управление проектами</h3>
+          <div class="stack__tags">
+            <span class="tag" data-i18n="tag.bitrix">Битрикс24</span>
+            <span class="tag" data-i18n="tag.docflow">Документооборот</span>
+            <span class="tag" data-i18n="tag.reporting">Отчётность</span>
+            <span class="tag" data-i18n="tag.vendors">Работа с подрядчиками</span>
+            <span class="tag">Notion</span>
+          </div>
+        </div>
+
+        <div class="stack__group" data-reveal>
+          <h3 class="stack__title" data-i18n="stack.g2.title">Аналитика и документы</h3>
+          <div class="stack__tags">
+            <span class="tag" data-i18n="tag.research">Полевое исследование</span>
+            <span class="tag" data-i18n="tag.reqs">Функциональные требования</span>
+            <span class="tag" data-i18n="tag.spec">Техническое задание</span>
+            <span class="tag" data-i18n="tag.present">Презентации</span>
+            <span class="tag" data-i18n="tag.excel">Excel — продвинутый</span>
+            <span class="tag" data-i18n="tag.sheets">Google Sheets — продвинутый</span>
+            <span class="tag" data-i18n="tag.powerbi">Power BI — продвинутый</span>
+            <span class="tag">PowerPoint</span>
+            <span class="tag">Word</span>
+          </div>
+        </div>
+
+        <div class="stack__group" data-reveal>
+          <h3 class="stack__title" data-i18n="stack.g3.title">ИИ в работе</h3>
+          <div class="stack__tags">
+            <span class="tag" data-i18n="tag.aidocs">Подготовка документов</span>
+            <span class="tag" data-i18n="tag.aianalysis">Разбор и сведение данных</span>
+            <span class="tag" data-i18n="tag.airesearch">Поиск и структурирование информации</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Claude Code</span>
+            <span class="tag">ChatGPT</span>
+            <span class="tag">Gemini</span>
+            <span class="tag">Higgsfield</span>
+          </div>
+        </div>
+
+        <div class="stack__group" data-reveal>
+          <h3 class="stack__title" data-i18n="stack.g4.title">Операционка мероприятий</h3>
+          <div class="stack__tags">
+            <span class="tag" data-i18n="tag.adminpanel">Админ-панель бронирования</span>
+            <span class="tag" data-i18n="tag.eventcoord">Координация мероприятий</span>
+            <span class="tag" data-i18n="tag.safety">Регламенты безопасности</span>
+            <span class="tag" data-i18n="tag.vip">Сопровождение VIP-гостей</span>
+            <span class="tag" data-i18n="tag.teamlead">Руководство группой</span>
+          </div>
+        </div>
+
+        <div class="stack__group" data-reveal>
+          <h3 class="stack__title" data-i18n="stack.g5.title">Языки</h3>
+          <div class="stack__tags">
+            <span class="tag" data-i18n="tag.ru">Русский — родной</span>
+            <span class="tag" data-i18n="tag.en">Английский — C1</span>
+            <span class="tag" data-i18n="tag.de">Немецкий — A1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8. КУДА ДВИГАЮСЬ ========== -->
+  <section class="section" id="next">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="next.kicker">Куда двигаюсь</p>
+        <h2 class="section__title" data-i18n="next.title">Что ищу дальше</h2>
+      </div>
+
+      <div class="goals">
+        <article class="goal" data-reveal>
+          <span class="goal__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+          </span>
+          <h3 class="goal__title" data-i18n="next.1.title">Роль</h3>
+          <p class="goal__text" data-i18n="next.1.text">Менеджер спортивных проектов / менеджер по спортивной атрибутике</p>
+        </article>
+
+        <article class="goal" data-reveal>
+          <span class="goal__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.8"/></svg>
+          </span>
+          <h3 class="goal__title" data-i18n="next.2.title">Формат</h3>
+          <p class="goal__text" data-i18n="next.2.text">Москва — офис, гибрид или удалённо. Готов к командировкам</p>
+        </article>
+
+        <article class="goal" data-reveal>
+          <span class="goal__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </span>
+          <h3 class="goal__title" data-i18n="next.3.title">Индустрия</h3>
+          <p class="goal__text" data-i18n="next.3.text">Спортивные клубы, лиги и федерации, букмекерские компании, площадки и бренды атрибутики</p>
+        </article>
+      </div>
+
+      <ul class="tasks" data-reveal>
+        <li data-i18n="next.task1">Запуск и развитие продаж атрибутики: ассортимент, каналы, партнёры.</li>
+        <li data-i18n="next.task2">Проекты на стыке спорта и цифровизации — от исследования до ТЗ и приёмки.</li>
+        <li data-i18n="next.task3">Координация подрядчиков и внутренних команд на длинных проектах.</li>
+        <li data-i18n="next.task4">Работа в отделе спонсорства клуба или лиги.</li>
+        <li data-i18n="next.task5">Управление стратегией продвижения клуба.</li>
+        <li data-i18n="next.task6">Управление спортивными объектами.</li>
+        <li data-i18n="next.task7">Тестирование и приёмка цифровых продуктов: сайт, приложение, BI-система.</li>
+        <li data-i18n="next.task8">Аналитика посещаемости и подготовка данных для решений.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== СТАДИОНЫ (фотоблок) ========== -->
+  <section class="section" id="photos">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="kicker" data-i18n="photos.kicker">Стадионы</p>
+        <h2 class="section__title" data-i18n="photos.title">Смотрю индустрию с трибуны и изнутри</h2>
+        <p class="section__lead" data-i18n="photos.lead">Езжу на матчи и турниры не только как болельщик: смотрю, как устроены зрительский опыт, навигация, мерч-зоны и работа персонала. Каждая поездка — материал для работы.</p>
+      </div>
+
+      <div class="gallery">
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/real-almeria-2024.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Вид на поле и трибуны стадиона перед матчем Реал Мадрид — Альмерия" data-i18n-alt="ph1.alt">
+          <figcaption><b data-i18n="ph1.title">Реал Мадрид — Альмерия</b><span data-i18n="ph1.meta">Испания, 2024</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/inter-liverpool-2025.webp" width="787" height="1400" loading="lazy" decoding="async" alt="Кадр с матча Интер — Ливерпуль" data-i18n-alt="ph2.alt">
+          <figcaption><b data-i18n="ph2.title">Интер — Ливерпуль</b><span data-i18n="ph2.meta">Италия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/dortmund-bayern-2026.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Трибуна с перформансом болельщиков на матче Боруссия Дортмунд — Бавария" data-i18n-alt="ph3.alt">
+          <figcaption><b data-i18n="ph3.title">Боруссия Дортмунд — Бавария</b><span data-i18n="ph3.meta">Германия, 2026</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/marseille-monaco-2024.webp" width="788" height="1400" loading="lazy" decoding="async" alt="Вечерний вид на трибуны и поле на матче Марсель — Монако" data-i18n-alt="ph4.alt">
+          <figcaption><b data-i18n="ph4.title">Марсель — Монако</b><span data-i18n="ph4.meta">Франция, 2024</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/torino-milan-2025.webp" width="1400" height="787" loading="lazy" decoding="async" alt="Иван Демидов на трибуне на матче Торино — Милан" data-i18n-alt="ph5.alt">
+          <figcaption><b data-i18n="ph5.title">Торино — Милан</b><span data-i18n="ph5.meta">Италия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/fortuna-bochum-2026.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="Иван Демидов на трибуне на матче Фортуна Дюссельдорф — Бохум" data-i18n-alt="ph6.alt">
+          <figcaption><b data-i18n="ph6.title">Фортуна Дюссельдорф — Бохум</b><span data-i18n="ph6.meta">Германия, 2026</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/koln-stpauli-2025.webp" width="1400" height="787" loading="lazy" decoding="async" alt="Иван Демидов на трибуне на матче Кёльн — Санкт-Паули" data-i18n-alt="ph7.alt">
+          <figcaption><b data-i18n="ph7.title">Кёльн — Санкт-Паули</b><span data-i18n="ph7.meta">Германия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/hsv-werder-2025-1.webp" width="787" height="1400" loading="lazy" decoding="async" alt="Кадр с матча Гамбург — Вердер Бремен" data-i18n-alt="ph8.alt">
+          <figcaption><b data-i18n="ph8.title">Гамбург — Вердер Бремен</b><span data-i18n="ph8.meta">Германия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/rayo-laspalmas-2024.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Дневной матч Райо Вальекано — Лас-Пальмас, вид на поле и трибуны" data-i18n-alt="ph9.alt">
+          <figcaption><b data-i18n="ph9.title">Райо Вальекано — Лас-Пальмас</b><span data-i18n="ph9.meta">Испания, 2024</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/inter-liverpool-2025-1.webp" width="1400" height="787" loading="lazy" decoding="async" alt="Иван Демидов на трибуне на матче Интер — Ливерпуль" data-i18n-alt="ph10.alt">
+          <figcaption><b data-i18n="ph10.title">Интер — Ливерпуль</b><span data-i18n="ph10.meta">Италия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/almaty-open-2025.webp" width="787" height="1400" loading="lazy" decoding="async" alt="Иван Демидов на трибуне теннисного турнира Almaty Open" data-i18n-alt="ph11.alt">
+          <figcaption><b data-i18n="ph11.title">Almaty Open, ATP 250</b><span data-i18n="ph11.meta">Казахстан, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/hsv-werder-2025.webp" width="1400" height="787" loading="lazy" decoding="async" alt="Иван Демидов на трибуне на матче Гамбург — Вердер Бремен" data-i18n-alt="ph12.alt">
+          <figcaption><b data-i18n="ph12.title">Гамбург — Вердер Бремен</b><span data-i18n="ph12.meta">Германия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/koln-stpauli-2025-1.webp" width="787" height="1400" loading="lazy" decoding="async" alt="Кадр с матча Кёльн — Санкт-Паули" data-i18n-alt="ph13.alt">
+          <figcaption><b data-i18n="ph13.title">Кёльн — Санкт-Паули</b><span data-i18n="ph13.meta">Германия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/real-almeria-2024-1.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Кадр с матча Реал Мадрид — Альмерия" data-i18n-alt="ph14.alt">
+          <figcaption><b data-i18n="ph14.title">Реал Мадрид — Альмерия</b><span data-i18n="ph14.meta">Испания, 2024</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/hsv-werder-2025-2.webp" width="787" height="1400" loading="lazy" decoding="async" alt="Кадр с матча Гамбург — Вердер Бремен" data-i18n-alt="ph15.alt">
+          <figcaption><b data-i18n="ph15.title">Гамбург — Вердер Бремен</b><span data-i18n="ph15.meta">Германия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/inter-liverpool-2025-2.webp" width="1400" height="787" loading="lazy" decoding="async" alt="Панорамный кадр с матча Интер — Ливерпуль" data-i18n-alt="ph16.alt">
+          <figcaption><b data-i18n="ph16.title">Интер — Ливерпуль</b><span data-i18n="ph16.meta">Италия, 2025</span></figcaption>
+        </figure>
+
+        <figure class="shot" data-reveal>
+          <img src="assets/photos/hsv-werder-2025-3.webp" width="1400" height="787" loading="lazy" decoding="async" alt="Панорамный кадр с матча Гамбург — Вердер Бремен" data-i18n-alt="ph17.alt">
+          <figcaption><b data-i18n="ph17.title">Гамбург — Вердер Бремен</b><span data-i18n="ph17.meta">Германия, 2025</span></figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 9. КОНТАКТЫ ========== -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div data-reveal>
+        <p class="kicker" data-i18n="contact.kicker">Контакты</p>
+        <h2 class="contact__title" data-i18n="contact.title">Напишите — отвечу в тот же день</h2>
+        <p class="contact__lead" data-i18n="contact.lead">Расскажите задачу — отвечу, чем могу быть полезен. Резюме и рекомендацию исполнительного директора ФНЛ высылаю по запросу.</p>
+      </div>
+
+      <div class="contact__links" data-reveal>
+        <a class="contact__link" href="mailto:ivandemidov18@icloud.com">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 8 9 5.5L21 8"/></svg>
+          <span class="contact__link-body">
+            <span class="contact__link-label" data-i18n="contact.email.label">Почта</span>
+            <span class="contact__link-value">ivandemidov18@icloud.com</span>
+          </span>
+        </a>
+
+        <a class="contact__link" href="https://t.me/demidov_ivan1" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3 10.8 13.7"/><path d="M21.5 3 14.7 22l-3.9-8.3L2.5 9.8 21.5 3z"/></svg>
+          <span class="contact__link-body">
+            <span class="contact__link-label" data-i18n="contact.tg.label">Телеграм</span>
+            <span class="contact__link-value">@demidov_ivan1</span>
+          </span>
+        </a>
+
+        <a class="contact__link" href="tel:+79854325352">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span class="contact__link-body">
+            <span class="contact__link-label" data-i18n="contact.phone.label">Телефон</span>
+            <span class="contact__link-value">+7 985 432-53-52</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="contact__actions" data-reveal>
+        <a class="btn btn--primary" href="Demidov_Ivan_Sport_Manager_CV.pdf" download><span data-i18n="contact.resume">Скачать резюме (PDF)</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== 10. ПОДВАЛ ========== -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <p class="footer__brand" data-i18n="brand">Иван Демидов</p>
+      <p class="footer__copy">
+        <span>&copy;</span>
+        <span id="year">2026</span>
+        <span data-i18n="footer.rights">Иван Демидов. Все права защищены.</span>
+      </p>
+    </div>
+    <nav class="footer__links" aria-label="Контакты в подвале" data-i18n-aria-label="a11y.footernav">
+      <a href="mailto:ivandemidov18@icloud.com">ivandemidov18@icloud.com</a>
+      <a href="https://t.me/demidov_ivan1" target="_blank" rel="noopener noreferrer">@demidov_ivan1</a>
+      <a href="tel:+79854325352">+7 985 432-53-52</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ==========================================================
+     СЛОВАРЬ ПЕРЕВОДОВ
+     Оба языка написаны как самостоятельные тексты.
+     ========================================================== */
+  var i18n = {
+    ru: {
+      "meta.title": "Иван Демидов — менеджер спортивных проектов",
+      "meta.desc": "Иван Демидов — менеджер в спортивной организации. Исследование рынка атрибутики, требования и ТЗ для подрядчиков, ведение проектов, операционка спортивных площадок и мероприятий.",
+
+      "a11y.skip": "К основному содержанию",
+      "a11y.nav": "Основная навигация",
+      "a11y.lang": "Язык сайта",
+      "a11y.menu": "Открыть меню",
+      "a11y.footernav": "Контакты в подвале",
+
+      "brand": "Иван Демидов",
+      "nav.about": "О себе",
+      "nav.services": "Чем занимаюсь",
+      "nav.work": "Работы",
+      "nav.docs": "Материалы",
+      "nav.experience": "Опыт",
+      "nav.education": "Образование",
+      "nav.stack": "Инструменты",
+      "nav.next": "Куда двигаюсь",
+      "nav.photos": "Стадионы",
+      "nav.cta": "Связаться",
+
+      "hero.status": "В активном поиске постоянного места работы",
+      "hero.name": "Иван Демидов",
+      "hero.role": "Менеджер спортивных проектов: цифровизация, атрибутика и работа спортивных площадок",
+      "hero.lead": "Веду спортивные проекты от исследования рынка и написания технического задания до координации подрядчиков и работы площадки в день мероприятия.",
+      "hero.cta1": "Написать мне",
+      "hero.cta2": "Посмотреть работы",
+      "hero.portrait.alt": "Портрет Ивана Демидова",
+      "hero.fact1.value": "73",
+      "hero.fact1.label": "клуба ФНЛ в исследовании ассортимента и каналов продаж",
+      "hero.fact2.value": "3,8",
+      "hero.fact2.label": "года опыта в спортивной индустрии — от стюардинга до цифровизации лиги",
+      "hero.fact3.value": "80",
+      "hero.fact3.label": "страниц функциональных требований к «Маркетплейсу ФНЛ»",
+
+      "about.kicker": "О себе",
+      "about.title": "Спорт как индустрия: продукт, процессы, площадка",
+      "about.p1": "Я работаю в спортивной индустрии со стороны организации: отвечаю за процессы на своём участке и довожу задачи до результата. Мне одинаково интересны и продуктовая часть — что и как продавать болельщику, — и операционная: как сделать так, чтобы в день матча всё работало по таймингу.",
+      "about.p2": "За последние годы прошёл три разные роли: стажировку в департаменте цифровизации ФНЛ, администрирование спортивного пространства WIN BOX и руководство группой стюардов на матчах РПЛ, Кубка России и КХЛ. Это дало мне и штабной опыт — исследование, требования, документооборот, — и полевой, где ошибки видны сразу.",
+      "about.p3": "Многозадачный и целеустремлённый: спокойно веду несколько направлений параллельно и не бросаю задачу на середине. Люблю футбол и теннис — езжу на матчи и турниры, чтобы смотреть, как устроен зрительский опыт изнутри. В работе активно использую ИИ: он закрывает рутину с документами, аналитикой и подготовкой материалов.",
+      "about.photo.alt": "Иван Демидов за столом пресс-конференции на стадионе Сан-Мамес",
+      "about.photo.caption": "Сан-Мамес, экскурсия по стадиону, 2024",
+
+      "svc.kicker": "Чем занимаюсь",
+      "svc.title": "Четыре задачи, которые я закрываю целиком",
+      "svc.1.title": "Исследование рынка и ассортимента",
+      "svc.1.text": "Разбираю, что продают конкуренты, через какие каналы и по какой логике. Свожу разрозненную картину по десяткам клубов в одну таблицу, из которой уже видно продуктовое решение.",
+      "svc.2.title": "Требования и ТЗ для подрядчиков",
+      "svc.2.text": "Перевожу бизнес-задачу на язык, по которому подрядчик может оценить сроки и бюджет, а разработка — начать работу без десяти уточняющих созвонов.",
+      "svc.3.title": "Ведение проекта и документооборот",
+      "svc.3.text": "Держу проект в одном месте: задачи, статусы, отчётность, переписка с подрядчиками и заказчиком. Готовлю и защищаю результаты перед руководством.",
+      "svc.4.title": "Операционка площадок и мероприятий",
+      "svc.4.text": "Отвечаю за то, чтобы в день события всё шло по плану: бронирование, инвентарь, гости, тайминг, работа команды на участке и отчётность по итогам.",
+
+      "work.kicker": "Работы",
+      "work.title": "Три задачи и что из них вышло",
+      "label.task": "Задача",
+      "label.did": "Что сделал",
+      "label.stack": "Инструменты",
+      "label.result": "Результат",
+
+      "case1.num": "01",
+      "case1.title": "Маркетплейс ФНЛ: атрибутика 73 клубов в одном месте",
+      "case1.org": "ФНЛ, 2025–2026",
+      "case1.task": "73 клуба лиги продавали атрибутику разрозненно: у лиги не было единой картины по ассортименту и каналам продаж, а значит, не на чем было строить общий маркетплейс.",
+      "case1.did": "Провёл исследование ассортимента и каналов продаж всех 73 клубов ФНЛ. На его основе подготовил функциональные требования и техническое задание для подрядчиков, вёл документооборот и отчётность по проекту, взаимодействовал с подрядчиками, заказчиками и командой разработки, готовил и представлял результаты.",
+      "case1.result": "Написаны функциональные требования к будущему «Маркетплейсу ФНЛ» — около 80 страниц документации. Требования и ТЗ переданы подрядчикам и команде разработки, начало разработки запланировано на следующий сезон. По итогам работы получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.",
+      "case1.link": "Запросить материалы и рекомендацию",
+
+      "case2.num": "02",
+      "case2.title": "WIN BOX: спортивное пространство в режиме нон-стоп",
+      "case2.org": "Эй Энд Эй Спортс (Рус), 2025–2026",
+      "case2.task": "Площадка одновременно работала на поток клиентов, партнёров и событий: брони, инвентарь, показы для потенциальных заказчиков, VIP-гости и отчётность — всё это нужно было держать под контролем в одни и те же часы.",
+      "case2.did": "Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию, выдавал спортивное оборудование и инвентарь. Координировал мероприятия — трансляции Формулы-1, автограф-сессии, шоу-программы — и сопровождал VIP-гостей. Управлял бронированием через админ-панель и вёл отчётность по посещаемости для компании-партнёра площадки.",
+      "case2.result": "Провёл более 200 мероприятий на площадке. Посещаемость стабильно росла всё лето, к осени пошла на спад.",
+      "case2.link": "Расскажу подробнее",
+
+      "case3.num": "03",
+      "case3.title": "Старший стюард на матчах РПЛ, Кубка России и КХЛ",
+      "case3.org": "Ивент-Сэйфети, 2022–2023",
+      "case3.task": "На матчах с большим потоком зрителей и жёстким таймингом нужен не набор людей на позициях, а управляемый участок, за который кто-то отвечает головой.",
+      "case3.did": "Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка. Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.",
+      "case3.result": "Отвечал за закреплённый участок с группой около 15 стюардов на матчах РПЛ, Кубка России и КХЛ. Работа шла по схемам объекта и на радиосвязи с остальными участками.",
+      "case3.link": "Расскажу подробнее",
+
+      "tag.bitrix": "Битрикс24",
+      "tag.ai": "ИИ-инструменты",
+      "tag.sources": "Официальные источники ФНЛ и клубов",
+      "tag.cms": "CMS-панель",
+      "tag.research": "Исследование рынка",
+      "tag.reqs": "Функциональные требования",
+      "tag.spec": "Техническое задание",
+      "tag.present": "Презентации",
+      "tag.adminpanel": "Админ-панель бронирования",
+      "tag.reporting": "Отчётность",
+      "tag.eventcoord": "Координация мероприятий",
+      "tag.teamlead": "Руководство группой",
+      "tag.radio": "Радиосвязь",
+      "tag.plans": "Схемы объекта",
+      "tag.excel": "Excel — продвинутый",
+      "tag.sheets": "Google Sheets — продвинутый",
+      "tag.powerbi": "Power BI — продвинутый",
+      "tag.safety": "Регламенты безопасности",
+      "tag.timing": "Работа по таймингу",
+      "tag.docflow": "Документооборот",
+      "tag.vendors": "Работа с подрядчиками",
+      "tag.aidocs": "Подготовка документов",
+      "tag.aianalysis": "Разбор и сведение данных",
+      "tag.airesearch": "Поиск и структурирование информации",
+      "tag.vip": "Сопровождение VIP-гостей",
+      "tag.ru": "Русский — родной",
+      "tag.en": "Английский — C1",
+      "tag.de": "Немецкий — A1",
+
+      "creds.title": "Образование и документы",
+      "creds.1.label": "Высшее образование",
+      "creds.1.value": "Финансовый университет при Правительстве РФ, «Менеджмент в спорте», 2026. Тема диплома — роль букмекерских компаний в российском спорте",
+      "creds.2.label": "Дополнительное обучение",
+      "creds.2.value": "Курс «Путь в спорте: обзор индустрии», Факультет, 2026",
+      "creds.3.label": "Водительские права",
+      "creds.3.value": "Категория B",
+      "unit.kb": "КБ",
+      "unit.mb": "МБ",
+      "c1": "Маркетплейс ФНЛ: требования",
+      "c2": "Исследование рынка атрибутики",
+      "c3": "Аналитика посещаемости",
+      "c4": "Спонсорство и партнёрства",
+      "c5": "Разборы клубов и событий",
+      "req.title": "Отзыв о стажировке от исполнительного директора ФНЛ",
+      "req.text": "Официальный документ с печатью и подписью. Высылаю лично: оставьте контакты, и я пришлю его вам.",
+      "req.name": "Имя",
+      "req.company": "Компания",
+      "req.contact": "Email или телефон",
+      "req.submit": "Запросить отзыв",
+      "req.hint": "Кнопка откроет почтовый клиент с готовым письмом. Можно и напрямую: ivandemidov18@icloud.com или @demidov_ivan1 в Telegram.",
+      "req.subject": "Запрос отзыва о стажировке в ФНЛ",
+      "req.intro": "Здравствуйте, Иван! Прошу прислать отзыв о стажировке в ФНЛ.",
+      "req.sent": "Письмо сформировано — осталось отправить его из почтового клиента.",
+      "req.fill": "Заполните все три поля, чтобы я знал, кому отвечать.",
+      "docs.kicker": "Материалы",
+      "docs.title": "Что я делал: документы и работы",
+      "d2": "Презентация проекта «Маркетплейс ФНЛ»",
+      "d3": "Функциональные требования к маркетплейсу",
+      "d4": "Требования к главной странице",
+      "d5": "Требования к карточке товара",
+      "d6": "Перечень функций маркетплейса",
+      "d7": "Исследование магазинов 73 клубов ФНЛ",
+      "d8": "Выводы по исследованию магазинов",
+      "d9": "Требования к визуализации посещаемости ФНЛ",
+      "d10": "Требования к визуализации посещаемости по регионам",
+      "u1": "Коммерческое предложение ХК «Шанхай Дрэгонс» — Huawei",
+      "u2": "Партнёрство ФК «Челябинск» и РМК",
+      "u3": "Разбор партнёрства Red Bull и Формулы-1",
+      "u4": "Анализ медиаактивности ФК «Зенит»",
+      "u5": "Разбор БК «Зенит» Санкт-Петербург",
+      "u6": "Менеджмент качества спортивного проекта: US Open 2025",
+      "u7": "Разбор ФК «Гамбург» (HSV)",
+      "exp.kicker": "Опыт",
+      "exp.title": "Путь: от трибуны к управлению процессами",
+      "exp1.period": "Декабрь 2025 — Май 2026",
+      "exp1.role": "Стажёр департамента цифровизации",
+      "exp1.org": "Ассоциация профессиональных футбольных клубов «Футбольная национальная лига» (ФНЛ)",
+      "exp1.dur": "6 месяцев",
+      "exp1.p1": "Провёл исследование ассортимента и каналов продаж атрибутики 73 клубов ФНЛ.",
+      "exp1.p2": "Подготовил функциональные требования и техническое задание для подрядчиков по проекту «Маркетплейс ФНЛ».",
+      "exp1.p3": "Вёл документооборот и отчётность по проекту через Битрикс24.",
+      "exp1.p4": "Взаимодействовал с подрядчиками, заказчиками и командой разработки.",
+      "exp1.p5": "Готовил и представлял результаты исследований и требований.",
+      "exp1.p6": "По итогам стажировки получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.",
+      "exp2.period": "Июнь 2025 — Январь 2026",
+      "exp2.role": "Администратор спортивного пространства WIN BOX",
+      "exp2.org": "Эй Энд Эй Спортс (Рус)",
+      "exp2.dur": "8 месяцев",
+      "exp2.p1": "Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию.",
+      "exp2.p2": "Выдавал спортивное оборудование и инвентарь, отвечал за его сохранность и оборот.",
+      "exp2.p3": "Координировал мероприятия на площадке: трансляции Формулы-1, автограф-сессии, шоу-программы.",
+      "exp2.p4": "Сопровождал VIP-гостей.",
+      "exp2.p5": "Управлял бронированием через собственную админ-панель площадки.",
+      "exp2.p6": "Вёл отчётность по посещаемости для компании-партнёра площадки.",
+      "exp3.period": "Сентябрь 2023 — Январь 2025",
+      "exp3.role": "Администратор",
+      "exp3.org": "Московская федерация футбола",
+      "exp3.dur": "1 год 5 месяцев",
+      "exp3.p1": "Организовывал детские и студенческие футбольные турниры.",
+      "exp3.p2": "Вёл учёт спортивного инвентаря.",
+      "exp3.p3": "Развивал медиаприсутствие студенческого турнира: готовил контент для Telegram-канала.",
+      "exp4.period": "Февраль 2022 — Июнь 2023",
+      "exp4.role": "Старший стюард",
+      "exp4.org": "Ивент-Сэйфети",
+      "exp4.dur": "1 год 5 месяцев",
+      "exp4.p1": "Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка.",
+      "exp4.p2": "Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.",
+      "exp4.p3": "Работал в условиях большого потока людей и строгого тайминга мероприятий.",
+
+      "stack.kicker": "Стек и инструменты",
+      "stack.title": "Чем работаю каждый день",
+      "stack.g1.title": "Управление проектами",
+      "stack.g2.title": "Аналитика и документы",
+      "stack.g3.title": "ИИ в работе",
+      "stack.g4.title": "Операционка мероприятий",
+      "stack.g5.title": "Языки",
+
+      "next.kicker": "Куда двигаюсь",
+      "next.title": "Что ищу дальше",
+      "next.1.title": "Роль",
+      "next.1.text": "Менеджер спортивных проектов / менеджер по спортивной атрибутике",
+      "next.2.title": "Формат",
+      "next.2.text": "Москва — офис, гибрид или удалённо. Готов к командировкам",
+      "next.3.title": "Индустрия",
+      "next.3.text": "Спортивные клубы, лиги и федерации, букмекерские компании, площадки и бренды атрибутики",
+      "next.task1": "Запуск и развитие продаж атрибутики: ассортимент, каналы, партнёры.",
+      "next.task2": "Проекты на стыке спорта и цифровизации — от исследования до ТЗ и приёмки.",
+      "next.task3": "Координация подрядчиков и внутренних команд на длинных проектах.",
+      "next.task4": "Работа в отделе спонсорства клуба или лиги.",
+      "next.task5": "Управление стратегией продвижения клуба.",
+      "next.task6": "Управление спортивными объектами.",
+      "next.task7": "Тестирование и приёмка цифровых продуктов: сайт, приложение, BI-система.",
+      "next.task8": "Аналитика посещаемости и подготовка данных для решений.",
+
+      "photos.kicker": "Стадионы",
+      "photos.title": "Смотрю индустрию с трибуны и изнутри",
+      "photos.lead": "Езжу на матчи и турниры не только как болельщик: смотрю, как устроены зрительский опыт, навигация, мерч-зоны и работа персонала. Каждая поездка — материал для работы.",
+
+      "ph1.title": "Реал Мадрид — Альмерия",
+      "ph1.meta": "Испания, 2024",
+      "ph1.alt": "Вид на поле и трибуны стадиона перед матчем Реал Мадрид — Альмерия",
+      "ph2.title": "Интер — Ливерпуль",
+      "ph2.meta": "Италия, 2025",
+      "ph2.alt": "Кадр с матча Интер — Ливерпуль",
+      "ph3.title": "Боруссия Дортмунд — Бавария",
+      "ph3.meta": "Германия, 2026",
+      "ph3.alt": "Трибуна с перформансом болельщиков на матче Боруссия Дортмунд — Бавария",
+      "ph4.title": "Марсель — Монако",
+      "ph4.meta": "Франция, 2024",
+      "ph4.alt": "Вечерний вид на трибуны и поле на матче Марсель — Монако",
+      "ph5.title": "Торино — Милан",
+      "ph5.meta": "Италия, 2025",
+      "ph5.alt": "Иван Демидов на трибуне на матче Торино — Милан",
+      "ph6.title": "Фортуна Дюссельдорф — Бохум",
+      "ph6.meta": "Германия, 2026",
+      "ph6.alt": "Иван Демидов на трибуне на матче Фортуна Дюссельдорф — Бохум",
+      "ph7.title": "Кёльн — Санкт-Паули",
+      "ph7.meta": "Германия, 2025",
+      "ph7.alt": "Иван Демидов на трибуне на матче Кёльн — Санкт-Паули",
+      "ph8.title": "Гамбург — Вердер Бремен",
+      "ph8.meta": "Германия, 2025",
+      "ph8.alt": "Кадр с матча Гамбург — Вердер Бремен",
+      "ph9.title": "Райо Вальекано — Лас-Пальмас",
+      "ph9.meta": "Испания, 2024",
+      "ph9.alt": "Дневной матч Райо Вальекано — Лас-Пальмас, вид на поле и трибуны",
+      "ph10.title": "Интер — Ливерпуль",
+      "ph10.meta": "Италия, 2025",
+      "ph10.alt": "Иван Демидов на трибуне на матче Интер — Ливерпуль",
+      "ph11.title": "Almaty Open, ATP 250",
+      "ph11.meta": "Казахстан, 2025",
+      "ph11.alt": "Иван Демидов на трибуне теннисного турнира Almaty Open",
+      "ph12.title": "Гамбург — Вердер Бремен",
+      "ph12.meta": "Германия, 2025",
+      "ph12.alt": "Иван Демидов на трибуне на матче Гамбург — Вердер Бремен",
+      "ph13.title": "Кёльн — Санкт-Паули",
+      "ph13.meta": "Германия, 2025",
+      "ph13.alt": "Кадр с матча Кёльн — Санкт-Паули",
+      "ph14.title": "Реал Мадрид — Альмерия",
+      "ph14.meta": "Испания, 2024",
+      "ph14.alt": "Кадр с матча Реал Мадрид — Альмерия",
+      "ph15.title": "Гамбург — Вердер Бремен",
+      "ph15.meta": "Германия, 2025",
+      "ph15.alt": "Кадр с матча Гамбург — Вердер Бремен",
+      "ph16.title": "Интер — Ливерпуль",
+      "ph16.meta": "Италия, 2025",
+      "ph16.alt": "Панорамный кадр с матча Интер — Ливерпуль",
+      "ph17.title": "Гамбург — Вердер Бремен",
+      "ph17.meta": "Германия, 2025",
+      "ph17.alt": "Панорамный кадр с матча Гамбург — Вердер Бремен",
+
+      "contact.kicker": "Контакты",
+      "contact.title": "Напишите — отвечу в тот же день",
+      "contact.lead": "Расскажите задачу — отвечу, чем могу быть полезен. Резюме и рекомендацию исполнительного директора ФНЛ высылаю по запросу.",
+      "contact.email.label": "Почта",
+      "contact.tg.label": "Телеграм",
+      "contact.phone.label": "Телефон",
+      "contact.resume": "Скачать резюме (PDF)",
+
+      "footer.rights": "Иван Демидов. Все права защищены."
+    },
+
+    en: {
+      "meta.title": "Ivan Demidov — Sports Project Manager",
+      "meta.desc": "Ivan Demidov — manager at a sports organisation. Merchandise market research, requirements and specs for vendors, project delivery, and day-of operations for sports venues and events.",
+
+      "a11y.skip": "Skip to main content",
+      "a11y.nav": "Main navigation",
+      "a11y.lang": "Site language",
+      "a11y.menu": "Open menu",
+      "a11y.footernav": "Footer contacts",
+
+      "brand": "Ivan Demidov",
+      "nav.about": "About",
+      "nav.services": "What I do",
+      "nav.work": "Work",
+      "nav.docs": "Materials",
+      "nav.experience": "Experience",
+      "nav.education": "Education",
+      "nav.stack": "Tools",
+      "nav.next": "What's next",
+      "nav.photos": "Stadiums",
+      "nav.cta": "Get in touch",
+
+      "hero.status": "Actively looking for a permanent position",
+      "hero.name": "Ivan Demidov",
+      "hero.role": "Sports project manager: digitalisation, merchandise and venue operations",
+      "hero.lead": "I take sports projects from market research and the written spec all the way through to vendor coordination and the venue running smoothly on event day.",
+      "hero.cta1": "Email me",
+      "hero.cta2": "See my work",
+      "hero.portrait.alt": "Portrait of Ivan Demidov",
+      "hero.fact1.value": "73",
+      "hero.fact1.label": "FNL clubs covered in my merchandise and sales-channel study",
+      "hero.fact2.value": "3.8",
+      "hero.fact2.label": "years in the sports industry — from stewarding to league digitalisation",
+      "hero.fact3.value": "80",
+      "hero.fact3.label": "pages of functional requirements written for the FNL Marketplace",
+
+      "about.kicker": "About",
+      "about.title": "Sport as an industry: product, process, venue",
+      "about.p1": "I work in sport from the organiser's side: I own the processes on my patch and see tasks through to a result. The product side interests me as much as the operational one — what you sell a supporter and how, and how to make matchday run to the minute.",
+      "about.p2": "Over the past few years I have held three very different roles: an internship in the FNL digitalisation department, running the WIN BOX sports venue, and leading a steward team at Russian Premier League, Russian Cup and KHL matches. That gave me both the desk side — research, requirements, paperwork — and the field side, where mistakes show up immediately.",
+      "about.p3": "I handle several tracks at once and I do not drop a task halfway. Football and tennis are what I genuinely follow — I travel to matches and tournaments to study the spectator experience from the inside. And I use AI heavily in my work: it clears the routine around documents, analysis and preparing materials.",
+      "about.photo.alt": "Ivan Demidov at the press conference desk at San Mamés stadium",
+      "about.photo.caption": "San Mamés, stadium tour, 2024",
+
+      "svc.kicker": "What I do",
+      "svc.title": "Four jobs I own end to end",
+      "svc.1.title": "Market and assortment research",
+      "svc.1.text": "I work out what competitors sell, through which channels and on what logic. Dozens of scattered club catalogues turn into one table that a product decision can actually be made from.",
+      "svc.2.title": "Requirements and vendor specs",
+      "svc.2.text": "I translate a business problem into language a vendor can price and schedule against, and a dev team can start on without ten clarification calls.",
+      "svc.3.title": "Project delivery and paperwork",
+      "svc.3.text": "I keep the project in one place: tasks, statuses, reporting, and the thread with vendors and the client. I prepare the results and present them to management.",
+      "svc.4.title": "Venue and event operations",
+      "svc.4.text": "I make sure event day goes to plan: bookings, equipment, guests, timing, the team on my section, and the reporting afterwards.",
+
+      "work.kicker": "Work",
+      "work.title": "Three problems and what came out of them",
+      "label.task": "Problem",
+      "label.did": "What I did",
+      "label.stack": "Tools",
+      "label.result": "Outcome",
+
+      "case1.num": "01",
+      "case1.title": "FNL Marketplace: merchandise from 73 clubs in one place",
+      "case1.org": "FNL, 2025–2026",
+      "case1.task": "The league's 73 clubs sold merchandise separately. There was no single picture of what was on sale or through which channels — and therefore nothing to build a shared marketplace on.",
+      "case1.did": "I ran a study of the merchandise range and sales channels of all 73 FNL clubs. On that basis I wrote the functional requirements and the technical specification for vendors, maintained project documentation and reporting, worked with vendors, clients and the development team, and prepared and presented the findings.",
+      "case1.result": "The functional requirements for the future FNL Marketplace were written out in full — around 80 pages of documentation. Requirements and the spec went to the vendors and the development team, and development is scheduled to start next season. The work earned me a written recommendation from the FNL executive director — available on request.",
+      "case1.link": "Request the materials and recommendation",
+
+      "case2.num": "02",
+      "case2.title": "WIN BOX: a sports venue running non-stop",
+      "case2.org": "A&A Sports (Rus), 2025–2026",
+      "case2.task": "The venue served a stream of clients, partners and events at the same time: bookings, equipment, walkthroughs for prospective clients, VIP guests and reporting all had to be held together within the same hours.",
+      "case2.did": "I gave venue walkthroughs to clients and partners, advised on bookings, and issued sports equipment and gear. I coordinated on-site events — Formula 1 screenings, autograph sessions and show programmes — and looked after VIP guests. I managed bookings through the venue's own admin panel and kept attendance reporting for the venue's partner company.",
+      "case2.result": "Ran more than 200 events at the venue. Attendance grew steadily through the summer and tailed off towards autumn.",
+      "case2.link": "Happy to walk you through it",
+
+      "case3.num": "03",
+      "case3.title": "Senior steward at Russian Premier League, Cup and KHL matches",
+      "case3.org": "Event Safety, 2022–2023",
+      "case3.task": "At matches with heavy crowd flow and a strict schedule, what you need is not people standing at posts but a managed section that somebody is personally accountable for.",
+      "case3.did": "I led a steward team on an assigned section of the venue: setting tasks, checking they were done, and owning the result for that section. I coordinated crowd safety and spectator experience at Russian Premier League, Russian Cup and KHL matches.",
+      "case3.result": "I owned an assigned section with a team of around 15 stewards at Russian Premier League, Russian Cup and KHL matches, working from the venue plans and on radio with the other sections.",
+      "case3.link": "Happy to walk you through it",
+
+      "tag.bitrix": "Bitrix24",
+      "tag.ai": "AI tools",
+      "tag.sources": "Official FNL and club sources",
+      "tag.cms": "CMS panel",
+      "tag.research": "Market research",
+      "tag.reqs": "Functional requirements",
+      "tag.spec": "Technical specification",
+      "tag.present": "Presentations",
+      "tag.adminpanel": "Booking admin panel",
+      "tag.reporting": "Reporting",
+      "tag.eventcoord": "Event coordination",
+      "tag.teamlead": "Team leadership",
+      "tag.radio": "Radio comms",
+      "tag.plans": "Venue plans",
+      "tag.excel": "Excel — advanced",
+      "tag.sheets": "Google Sheets — advanced",
+      "tag.powerbi": "Power BI — advanced",
+      "tag.safety": "Safety protocols",
+      "tag.timing": "Working to schedule",
+      "tag.docflow": "Document management",
+      "tag.vendors": "Vendor management",
+      "tag.aidocs": "Drafting documents",
+      "tag.aianalysis": "Parsing and consolidating data",
+      "tag.airesearch": "Research and structuring",
+      "tag.vip": "VIP guest hosting",
+      "tag.ru": "Russian — native",
+      "tag.en": "English — C1",
+      "tag.de": "German — A1",
+
+      "creds.title": "Education and credentials",
+      "creds.1.label": "Degree",
+      "creds.1.value": "Financial University under the Government of the Russian Federation — Sports Management, 2026. Thesis: the role of betting companies in Russian sport",
+      "creds.2.label": "Further training",
+      "creds.2.value": "Course “A Career in Sport: an industry overview”, Fakultet, 2026",
+      "creds.3.label": "Driving licence",
+      "creds.3.value": "Category B",
+      "unit.kb": "KB",
+      "unit.mb": "MB",
+      "c1": "FNL Marketplace: requirements",
+      "c2": "Merchandise market research",
+      "c3": "Attendance analytics",
+      "c4": "Sponsorship and partnerships",
+      "c5": "Club and event case studies",
+      "req.title": "Internship reference from the FNL executive director",
+      "req.text": "An official document with a stamp and signature. I send it personally: leave your details and I will forward it to you.",
+      "req.name": "Name",
+      "req.company": "Company",
+      "req.contact": "Email or phone",
+      "req.submit": "Request the reference",
+      "req.hint": "The button opens your mail client with the message ready. Or write directly: ivandemidov18@icloud.com or @demidov_ivan1 on Telegram.",
+      "req.subject": "Request for the FNL internship reference",
+      "req.intro": "Hello Ivan, could you send me your FNL internship reference?",
+      "req.sent": "The message is ready — send it from your mail client.",
+      "req.fill": "Please fill in all three fields so I know who to reply to.",
+      "docs.kicker": "Materials",
+      "docs.title": "What I have worked on: documents and coursework",
+      "d2": "“FNL Marketplace” project presentation",
+      "d3": "Functional requirements for the marketplace",
+      "d4": "Requirements for the home page",
+      "d5": "Requirements for the product page",
+      "d6": "List of marketplace features",
+      "d7": "Study of the online shops of 73 FNL clubs",
+      "d8": "Conclusions from the shop study",
+      "d9": "Requirements for the FNL attendance dashboard",
+      "d10": "Requirements for the regional attendance dashboard",
+      "u1": "Sponsorship proposal: Shanghai Dragons HC — Huawei",
+      "u2": "Partnership: FC Chelyabinsk and RMK",
+      "u3": "Case study: Red Bull and Formula 1",
+      "u4": "Media activity analysis of FC Zenit",
+      "u5": "Case study: Zenit Saint Petersburg basketball club",
+      "u6": "Quality management of a sports project: US Open 2025",
+      "u7": "Case study: Hamburger SV",
+      "exp.kicker": "Experience",
+      "exp.title": "From the stands to running the process",
+      "exp1.period": "December 2025 — May 2026",
+      "exp1.role": "Intern, Digitalisation Department",
+      "exp1.org": "Association of Professional Football Clubs \"Football National League\" (FNL)",
+      "exp1.dur": "6 months",
+      "exp1.p1": "Ran a study of the merchandise range and sales channels of 73 FNL clubs.",
+      "exp1.p2": "Wrote the functional requirements and technical specification for vendors on the FNL Marketplace project.",
+      "exp1.p3": "Maintained project documentation and reporting in Bitrix24.",
+      "exp1.p4": "Worked with vendors, clients and the development team.",
+      "exp1.p5": "Prepared and presented research findings and requirements.",
+      "exp1.p6": "Finished the internship with a written recommendation from the FNL executive director — available on request.",
+      "exp2.period": "June 2025 — January 2026",
+      "exp2.role": "Venue Administrator, WIN BOX sports space",
+      "exp2.org": "A&A Sports (Rus)",
+      "exp2.dur": "8 months",
+      "exp2.p1": "Gave venue walkthroughs to clients and partners and advised on bookings.",
+      "exp2.p2": "Issued sports equipment and gear, and was accountable for its condition and turnover.",
+      "exp2.p3": "Coordinated on-site events: Formula 1 screenings, autograph sessions, show programmes.",
+      "exp2.p4": "Hosted VIP guests.",
+      "exp2.p5": "Managed bookings through the venue's own admin panel.",
+      "exp2.p6": "Kept attendance reporting for the venue's partner company.",
+      "exp3.period": "September 2023 — January 2025",
+      "exp3.role": "Administrator",
+      "exp3.org": "Moscow Football Federation",
+      "exp3.dur": "1 year 5 months",
+      "exp3.p1": "Organised children's and student football tournaments.",
+      "exp3.p2": "Kept track of sports equipment.",
+      "exp3.p3": "Grew the student tournament's media presence: produced content for its Telegram channel.",
+      "exp4.period": "February 2022 — June 2023",
+      "exp4.role": "Senior Steward",
+      "exp4.org": "Event Safety",
+      "exp4.dur": "1 year 5 months",
+      "exp4.p1": "Led a steward team on an assigned section of the venue: setting tasks, checking delivery, owning the section's result.",
+      "exp4.p2": "Coordinated crowd safety and spectator experience at Russian Premier League, Russian Cup and KHL matches.",
+      "exp4.p3": "Worked under heavy crowd flow and a strict event schedule.",
+
+      "stack.kicker": "Tools",
+      "stack.title": "What I work with day to day",
+      "stack.g1.title": "Project management",
+      "stack.g2.title": "Analysis and documents",
+      "stack.g3.title": "AI at work",
+      "stack.g4.title": "Event operations",
+      "stack.g5.title": "Languages",
+
+      "next.kicker": "What's next",
+      "next.title": "What I'm looking for",
+      "next.1.title": "Role",
+      "next.1.text": "Sports project manager / sports merchandise manager",
+      "next.2.title": "Format",
+      "next.2.text": "Moscow — on-site, hybrid or remote. Open to travel",
+      "next.3.title": "Industry",
+      "next.3.text": "Sports clubs, leagues and federations, betting companies, venues and merchandise brands",
+      "next.task1": "Launching and growing merchandise sales: range, channels, partners.",
+      "next.task2": "Projects where sport meets digitalisation — from research to spec and acceptance.",
+      "next.task3": "Coordinating vendors and internal teams on long-running projects.",
+      "next.task4": "Working in the sponsorship department of a club or league.",
+      "next.task5": "Owning a club's promotion strategy.",
+      "next.task6": "Running sports venues.",
+      "next.task7": "Testing and acceptance of digital products: website, mobile app, BI system.",
+      "next.task8": "Attendance analytics and preparing data for decisions.",
+
+      "photos.kicker": "Stadiums",
+      "photos.title": "I study the industry from the stands and from the inside",
+      "photos.lead": "I go to matches and tournaments as more than a supporter: I look at how the spectator experience, wayfinding, merch areas and staff operations are put together. Every trip is material for the job.",
+
+      "ph1.title": "Real Madrid vs Almería",
+      "ph1.meta": "Spain, 2024",
+      "ph1.alt": "View of the pitch and stands before Real Madrid vs Almería",
+      "ph2.title": "Inter vs Liverpool",
+      "ph2.meta": "Italy, 2025",
+      "ph2.alt": "A shot from Inter vs Liverpool",
+      "ph3.title": "Borussia Dortmund vs Bayern Munich",
+      "ph3.meta": "Germany, 2026",
+      "ph3.alt": "A supporters' tifo display at Borussia Dortmund vs Bayern Munich",
+      "ph4.title": "Marseille vs Monaco",
+      "ph4.meta": "France, 2024",
+      "ph4.alt": "Evening view of the stands and pitch at Marseille vs Monaco",
+      "ph5.title": "Torino vs Milan",
+      "ph5.meta": "Italy, 2025",
+      "ph5.alt": "Ivan Demidov in the stands at Torino vs Milan",
+      "ph6.title": "Fortuna Düsseldorf vs Bochum",
+      "ph6.meta": "Germany, 2026",
+      "ph6.alt": "Ivan Demidov in the stands at Fortuna Düsseldorf vs Bochum",
+      "ph7.title": "Köln vs St. Pauli",
+      "ph7.meta": "Germany, 2025",
+      "ph7.alt": "Ivan Demidov in the stands at Köln vs St. Pauli",
+      "ph8.title": "Hamburger SV vs Werder Bremen",
+      "ph8.meta": "Germany, 2025",
+      "ph8.alt": "A shot from Hamburger SV vs Werder Bremen",
+      "ph9.title": "Rayo Vallecano vs Las Palmas",
+      "ph9.meta": "Spain, 2024",
+      "ph9.alt": "Daytime view of the pitch and stands at Rayo Vallecano vs Las Palmas",
+      "ph10.title": "Inter vs Liverpool",
+      "ph10.meta": "Italy, 2025",
+      "ph10.alt": "Ivan Demidov in the stands at Inter vs Liverpool",
+      "ph11.title": "Almaty Open, ATP 250",
+      "ph11.meta": "Kazakhstan, 2025",
+      "ph11.alt": "Ivan Demidov in the stands at the Almaty Open tennis tournament",
+      "ph12.title": "Hamburger SV vs Werder Bremen",
+      "ph12.meta": "Germany, 2025",
+      "ph12.alt": "Ivan Demidov in the stands at Hamburger SV vs Werder Bremen",
+      "ph13.title": "Köln vs St. Pauli",
+      "ph13.meta": "Germany, 2025",
+      "ph13.alt": "A shot from Köln vs St. Pauli",
+      "ph14.title": "Real Madrid vs Almería",
+      "ph14.meta": "Spain, 2024",
+      "ph14.alt": "A shot from Real Madrid vs Almería",
+      "ph15.title": "Hamburger SV vs Werder Bremen",
+      "ph15.meta": "Germany, 2025",
+      "ph15.alt": "A shot from Hamburger SV vs Werder Bremen",
+      "ph16.title": "Inter vs Liverpool",
+      "ph16.meta": "Italy, 2025",
+      "ph16.alt": "A wide shot from Inter vs Liverpool",
+      "ph17.title": "Hamburger SV vs Werder Bremen",
+      "ph17.meta": "Germany, 2025",
+      "ph17.alt": "A wide shot from Hamburger SV vs Werder Bremen",
+
+      "contact.kicker": "Contact",
+      "contact.title": "Write to me — I reply the same day",
+      "contact.lead": "Tell me the problem and I will come back on where I can be useful. CV and the FNL executive director's recommendation sent on request.",
+      "contact.email.label": "Email",
+      "contact.tg.label": "Telegram",
+      "contact.phone.label": "Phone",
+      "contact.resume": "Download CV (PDF)",
+
+      "footer.rights": "Ivan Demidov. All rights reserved."
+    }
+  };
+
+  var reduceMotion = window.matchMedia
+    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    : false;
+
+  var currentLangCode = "ru";
+  var STORAGE_KEY = "id-portfolio-lang";
+  var LOCALE = { ru: "ru_RU", en: "en_US" };
+
+  function t(key, lang) {
+    var dict = i18n[lang] || i18n.ru;
+    return Object.prototype.hasOwnProperty.call(dict, key) ? dict[key] : key;
+  }
+
+  function setAttrFromDict(selector, attr, lang) {
+    var nodes = document.querySelectorAll("[" + selector + "]");
+    for (var i = 0; i < nodes.length; i++) {
+      var key = nodes[i].getAttribute(selector);
+      nodes[i].setAttribute(attr, t(key, lang));
+    }
+  }
+
+  function setMeta(selector, value) {
+    var el = document.querySelector(selector);
+    if (el) el.setAttribute("content", value);
+  }
+
+  function applyLang(lang) {
+    if (!i18n[lang]) lang = "ru";
+
+    var nodes = document.querySelectorAll("[data-i18n]");
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].textContent = t(nodes[i].getAttribute("data-i18n"), lang);
+    }
+
+    currentLangCode = lang;
+    stopCounters();
+    splitAll();
+
+    setAttrFromDict("data-i18n-alt", "alt", lang);
+    setAttrFromDict("data-i18n-title", "title", lang);
+    setAttrFromDict("data-i18n-aria-label", "aria-label", lang);
+
+    document.documentElement.setAttribute("lang", lang);
+    document.title = t("meta.title", lang);
+
+    setMeta('meta[name="description"]', t("meta.desc", lang));
+    setMeta('meta[property="og:title"]', t("meta.title", lang));
+    setMeta('meta[property="og:description"]', t("meta.desc", lang));
+    setMeta('meta[property="og:locale"]', LOCALE[lang] || "ru_RU");
+    setMeta('meta[name="twitter:title"]', t("meta.title", lang));
+    setMeta('meta[name="twitter:description"]', t("meta.desc", lang));
+
+    var buttons = document.querySelectorAll(".lang__btn");
+    for (var j = 0; j < buttons.length; j++) {
+      buttons[j].setAttribute("aria-pressed", String(buttons[j].getAttribute("data-lang") === lang));
+    }
+
+    try { window.localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  /* Заголовок первого экрана разбираем на слова, чтобы они выезжали по очереди.
+     Делается после каждой смены языка — applyLang перезаписывает textContent. */
+  function splitWords(el) {
+    var words = el.textContent.trim().split(/\s+/);
+    el.textContent = "";
+    for (var i = 0; i < words.length; i++) {
+      var outer = document.createElement("span");
+      outer.className = "word";
+      outer.style.setProperty("--word-i", String(i));
+      var inner = document.createElement("span");
+      inner.textContent = words[i];
+      outer.appendChild(inner);
+      el.appendChild(outer);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
+    }
+  }
+
+  function splitAll() {
+    var targets = document.querySelectorAll("[data-split]");
+    for (var i = 0; i < targets.length; i++) splitWords(targets[i]);
+  }
+
+  /* Счётчик чисел в фактах */
+  var counters = [];
+
+  function stopCounters() {
+    for (var i = 0; i < counters.length; i++) cancelAnimationFrame(counters[i]);
+    counters = [];
+  }
+
+  function countUp(el) {
+    if (reduceMotion || el.getAttribute("data-counted") === "1") return;
+    var raw = el.textContent.trim();
+    var m = raw.match(/^(\D*?)(\d+(?:[.,]\d+)?)(.*)$/);
+    if (!m) return;
+
+    el.setAttribute("data-counted", "1");
+    var prefix = m[1], numStr = m[2], suffix = m[3];
+    var sep = numStr.indexOf(",") >= 0 ? "," : ".";
+    var parts = numStr.split(/[.,]/);
+    var decimals = parts.length > 1 ? parts[1].length : 0;
+    var target = parseFloat(numStr.replace(",", "."));
+    var duration = 1000;
+    var started = null;
+
+    function frame(ts) {
+      if (started === null) started = ts;
+      var p = Math.min(1, (ts - started) / duration);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var shown = (target * eased).toFixed(decimals);
+      if (sep === ",") shown = shown.replace(".", ",");
+      el.textContent = prefix + shown + suffix;
+      if (p < 1) counters.push(requestAnimationFrame(frame));
+      else el.textContent = prefix + numStr + suffix;
+    }
+    counters.push(requestAnimationFrame(frame));
+  }
+
+  function detectLang() {
+    var saved = null;
+    try { saved = window.localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && i18n[saved]) return saved;
+
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "ru";
+    return String(nav).toLowerCase().indexOf("ru") === 0 ? "ru" : "en";
+  }
+
+  /* --- Переключатель языка --- */
+  var langButtons = document.querySelectorAll(".lang__btn");
+  for (var b = 0; b < langButtons.length; b++) {
+    langButtons[b].addEventListener("click", function () {
+      applyLang(this.getAttribute("data-lang"));
+    });
+  }
+
+  applyLang(detectLang());
+
+  /* --- Очередь входа первого экрана --- */
+  var animated = document.querySelectorAll("[data-anim]");
+  for (var a = 0; a < animated.length; a++) {
+    animated[a].style.setProperty("--anim-i", animated[a].getAttribute("data-anim"));
+  }
+
+  var hero = document.getElementById("hero");
+  function startHero() {
+    if (!hero) return;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { hero.classList.add("is-ready"); });
+    });
+  }
+  if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+    document.fonts.ready.then(startHero);
+    setTimeout(startHero, 1000);
+  } else {
+    startHero();
+  }
+
+  /* --- Счётчик чисел, когда факты попадают в кадр --- */
+  var factsBlock = document.querySelector(".hero__facts");
+  if (factsBlock && !reduceMotion && "IntersectionObserver" in window) {
+    var factsObserver = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        var values = factsBlock.querySelectorAll("[data-count]");
+        for (var v = 0; v < values.length; v++) countUp(values[v]);
+        factsObserver.disconnect();
+      }
+    }, { threshold: 0.4 });
+    factsObserver.observe(factsBlock);
+  }
+
+  /* --- Запрос отзыва: собираем письмо и отдаём почтовому клиенту --- */
+  var refForm = document.getElementById("ref-form");
+  var refStatus = document.getElementById("ref-status");
+
+  if (refForm) {
+    refForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var fields = ["req-name", "req-company", "req-contact"].map(function (id) {
+        return document.getElementById(id);
+      });
+      var empty = false;
+      for (var i = 0; i < fields.length; i++) {
+        var ok = fields[i] && fields[i].value.trim() !== "";
+        if (fields[i]) fields[i].setAttribute("aria-invalid", String(!ok));
+        if (!ok) empty = true;
+      }
+      if (empty) {
+        refStatus.textContent = t("req.fill", currentLangCode);
+        return;
+      }
+
+      var body = t("req.intro", currentLangCode) + "\n\n" +
+        t("req.name", currentLangCode) + ": " + fields[0].value.trim() + "\n" +
+        t("req.company", currentLangCode) + ": " + fields[1].value.trim() + "\n" +
+        t("req.contact", currentLangCode) + ": " + fields[2].value.trim() + "\n";
+
+      window.location.href = "mailto:ivandemidov18@icloud.com" +
+        "?subject=" + encodeURIComponent(t("req.subject", currentLangCode)) +
+        "&body=" + encodeURIComponent(body);
+
+      refStatus.textContent = t("req.sent", currentLangCode);
+    });
+  }
+
+  /* --- Перед печатью раскрываем все категории, после — возвращаем как было --- */
+  var catBlocks = document.querySelectorAll(".cat");
+  var catState = [];
+
+  function expandForPrint() {
+    catState = [];
+    for (var i = 0; i < catBlocks.length; i++) {
+      catState.push(catBlocks[i].open);
+      catBlocks[i].open = true;
+    }
+  }
+  function restoreAfterPrint() {
+    for (var i = 0; i < catBlocks.length; i++) {
+      if (i < catState.length) catBlocks[i].open = catState[i];
+    }
+  }
+
+  if (catBlocks.length) {
+    window.addEventListener("beforeprint", expandForPrint);
+    window.addEventListener("afterprint", restoreAfterPrint);
+    // Safari не шлёт beforeprint — ловим смену печатного медиа
+    if (window.matchMedia) {
+      var printMQ = window.matchMedia("print");
+      var onPrintChange = function (e) { if (e.matches) expandForPrint(); else restoreAfterPrint(); };
+      if (printMQ.addEventListener) printMQ.addEventListener("change", onPrintChange);
+      else if (printMQ.addListener) printMQ.addListener(onPrintChange);
+    }
+  }
+
+  /* --- Год в подвале --- */
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* --- Мобильное меню --- */
+  var burger = document.getElementById("burger");
+  var mobileNav = document.getElementById("mobile-nav");
+
+  function closeMenu() {
+    if (!burger || !mobileNav) return;
+    burger.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+  }
+
+  if (burger && mobileNav) {
+    burger.addEventListener("click", function () {
+      var open = burger.getAttribute("aria-expanded") === "true";
+      burger.setAttribute("aria-expanded", String(!open));
+      mobileNav.classList.toggle("is-open", !open);
+    });
+
+    var mLinks = mobileNav.querySelectorAll("a");
+    for (var m = 0; m < mLinks.length; m++) {
+      mLinks[m].addEventListener("click", closeMenu);
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 900) closeMenu();
+    });
+  }
+
+  /* --- Шапка, полоса прогресса и параллакс фона --- */
+  var header = document.getElementById("site-header");
+  var progressBar = document.getElementById("progress-bar");
+  var heroImage = document.querySelector(".hero__bg img");
+  var scrollTicking = false;
+
+  function renderScroll() {
+    scrollTicking = false;
+    var y = window.scrollY;
+
+    if (header) header.classList.toggle("is-stuck", y > 8);
+
+    if (progressBar) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+      progressBar.style.transform = "scaleX(" + ratio.toFixed(4) + ")";
+    }
+
+    if (heroImage && !reduceMotion) {
+      var shift = Math.min(y, window.innerHeight) * 0.16;
+      heroImage.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0) scale(1.08)";
+    }
+  }
+
+  function onScroll() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(renderScroll);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  renderScroll();
+
+  /* --- Появление при скролле --- */
+  var revealables = document.querySelectorAll("[data-reveal]");
+
+  /* Внутри одной группы карточки появляются по очереди */
+  (function stagger() {
+    var groups = [];
+    for (var i = 0; i < revealables.length; i++) {
+      var parent = revealables[i].parentElement;
+      var found = null;
+      for (var g = 0; g < groups.length; g++) {
+        if (groups[g].parent === parent) { found = groups[g]; break; }
+      }
+      if (!found) { found = { parent: parent, items: [] }; groups.push(found); }
+      found.items.push(revealables[i]);
+    }
+    for (var k = 0; k < groups.length; k++) {
+      var items = groups[k].items;
+      if (items.length < 2 || items.length > 6) continue;
+      for (var n = 0; n < items.length; n++) {
+        items[n].style.transitionDelay = (n * 80) + "ms";
+      }
+    }
+  })();
+
+  function revealAll() {
+    for (var r = 0; r < revealables.length; r++) {
+      revealables[r].classList.add("is-visible");
+    }
+  }
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealAll();
+  } else {
+    var observer = new IntersectionObserver(function (entries) {
+      for (var e = 0; e < entries.length; e++) {
+        if (entries[e].isIntersecting) {
+          entries[e].target.classList.add("is-visible");
+          observer.unobserve(entries[e].target);
+        }
+      }
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+
+    for (var k = 0; k < revealables.length; k++) {
+      observer.observe(revealables[k]);
+    }
+  }
+
+  /* --- Подсветка активного пункта навигации --- */
+  var navLinks = document.querySelectorAll(".nav__link");
+  var sections = [];
+  for (var n = 0; n < navLinks.length; n++) {
+    var target = document.querySelector(navLinks[n].getAttribute("href"));
+    if (target) sections.push({ link: navLinks[n], el: target });
+  }
+
+  if (sections.length && "IntersectionObserver" in window) {
+    var navObserver = new IntersectionObserver(function (entries) {
+      for (var i2 = 0; i2 < entries.length; i2++) {
+        if (!entries[i2].isIntersecting) continue;
+        for (var s = 0; s < sections.length; s++) {
+          sections[s].link.classList.toggle("is-active", sections[s].el === entries[i2].target);
+        }
+      }
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+
+    for (var s2 = 0; s2 < sections.length; s2++) {
+      navObserver.observe(sections[s2].el);
+    }
+  }
+})();
+</script>
+</body>
+</html>
