@@ -27,6 +27,11 @@
 <link rel="preload" href="assets/fonts/golos-text-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/unbounded-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 
+<!-- Жидкая WebGL-анимация в hero (LiquidEther, самостоятельный порт на Three.js без React).
+     Собрана локально esbuild'ом и захостена в assets/ — страница принципиально не делает
+     внешних запросов. Скрипт сам проверяет prefers-reduced-motion и поддержку WebGL перед стартом. -->
+<script defer src="assets/js/liquid-ether.js"></script>
+
 <style>
 /* ============================================================
    ШРИФТЫ — локальные. Внешних запросов страница не делает:
@@ -77,6 +82,17 @@
      главное действие, критичное число, состояние ошибки. */
   --accent:        #4fe8c4;
   --accent-ink:    #05130f;
+
+  /* Палитра LiquidEther в hero — те же три тона, что течёт в анимации:
+     глубокий индиго → бренд-бирюза → почти белая мятная вспышка.
+     Используются точечно (кольцо портрета, полоса прогресса, свечение кнопки),
+     чтобы интерфейс визуально продолжал анимацию, а не спорил с ней. */
+  --ether-1:       #1c3fd6;
+  --ether-2:       #4fe8c4;
+  --ether-3:       #d8fff2;
+  --accent-2:      var(--ether-1);
+  --accent-glow:   var(--ether-3);
+  --ether-gradient: linear-gradient(120deg, var(--ether-1), var(--ether-2) 55%, var(--ether-3));
 
   /* Шкала отступов — кратна 4px */
   --s-1:  4px;
@@ -319,7 +335,7 @@ button{
   width: 100%;
   transform: scaleX(0);
   transform-origin: 0 50%;
-  background: var(--fg-3);
+  background: var(--ether-gradient);
 }
 
 .header__inner{
@@ -525,21 +541,19 @@ button{
   border-top: 0;
 }
 
-.hero__bg{
+/* Жидкий эфир течёт поверх сплошного тёмного фона (--bg) — без фоновой
+   фотографии, чтобы анимация читалась как единственный акцент экрана. */
+.hero__ether{
   position: absolute;
   inset: 0;
   z-index: -2;
   overflow: hidden;
+  mix-blend-mode: screen;
+  /* touch-action:none в самом компоненте блокирует свайп-скролл на тач-устройствах —
+     разрешаем вертикальную прокрутку, JS-обработчики компонента остаются passive. */
+  touch-action: pan-y;
 }
-.hero__bg img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
-  opacity: .34;
-  filter: grayscale(1) contrast(1.14) brightness(.92);
-  will-change: transform;
-}
+.hero__ether canvas{ touch-action: pan-y; }
 .hero__scrim{
   position: absolute;
   inset: 0;
@@ -548,18 +562,38 @@ button{
     linear-gradient(180deg, rgba(8,8,12,.30) 0%, rgba(8,8,12,.70) 56%, var(--bg) 100%);
 }
 
-.hero__id{
-  display: flex;
-  align-items: center;
-  gap: var(--s-5);
-  margin-bottom: clamp(24px, 4vw, 40px);
-  flex-wrap: wrap;
+/* Первый экран — компактная колонка «фото + статус» слева, весь остальной
+   текст справа, во всю оставшуюся ширину (см. .hero__id ниже). */
+.hero__body{
+  display: grid;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+.hero__copy{ min-width: 0; }
+
+@media (min-width: 760px){
+  .hero__body{ grid-template-columns: auto minmax(0, 1fr); }
 }
 
-/* Портрет — компактный круг с акцентным кольцом */
+.hero__id{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-4);
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+@media (min-width: 760px){
+  .hero__id{ margin-bottom: 0; }
+}
+
+/* Портрет — компактный круг с акцентным кольцом.
+   Высота задана явно (не только aspect-ratio) — в колоночном flex-контейнере
+   высота обычного aspect-ratio:1 игнорируется и берётся пропорция фото (3:4),
+   из-за чего круг превращался в овал. */
 .avatar{
   position: relative;
-  width: clamp(80px, 15vw, 116px);
+  width: clamp(84px, 15vw, 128px);
+  height: clamp(84px, 15vw, 128px);
   aspect-ratio: 1;
   flex: none;
 }
@@ -581,38 +615,28 @@ button{
   border-right-color: transparent;
 }
 
+/* Узкий блок статуса под фото — примерно в ширину круга, переносится
+   на 2-3 строки, не растягивается в широкую плашку. */
 .hero__status{
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s-3);
-  padding: var(--s-2) var(--s-5);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  width: clamp(150px, 20vw, 196px);
+  padding: var(--s-3) var(--s-4);
   border: 1px solid var(--fg-3);
   background: var(--bg-2);
-  border-radius: var(--r-full);
-  font-size: .9375rem;
+  border-radius: var(--r-sm);
+  font-size: .8125rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--fg);
 }
-/* Точка — единственный цветной элемент плашки: индикатор «статус активен» */
 .hero__status-dot{
   width: 8px; height: 8px;
+  margin-top: .3em;
   border-radius: 50%;
   background: var(--accent);
   flex: none;
-}
-
-@media (max-width: 560px){
-  .hero__status{
-    font-size: .8125rem;
-    padding: var(--s-3) var(--s-4);
-    gap: var(--s-2);
-    line-height: 1.35;
-    border-radius: var(--r-md);
-    /* фраза длинная и переносится — точка держится первой строки, а не центра блока */
-    align-items: flex-start;
-  }
-  .hero__status-dot{ margin-top: .3em; }
-  .hero__id{ gap: var(--s-4); }
 }
 
 .hero__name{
@@ -640,13 +664,13 @@ button{
   padding-left: var(--s-6);
   border-left: 2px solid var(--line-2);
   margin-bottom: var(--s-7);
-  max-width: 36ch;
+  max-width: 46ch;
 }
 
 .hero__lead{
   color: var(--fg-2);
   font-size: clamp(1rem, .95rem + .35vw, 1.1875rem);
-  max-width: 54ch;
+  max-width: 64ch;
   margin-bottom: var(--s-8);
 }
 
@@ -659,11 +683,11 @@ button{
 
 .hero__facts{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
   gap: var(--s-6);
   padding-top: var(--s-8);
   border-top: 1px solid var(--line);
-  max-width: 640px;
+  max-width: 800px;
 }
 .hero__facts > div{ position: relative; padding-left: var(--s-4); }
 .hero__facts > div::before{
@@ -1474,22 +1498,6 @@ figure.photo figcaption{
 }
 .js .hero.is-ready .hero__name[data-split] .word > span{ transform: none; }
 
-/* Кольцо вокруг портрета раскрывается при входе */
-.js .avatar__ring{
-  opacity: 0;
-  transform: scale(.78);
-  transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out);
-  transition-delay: 220ms;
-}
-.js .hero.is-ready .avatar__ring{ opacity: 1; transform: none; }
-
-.js .avatar img{
-  transform: scale(.92);
-  transition: transform 900ms var(--ease-out);
-  transition-delay: 120ms;
-}
-.js .hero.is-ready .avatar img{ transform: none; }
-
 @media (prefers-reduced-motion: no-preference){
   html{ scroll-behavior: smooth; }
 }
@@ -1505,8 +1513,6 @@ figure.photo figcaption{
   .js [data-reveal]{ opacity: 1 !important; transform: none !important; }
   .js [data-anim]{ opacity: 1 !important; transform: none !important; }
   .js .word > span{ opacity: 1 !important; transform: none !important; }
-  .js .avatar__ring{ opacity: 1 !important; transform: none !important; }
-  .js .avatar img{ opacity: 1 !important; transform: none !important; }
   .js .tl:not(.is-visible)::before{ transform: none !important; }
   .card:hover, .goal:hover{ transform: none !important; }
   .shot:hover img{ transform: none !important; }
@@ -1528,7 +1534,7 @@ figure.photo figcaption{
   body{ font-size: 11pt; line-height: 1.45; }
 
   .header, .mobile-nav, .burger, .lang, .skip-link, .progress,
-  .hero__bg, .hero__scrim, .hero__actions, .contact__actions,
+  .hero__ether, .hero__scrim, .hero__actions, .contact__actions,
   .gallery, .nav, .doc__arrow, .cat__chev, .request__form,
   .request__status{ display: none !important; }
 
@@ -1544,8 +1550,6 @@ figure.photo figcaption{
   .js [data-reveal]{ opacity: 1 !important; transform: none !important; }
   .js [data-anim]{ opacity: 1 !important; transform: none !important; }
   .js .word > span{ opacity: 1 !important; transform: none !important; }
-  .js .avatar__ring{ opacity: 1 !important; transform: none !important; }
-  .js .avatar img{ opacity: 1 !important; transform: none !important; }
 
   .section, .hero{
     padding-block: 12pt;
@@ -1660,9 +1664,7 @@ setTimeout(function () {
 
   <!-- ========== 2. ПЕРВЫЙ ЭКРАН ========== -->
   <section class="hero" id="hero">
-    <div class="hero__bg" aria-hidden="true">
-      <img src="assets/photos/hero-bg.webp" alt="" width="1400" height="789" fetchpriority="high" decoding="async">
-    </div>
+    <div class="hero__ether" id="hero-ether" aria-hidden="true"></div>
     <div class="hero__scrim" aria-hidden="true"></div>
 
     <div class="wrap hero__body">
@@ -1678,33 +1680,35 @@ setTimeout(function () {
         </p>
       </div>
 
-      <h1 class="hero__name" data-split data-anim="2" data-i18n="hero.name">Иван Демидов</h1>
+      <div class="hero__copy">
+        <h1 class="hero__name" data-split data-anim="2" data-i18n="hero.name">Иван Демидов</h1>
 
-      <p class="hero__role" data-anim="3" data-i18n="hero.role">Менеджер спортивных проектов: цифровизация, атрибутика и работа спортивных площадок</p>
+        <p class="hero__role" data-anim="3" data-i18n="hero.role">Менеджер спортивных проектов: цифровизация, атрибутика и работа спортивных площадок</p>
 
-      <p class="hero__lead" data-anim="4" data-i18n="hero.lead">Веду спортивные проекты от исследования рынка и написания технического задания до координации подрядчиков и работы площадки в день мероприятия.</p>
+        <p class="hero__lead" data-anim="4" data-i18n="hero.lead">Веду спортивные проекты от исследования рынка и написания технического задания до координации подрядчиков и работы площадки в день мероприятия.</p>
 
-      <div class="hero__actions" data-anim="5">
-          <a class="btn btn--primary" href="#contact"><span data-i18n="hero.cta1">Написать мне</span>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a class="btn btn--ghost" href="#work" data-i18n="hero.cta2">Посмотреть работы</a>
-        </div>
+        <div class="hero__actions" data-anim="5">
+            <a class="btn btn--primary" href="#contact"><span data-i18n="hero.cta1">Написать мне</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#work" data-i18n="hero.cta2">Посмотреть работы</a>
+          </div>
 
-      <dl class="hero__facts" data-anim="6">
-        <div>
-          <dd class="fact__value" data-count data-i18n="hero.fact1.value">73</dd>
-          <dt class="fact__label" data-i18n="hero.fact1.label">клуба ФНЛ в исследовании ассортимента и каналов продаж</dt>
-        </div>
-        <div>
-          <dd class="fact__value" data-count data-i18n="hero.fact2.value">3,8</dd>
-          <dt class="fact__label" data-i18n="hero.fact2.label">года опыта в спортивной индустрии — от стюардинга до цифровизации лиги</dt>
-        </div>
-        <div>
-          <dd class="fact__value" data-count data-i18n="hero.fact3.value">80</dd>
-          <dt class="fact__label" data-i18n="hero.fact3.label">страниц функциональных требований к «Маркетплейсу ФНЛ»</dt>
-        </div>
-      </dl>
+        <dl class="hero__facts" data-anim="6">
+          <div>
+            <dd class="fact__value" data-count data-i18n="hero.fact1.value">73</dd>
+            <dt class="fact__label" data-i18n="hero.fact1.label">клуба ФНЛ в исследовании ассортимента и каналов продаж</dt>
+          </div>
+          <div>
+            <dd class="fact__value" data-count data-i18n="hero.fact2.value">3,8</dd>
+            <dt class="fact__label" data-i18n="hero.fact2.label">года опыта в спортивной индустрии — от стюардинга до цифровизации лиги</dt>
+          </div>
+          <div>
+            <dd class="fact__value" data-count data-i18n="hero.fact3.value">80</dd>
+            <dt class="fact__label" data-i18n="hero.fact3.label">страниц функциональных требований к «Маркетплейсу ФНЛ»</dt>
+          </div>
+        </dl>
+      </div>
     </div>
   </section>
 
@@ -3406,10 +3410,9 @@ setTimeout(function () {
     });
   }
 
-  /* --- Шапка, полоса прогресса и параллакс фона --- */
+  /* --- Шапка и полоса прогресса --- */
   var header = document.getElementById("site-header");
   var progressBar = document.getElementById("progress-bar");
-  var heroImage = document.querySelector(".hero__bg img");
   var scrollTicking = false;
 
   function renderScroll() {
@@ -3422,11 +3425,6 @@ setTimeout(function () {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var ratio = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
       progressBar.style.transform = "scaleX(" + ratio.toFixed(4) + ")";
-    }
-
-    if (heroImage && !reduceMotion) {
-      var shift = Math.min(y, window.innerHeight) * 0.16;
-      heroImage.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0) scale(1.08)";
     }
   }
 
