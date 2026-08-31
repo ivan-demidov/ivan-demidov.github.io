@@ -32,6 +32,10 @@
      внешних запросов. Скрипт сам проверяет prefers-reduced-motion и поддержку WebGL перед стартом. -->
 <script defer src="assets/js/liquid-ether.js"></script>
 
+<!-- Фон всей страницы ниже первого экрана (DarkVeil, порт на чистый WebGL без React).
+     Так же собран локально и лежит в assets/ — внешних запросов страница не делает. -->
+<script defer src="assets/js/dark-veil.js"></script>
+
 <style>
 /* ============================================================
    ШРИФТЫ — локальные. Внешних запросов страница не делает:
@@ -139,11 +143,14 @@ html{
   overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: calc(var(--header-h) + var(--s-6));
+  /* Базовый чёрный держит <html>, а не <body>: фон body закрасил бы собой
+     холст страницы и спрятал фиксированный слой .page-veil под ним. */
+  background: var(--bg);
 }
 
 body{
   margin: 0;
-  background: var(--bg);
+  background: transparent;
   color: var(--fg);
   font-family: var(--font-body);
   font-size: clamp(1rem, .96rem + .18vw, 1.0625rem);
@@ -152,6 +159,66 @@ body{
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------------------
+   Фон страницы: живой DarkVeil на всю высоту документа.
+   Слой фиксирован во вьюпорте и лежит под всем контентом, поэтому
+   анимация видна везде, где раньше был просто чёрный фон, и не
+   пересчитывается при скролле.
+   ------------------------------------------------------------ */
+.page-veil{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+}
+.page-veil canvas{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Стык героя и остальной страницы. Пустой элемент стоит ровно на нижней
+   границе первого экрана и несёт два слоя:
+   ::after — сплошная подложка вверх, на весь первый экран вместе с шапкой.
+             Она перекрывает DarkVeil, поэтому стекло шапки размывает тот же
+             чёрный, что и под ней, а не кусок анимации: сверху шапка и hero
+             читаются как одна плоскость.
+   ::before — растушёвка вниз: без неё DarkVeil включался бы резкой полосой.
+   Оба слоя лежат над .page-veil (тот же z-index, но ниже по дереву) и под
+   контентом; первый экран с LiquidEther поднят над ними своим isolation. */
+.veil-fade{
+  position: relative;
+  height: 0;
+  z-index: -1;
+}
+.veil-fade::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Заведомо больше первого экрана: верх упирается в начало документа. */
+  height: 300vh;
+  pointer-events: none;
+  background: var(--bg);
+}
+.veil-fade::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: clamp(220px, 30vw, 420px);
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    #08080c 0%,
+    rgba(8, 8, 12, .92) 22%,
+    rgba(8, 8, 12, .62) 52%,
+    rgba(8, 8, 12, .26) 78%,
+    rgba(8, 8, 12, 0) 100%);
 }
 
 /* Плёночное зерно — едва заметная текстура поверх всей страницы */
@@ -315,6 +382,26 @@ button{
 .header.is-stuck{
   background: var(--glass-strong);
   border-bottom-color: var(--line);
+}
+
+/* Нижняя кромка шапки: под ней проезжает живой фон, и обрыв стекла читался
+   как резкая горизонтальная граница. Полоса под шапкой продолжает и стекло,
+   и размытие, но гаснет по маске — переход становится растушёванным.
+   z-index:-1 держит её под содержимым шапки, чтобы не гасить полосу прогресса. */
+.header::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 72px;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, var(--glass), rgba(13, 13, 20, 0));
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .55) 45%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .55) 45%, transparent 100%);
 }
 
 /* Без поддержки backdrop-filter стекло вырождается в сплошной фон */
@@ -1534,7 +1621,7 @@ figure.photo figcaption{
   body{ font-size: 11pt; line-height: 1.45; }
 
   .header, .mobile-nav, .burger, .lang, .skip-link, .progress,
-  .hero__ether, .hero__scrim, .hero__actions, .contact__actions,
+  .page-veil, .veil-fade, .hero__ether, .hero__scrim, .hero__actions, .contact__actions,
   .gallery, .nav, .doc__arrow, .cat__chev, .request__form,
   .request__status{ display: none !important; }
 
@@ -1595,6 +1682,7 @@ figure.photo figcaption{
 </head>
 
 <body>
+<div class="page-veil" id="page-veil" aria-hidden="true"></div>
 <script>
 document.documentElement.className += " js";
 setTimeout(function () {
@@ -1711,6 +1799,8 @@ setTimeout(function () {
       </div>
     </div>
   </section>
+
+  <div class="veil-fade" aria-hidden="true"></div>
 
   <!-- ========== 3. О СЕБЕ ========== -->
   <section class="section" id="about">
