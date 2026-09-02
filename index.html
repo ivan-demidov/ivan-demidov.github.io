@@ -21,8 +21,8 @@
 <meta name="twitter:description" content="Исследование рынка атрибутики, требования и ТЗ для подрядчиков, ведение проектов, операционка спортивных площадок и мероприятий.">
 <meta name="twitter:image" content="https://ivan-demidov.github.io/assets/photos/hero-bg.webp">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080c'/%3E%3Crect x='19' y='17' width='5' height='30' fill='%234fe8c4'/%3E%3Cpath d='M30 17h6.5C44 17 49 23 49 32s-5 15-12.5 15H30zm5.2 5v20h1.1c4.4 0 7.4-3.6 7.4-10s-3-10-7.4-10z' fill='%23f2f3f5'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080c'/%3E%3Crect x='19' y='17' width='5' height='30' fill='%234fe8c4'/%3E%3Cpath d='M30 17h6.5C44 17 49 23 49 32s-5 15-12.5 15H30zm5.2 5v20h1.1c4.4 0 7.4-3.6 7.4-10s-3-10-7.4-10z' fill='%23f2f3f5'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234fe8c4'/%3E%3Crect x='17' y='18' width='5.5' height='28' rx='1' fill='%2305130f'/%3E%3Cpath d='M28 18h7.8C43.9 18 49 23.6 49 32s-5.1 14-13.2 14H28zm5.5 5.4v17.2h2c4.4 0 7.2-3.3 7.2-8.6s-2.8-8.6-7.2-8.6z' fill='%2305130f'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234fe8c4'/%3E%3Crect x='17' y='18' width='5.5' height='28' rx='1' fill='%2305130f'/%3E%3Cpath d='M28 18h7.8C43.9 18 49 23.6 49 32s-5.1 14-13.2 14H28zm5.5 5.4v17.2h2c4.4 0 7.2-3.3 7.2-8.6s-2.8-8.6-7.2-8.6z' fill='%2305130f'/%3E%3C/svg%3E">
 
 <link rel="preload" href="assets/fonts/golos-text-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/unbounded-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
@@ -440,18 +440,33 @@ button{
   font-weight: 700;
   font-size: .9375rem;
   letter-spacing: -.02em;
-  white-space: nowrap;
   margin-right: auto;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.brand__dot{
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--fg-3);
-  align-self: center;
   flex: none;
+}
+.brand__mark{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .875rem;
+  letter-spacing: .01em;
+  line-height: 1;
+  flex: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.brand:hover .brand__mark,
+.brand:focus-visible .brand__mark{
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(79, 232, 196, .26);
+}
+@media (prefers-reduced-motion: reduce){
+  .brand__mark{ transition: none; }
+  .brand:hover .brand__mark{ transform: none; }
 }
 
 .nav{ display: none; }
@@ -492,7 +507,6 @@ button{
 }
 
 @media (max-width: 380px){
-  .brand{ font-size: .8125rem; }
   .header__inner{ gap: var(--s-3); }
   .header__tools{ gap: var(--s-2); }
   .lang__btn{ padding: 5px var(--s-2); }
@@ -788,7 +802,7 @@ button{
 .fact__value{
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.125rem);
+  font-size: clamp(1.875rem, 1.4rem + 1.7vw, 2.75rem);
   font-weight: 700;
   letter-spacing: -.03em;
   color: var(--accent);
@@ -796,9 +810,9 @@ button{
 }
 .fact__label{
   display: block;
-  margin-top: var(--s-1);
-  font-size: .8125rem;
-  line-height: 1.4;
+  margin-top: var(--s-2);
+  font-size: .875rem;
+  line-height: 1.45;
   color: var(--fg-3);
 }
 
@@ -927,15 +941,25 @@ figure.photo figcaption{
   font-weight: 700;
   color: var(--fg-3);
 }
+.case__headings{
+  flex: 1 1 260px;
+  min-width: 0;
+  display: grid;
+  gap: var(--s-2);
+}
 .case__title{
   font-size: clamp(1.25rem, 1.05rem + .9vw, 1.75rem);
-  flex: 1 1 260px;
   min-width: 0;
 }
 .case__org{
-  font-size: .8125rem;
+  font-size: .875rem;
+  color: var(--fg-2);
+}
+.case__period{
+  font-size: .75rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
   color: var(--fg-3);
-  white-space: nowrap;
 }
 
 .case__rows{ display: grid; gap: var(--s-5); }
@@ -1156,14 +1180,6 @@ figure.photo figcaption{
   color: var(--accent);
   min-height: 1.4em;
 }
-.request__hint{
-  margin-top: var(--s-3);
-  font-size: .8125rem;
-  line-height: 1.55;
-  color: var(--fg-3);
-  overflow-wrap: anywhere;
-}
-
 .doc{
   display: flex;
   align-items: center;
@@ -1219,87 +1235,6 @@ figure.photo figcaption{
 }
 .doc--featured .doc__icon{ border-color: var(--line-2); color: var(--fg); }
 .doc--featured .doc__name{ font-weight: 600; }
-
-/* ============================================================
-   ТАЙМЛАЙН ОПЫТА
-   ============================================================ */
-.timeline{
-  position: relative;
-  display: grid;
-  gap: var(--s-9);
-  padding-left: var(--s-7);
-}
-.timeline::before{
-  content: "";
-  position: absolute;
-  left: 5px; top: 8px; bottom: 8px;
-  width: 1px;
-  background: var(--line-2);
-}
-
-.tl{ position: relative; }
-.tl::before{
-  content: "";
-  position: absolute;
-  left: calc(var(--s-7) * -1);
-  top: 8px;
-  width: 11px; height: 11px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--line-2);
-  transition: transform var(--dur) var(--ease-out);
-}
-.js .tl:not(.is-visible)::before{ transform: scale(.3); }
-
-.tl__period{
-  display: inline-block;
-  font-size: .875rem;
-  font-weight: 600;
-  color: var(--fg-2);
-  margin-bottom: var(--s-3);
-}
-.tl__role{
-  font-size: clamp(1.125rem, 1rem + .7vw, 1.5rem);
-  margin-bottom: var(--s-2);
-}
-.tl__meta{
-  max-width: 76ch;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--s-2) var(--s-4);
-  margin-bottom: var(--s-5);
-}
-.tl__org{
-  font-size: .9375rem;
-  font-weight: 500;
-  color: var(--fg);
-}
-.tl__dur{
-  font-size: .8125rem;
-  color: var(--fg-3);
-}
-.tl__points{ display: grid; gap: var(--s-3); max-width: 76ch; }
-.tl__points li{
-  position: relative;
-  padding-left: var(--s-5);
-  color: var(--fg-2);
-  font-size: .9375rem;
-  line-height: 1.62;
-}
-.tl__points li::before{
-  content: "";
-  position: absolute;
-  left: 0; top: .72em;
-  width: 6px; height: 1px;
-  background: var(--line-2);
-}
-
-@media (min-width: 900px){
-  .timeline{ padding-left: var(--s-9); }
-  .timeline::before{ left: 5px; }
-  .tl::before{ left: calc(var(--s-9) * -1); }
-}
 
 /* ============================================================
    СТЕК
@@ -1407,6 +1342,26 @@ figure.photo figcaption{
 }
 @media (min-width: 620px){ .gallery{ columns: 2; } }
 @media (min-width: 1000px){ .gallery{ columns: 3; } }
+
+/* На телефоне 17 вертикальных фотографий делают страницу бесконечной,
+   поэтому там галерея свёрнута до нажатия на кнопку. Правило намеренно
+   заперто в медиазапросе и в классе .js: на десктопе и без скриптов
+   галерея работает ровно так же, как раньше. */
+.gallery__toggle{ display: none; }
+
+@media (max-width: 767px){
+  .js .gallery__toggle{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: var(--s-6);
+  }
+  .js .gallery__toggle .icon{
+    transition: transform var(--dur) var(--ease);
+  }
+  .js .gallery-panel.is-open .gallery__toggle .icon{ transform: rotate(180deg); }
+  .js .gallery-panel:not(.is-open) .gallery{ display: none; }
+}
 
 .shot{
   break-inside: avoid;
@@ -1600,7 +1555,6 @@ figure.photo figcaption{
   .js [data-reveal]{ opacity: 1 !important; transform: none !important; }
   .js [data-anim]{ opacity: 1 !important; transform: none !important; }
   .js .word > span{ opacity: 1 !important; transform: none !important; }
-  .js .tl:not(.is-visible)::before{ transform: none !important; }
   .card:hover, .goal:hover{ transform: none !important; }
   .shot:hover img{ transform: none !important; }
   .progress{ display: none; }
@@ -1622,7 +1576,7 @@ figure.photo figcaption{
 
   .header, .mobile-nav, .burger, .lang, .skip-link, .progress,
   .page-veil, .veil-fade, .hero__ether, .hero__scrim, .hero__actions, .contact__actions,
-  .gallery, .nav, .doc__arrow, .cat__chev, .request__form,
+  .gallery, .gallery__toggle, .nav, .doc__arrow, .cat__chev, .request__form,
   .request__status{ display: none !important; }
 
   /* Категории раскрываются перед печатью скриптом — CSS для <details> тут бессилен */
@@ -1657,7 +1611,7 @@ figure.photo figcaption{
 
   .hero__name{ font-size: 24pt; }
   .section__title, .contact__title{ font-size: 16pt; }
-  .case__title, .tl__role{ font-size: 12pt; }
+  .case__title{ font-size: 12pt; }
 
   a{ color: #000 !important; text-decoration: underline; }
   a[href^="http"]::after,
@@ -1696,19 +1650,17 @@ setTimeout(function () {
 <!-- ========== 1. ШАПКА ========== -->
 <header class="header" id="site-header">
   <div class="wrap header__inner">
-    <a class="brand" href="#hero">
-      <span class="brand__dot" aria-hidden="true"></span>
-      <span data-i18n="brand">Иван Демидов</span>
+    <a class="brand" href="#hero" aria-label="Иван Демидов — на главную" data-i18n-aria-label="a11y.brand">
+      <span class="brand__mark" aria-hidden="true">ID</span>
     </a>
 
     <nav class="nav" aria-label="Основная навигация" data-i18n-aria-label="a11y.nav">
       <ul class="nav__list">
         <li><a class="nav__link" href="#about" data-i18n="nav.about">О себе</a></li>
-        <li><a class="nav__link" href="#work" data-i18n="nav.work">Работы</a></li>
-        <li><a class="nav__link" href="#docs" data-i18n="nav.docs">Материалы</a></li>
         <li><a class="nav__link" href="#experience" data-i18n="nav.experience">Опыт</a></li>
         <li><a class="nav__link" href="#education" data-i18n="nav.education">Образование</a></li>
-        <li><a class="nav__link" href="#next" data-i18n="nav.next">Куда двигаюсь</a></li>
+        <li><a class="nav__link" href="#docs" data-i18n="nav.docs">Материалы</a></li>
+        <li><a class="nav__link" href="#next" data-i18n="nav.next">Мои цели</a></li>
         <li><a class="nav__link" href="#photos" data-i18n="nav.photos">Стадионы</a></li>
       </ul>
     </nav>
@@ -1735,12 +1687,11 @@ setTimeout(function () {
       <ul class="mobile-nav__list">
         <li><a class="mobile-nav__link" href="#about" data-i18n="nav.about">О себе</a></li>
         <li><a class="mobile-nav__link" href="#services" data-i18n="nav.services">Чем занимаюсь</a></li>
-        <li><a class="mobile-nav__link" href="#work" data-i18n="nav.work">Работы</a></li>
-        <li><a class="mobile-nav__link" href="#docs" data-i18n="nav.docs">Материалы</a></li>
         <li><a class="mobile-nav__link" href="#experience" data-i18n="nav.experience">Опыт</a></li>
         <li><a class="mobile-nav__link" href="#education" data-i18n="nav.education">Образование</a></li>
+        <li><a class="mobile-nav__link" href="#docs" data-i18n="nav.docs">Материалы</a></li>
         <li><a class="mobile-nav__link" href="#stack" data-i18n="nav.stack">Инструменты</a></li>
-        <li><a class="mobile-nav__link" href="#next" data-i18n="nav.next">Куда двигаюсь</a></li>
+        <li><a class="mobile-nav__link" href="#next" data-i18n="nav.next">Мои цели</a></li>
         <li><a class="mobile-nav__link" href="#photos" data-i18n="nav.photos">Стадионы</a></li>
       </ul>
       <a class="btn btn--primary mobile-nav__cta" href="#contact" data-i18n="nav.cta">Связаться</a>
@@ -1779,7 +1730,7 @@ setTimeout(function () {
             <a class="btn btn--primary" href="#contact"><span data-i18n="hero.cta1">Написать мне</span>
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a class="btn btn--ghost" href="#work" data-i18n="hero.cta2">Посмотреть работы</a>
+            <a class="btn btn--ghost" href="#experience" data-i18n="hero.cta2">Посмотреть работы</a>
           </div>
 
         <dl class="hero__facts" data-anim="6">
@@ -1788,7 +1739,7 @@ setTimeout(function () {
             <dt class="fact__label" data-i18n="hero.fact1.label">клуба ФНЛ в исследовании ассортимента и каналов продаж</dt>
           </div>
           <div>
-            <dd class="fact__value" data-count data-i18n="hero.fact2.value">3,8</dd>
+            <dd class="fact__value" data-count data-i18n="hero.fact2.value">3+</dd>
             <dt class="fact__label" data-i18n="hero.fact2.label">года опыта в спортивной индустрии — от стюардинга до цифровизации лиги</dt>
           </div>
           <div>
@@ -1811,7 +1762,7 @@ setTimeout(function () {
 
         <div class="about__text" style="margin-top: var(--s-7)">
           <p data-i18n="about.p1">Я работаю в спортивной индустрии со стороны организации: отвечаю за процессы на своём участке и довожу задачи до результата. Мне одинаково интересны и продуктовая часть — что и как продавать болельщику, — и операционная: как сделать так, чтобы в день матча всё работало по таймингу.</p>
-          <p data-i18n="about.p2">За последние годы прошёл три разные роли: стажировку в департаменте цифровизации ФНЛ, администрирование спортивного пространства WIN BOX и руководство группой стюардов на матчах РПЛ, Кубка России и КХЛ. Это дало мне и штабной опыт — исследование, требования, документооборот, — и полевой, где ошибки видны сразу.</p>
+          <p data-i18n="about.p2">За последние годы прошёл четыре разные роли: стажировку в департаменте цифровизации ФНЛ, администрирование спортивного пространства WIN BOX, организацию детских и студенческих турниров в Московской федерации футбола и руководство группой стюардов на матчах РПЛ, Кубка России и КХЛ. Это дало мне и штабной опыт — исследование, требования, документооборот, — и полевой, где ошибки видны сразу.</p>
           <p data-i18n="about.p3">Многозадачный и целеустремлённый: спокойно веду несколько направлений параллельно и не бросаю задачу на середине. Люблю футбол и теннис — езжу на матчи и турниры, чтобы смотреть, как устроен зрительский опыт изнутри. В работе <strong>активно использую ИИ</strong>: он закрывает рутину с документами, аналитикой и подготовкой материалов.</p>
         </div>
       </div>
@@ -1868,12 +1819,12 @@ setTimeout(function () {
     </div>
   </section>
 
-  <!-- ========== 5. РАБОТЫ ========== -->
-  <section class="section" id="work">
+  <!-- ========== 5. ОПЫТ ========== -->
+  <section class="section" id="experience">
     <div class="wrap">
       <div class="section__head" data-reveal>
-        <p class="kicker" data-i18n="work.kicker">Работы</p>
-        <h2 class="section__title" data-i18n="work.title">Три задачи и что из них вышло</h2>
+        <p class="kicker" data-i18n="work.kicker">Опыт</p>
+        <h2 class="section__title" data-i18n="work.title">Где работал и что сделал</h2>
       </div>
 
       <div class="cases">
@@ -1881,18 +1832,21 @@ setTimeout(function () {
         <article class="case" data-reveal>
           <div class="case__head">
             <span class="case__num" data-i18n="case1.num">01</span>
-            <h3 class="case__title" data-i18n="case1.title">Маркетплейс ФНЛ: атрибутика 73 клубов в одном месте</h3>
-            <span class="case__org" data-i18n="case1.org">ФНЛ, 2025–2026</span>
+            <div class="case__headings">
+              <h3 class="case__title" data-i18n="case1.title">Маркетплейс ФНЛ: атрибутика 73 клубов в одном месте</h3>
+              <p class="case__org" data-i18n="case1.org">ФНЛ · Стажёр департамента цифровизации</p>
+              <p class="case__period" data-i18n="case1.period">Декабрь 2025 — Май 2026 · 6 месяцев</p>
+            </div>
           </div>
 
           <div class="case__rows">
             <p class="case__row">
               <span class="case__label" data-i18n="label.task">Задача</span>
-              <span class="case__value" data-i18n="case1.task">73 клуба лиги продавали атрибутику разрозненно: у лиги не было единой картины по ассортименту и каналам продаж, а значит, не на чем было строить общий маркетплейс.</span>
+              <span class="case__value" data-i18n="case1.task">73 клуба лиги продавали атрибутику разрозненно: у лиги не было единой картины по ассортименту и каналам продаж, а значит, не на чем было строить общий маркетплейс. Параллельно у лиги шли собственные цифровые продукты — сайт, мобильное приложение, BI-система и «Трансферхаб», — которым нужны были понятные приоритеты в бэклоге и проверка релизов.</span>
             </p>
             <p class="case__row">
               <span class="case__label" data-i18n="label.did">Что сделал</span>
-              <span class="case__value" data-i18n="case1.did">Провёл исследование ассортимента и каналов продаж всех 73 клубов ФНЛ. На его основе подготовил функциональные требования и техническое задание для подрядчиков, вёл документооборот и отчётность по проекту, взаимодействовал с подрядчиками, заказчиками и командой разработки, готовил и представлял результаты.</span>
+              <span class="case__value" data-i18n="case1.did">Провёл исследование ассортимента и каналов продаж всех 73 клубов ФНЛ и на его основе подготовил функциональные требования и техническое задание для подрядчиков. Формировал и приоритизировал бэклог сайта и мобильного приложения лиги по методике RICE — отбирал гипотезы по охвату, влиянию и трудозатратам. Вёл QA цифровых продуктов лиги: писал тест-кейсы, тестировал релизы, вёл отчётность по дефектам. Вёл документооборот и отчётность по проекту в Битрикс24, взаимодействовал с подрядчиками, заказчиками и командой разработки, готовил и представлял результаты.</span>
             </p>
             <p class="case__row">
               <span class="case__label" data-i18n="label.stack">Инструменты</span>
@@ -1905,13 +1859,16 @@ setTimeout(function () {
                   <span class="tag" data-i18n="tag.research">Исследование рынка</span>
                   <span class="tag" data-i18n="tag.reqs">Функциональные требования</span>
                   <span class="tag" data-i18n="tag.spec">Техническое задание</span>
+                  <span class="tag" data-i18n="tag.rice">Приоритизация по RICE</span>
+                  <span class="tag" data-i18n="tag.qa">QA и тест-кейсы</span>
+                  <span class="tag" data-i18n="tag.bi">BI-система лиги</span>
                   <span class="tag" data-i18n="tag.present">Презентации</span>
                 </span>
               </span>
             </p>
             <p class="case__row case__row--result">
               <span class="case__label" data-i18n="label.result">Результат</span>
-              <span class="case__value" data-i18n="case1.result">Написаны функциональные требования к будущему «Маркетплейсу ФНЛ» — около 80 страниц документации. Требования и ТЗ переданы подрядчикам и команде разработки, начало разработки запланировано на следующий сезон. По итогам работы получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.</span>
+              <span class="case__value" data-i18n="case1.result">Написаны функциональные требования к будущему «Маркетплейсу ФНЛ» — около 80 страниц документации. Требования и ТЗ переданы подрядчикам и команде разработки, начало разработки запланировано на следующий сезон. Бэклог сайта и приложения выстроен по приоритетам, релизы цифровых продуктов проходили через проверку. По итогам работы получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.</span>
             </p>
           </div>
 
@@ -1923,33 +1880,39 @@ setTimeout(function () {
         <article class="case" data-reveal>
           <div class="case__head">
             <span class="case__num" data-i18n="case2.num">02</span>
-            <h3 class="case__title" data-i18n="case2.title">WIN BOX: спортивное пространство в режиме нон-стоп</h3>
-            <span class="case__org" data-i18n="case2.org">Эй Энд Эй Спортс (Рус), 2025–2026</span>
+            <div class="case__headings">
+              <h3 class="case__title" data-i18n="case2.title">WIN BOX: спортивное пространство в режиме нон-стоп</h3>
+              <p class="case__org" data-i18n="case2.org">Эй Энд Эй Спортс (Рус) · Администратор спортивного пространства WIN BOX</p>
+              <p class="case__period" data-i18n="case2.period">Июнь 2025 — Январь 2026 · 8 месяцев</p>
+            </div>
           </div>
 
           <div class="case__rows">
             <p class="case__row">
               <span class="case__label" data-i18n="label.task">Задача</span>
-              <span class="case__value" data-i18n="case2.task">Площадка одновременно работала на поток клиентов, партнёров и событий: брони, инвентарь, показы для потенциальных заказчиков, VIP-гости и отчётность — всё это нужно было держать под контролем в одни и те же часы.</span>
+              <span class="case__value" data-i18n="case2.task">Площадка одновременно работала на поток клиентов, партнёров и событий: брони, инвентарь, показы для потенциальных заказчиков, VIP-гости, подрядные команды и отчётность — всё это нужно было держать под контролем в одни и те же часы.</span>
             </p>
             <p class="case__row">
               <span class="case__label" data-i18n="label.did">Что сделал</span>
-              <span class="case__value" data-i18n="case2.did">Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию, выдавал спортивное оборудование и инвентарь. Координировал мероприятия — трансляции Формулы-1, автограф-сессии, шоу-программы — и сопровождал VIP-гостей. Управлял бронированием через админ-панель и вёл отчётность по посещаемости для компании-партнёра площадки.</span>
+              <span class="case__value" data-i18n="case2.did">Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию и вёл брони через админ-панель, интегрированную с сайтом: клиентские записи, статусы, загрузка зон. Выдавал спортивное оборудование и инвентарь, отвечал за его сохранность и оборот. Координировал мероприятия — трансляции Формулы-1, автограф-сессии, шоу-программы — и работу нескольких подрядных команд одновременно, сопровождал VIP-гостей. Собирал и обрабатывал статистику посещаемости и загрузки зон, готовил по ней отчётность для руководства и компании-партнёра площадки.</span>
             </p>
             <p class="case__row">
               <span class="case__label" data-i18n="label.stack">Инструменты</span>
               <span class="case__value">
                 <span class="case__tools">
                   <span class="tag" data-i18n="tag.adminpanel">Админ-панель бронирования</span>
-                  <span class="tag" data-i18n="tag.reporting">Отчётность по посещаемости</span>
-                  <span class="tag" data-i18n="tag.present">Презентации</span>
+                  <span class="tag" data-i18n="tag.reporting">Отчётность</span>
                   <span class="tag" data-i18n="tag.eventcoord">Координация мероприятий</span>
+                  <span class="tag" data-i18n="tag.vendors">Работа с подрядчиками</span>
+                  <span class="tag" data-i18n="tag.vip">Сопровождение VIP-гостей</span>
+                  <span class="tag" data-i18n="tag.inventory">Учёт инвентаря</span>
+                  <span class="tag" data-i18n="tag.present">Презентации</span>
                 </span>
               </span>
             </p>
             <p class="case__row case__row--result">
               <span class="case__label" data-i18n="label.result">Результат</span>
-              <span class="case__value" data-i18n="case2.result">Провёл более 200 мероприятий на площадке. Посещаемость стабильно росла всё лето, к осени пошла на спад.</span>
+              <span class="case__value" data-i18n="case2.result">Провёл более 200 мероприятий на площадке. Посещаемость стабильно росла всё лето.</span>
             </p>
           </div>
 
@@ -1961,18 +1924,64 @@ setTimeout(function () {
         <article class="case" data-reveal>
           <div class="case__head">
             <span class="case__num" data-i18n="case3.num">03</span>
-            <h3 class="case__title" data-i18n="case3.title">Старший стюард на матчах РПЛ, Кубка России и КХЛ</h3>
-            <span class="case__org" data-i18n="case3.org">Ивент-Сэйфети, 2022–2023</span>
+            <div class="case__headings">
+              <h3 class="case__title" data-i18n="case3.title">Детские и студенческие турниры Московской федерации футбола</h3>
+              <p class="case__org" data-i18n="case3.org">Московская федерация футбола · Администратор</p>
+              <p class="case__period" data-i18n="case3.period">Сентябрь 2023 — Январь 2025 · 1 год 5 месяцев</p>
+            </div>
           </div>
 
           <div class="case__rows">
             <p class="case__row">
               <span class="case__label" data-i18n="label.task">Задача</span>
-              <span class="case__value" data-i18n="case3.task">На матчах с большим потоком зрителей и жёстким таймингом нужен не набор людей на позициях, а управляемый участок, за который кто-то отвечает головой.</span>
+              <span class="case__value" data-i18n="case3.task">Турниры идут сериями весь сезон: расписание, инвентарь, десятки команд-участников. Нужен человек, который держит и соревновательные дни, и связь с участниками между ними.</span>
             </p>
             <p class="case__row">
               <span class="case__label" data-i18n="label.did">Что сделал</span>
-              <span class="case__value" data-i18n="case3.did">Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка. Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.</span>
+              <span class="case__value" data-i18n="case3.did">Организовывал детские и студенческие футбольные турниры: формировал расписание, рассылал информацию участникам, сопровождал соревновательные дни. Вёл учёт спортивного инвентаря — приёмку, выдачу, контроль состояния, планирование замены и дозакупки. Развивал медиаприсутствие студенческого турнира: вёл Telegram-канал, планировал контент и коммуникацию с командами.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.stack">Инструменты</span>
+              <span class="case__value">
+                <span class="case__tools">
+                  <span class="tag" data-i18n="tag.tournaments">Организация турниров</span>
+                  <span class="tag" data-i18n="tag.schedule">Расписание соревнований</span>
+                  <span class="tag" data-i18n="tag.inventory">Учёт инвентаря</span>
+                  <span class="tag" data-i18n="tag.telegram">Telegram-канал</span>
+                  <span class="tag" data-i18n="tag.contentplan">Контент-план</span>
+                  <span class="tag" data-i18n="tag.timing">Работа по таймингу</span>
+                </span>
+              </span>
+            </p>
+            <p class="case__row case__row--result">
+              <span class="case__label" data-i18n="label.result">Результат</span>
+              <span class="case__value" data-i18n="case3.result">Турниры проходили по расписанию весь сезон — от детских соревнований до студенческой лиги. Telegram-канал студенческого турнира стал рабочим каналом связи с командами: расписание, результаты и организационные объявления шли через него.</span>
+            </p>
+          </div>
+
+          <a class="case__link" href="#contact"><span data-i18n="case3.link">Расскажу подробнее</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <article class="case" data-reveal>
+          <div class="case__head">
+            <span class="case__num" data-i18n="case4.num">04</span>
+            <div class="case__headings">
+              <h3 class="case__title" data-i18n="case4.title">Старший стюард на матчах РПЛ, Кубка России и КХЛ</h3>
+              <p class="case__org" data-i18n="case4.org">Ивент-Сэйфети · Старший стюард</p>
+              <p class="case__period" data-i18n="case4.period">Февраль 2022 — Июнь 2023 · 1 год 5 месяцев</p>
+            </div>
+          </div>
+
+          <div class="case__rows">
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.task">Задача</span>
+              <span class="case__value" data-i18n="case4.task">На матчах с большим потоком зрителей и жёстким таймингом нужен не набор людей на позициях, а управляемый участок, за который кто-то отвечает головой.</span>
+            </p>
+            <p class="case__row">
+              <span class="case__label" data-i18n="label.did">Что сделал</span>
+              <span class="case__value" data-i18n="case4.did">Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка. Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ. Работал в условиях большого потока людей и строгого тайминга мероприятий.</span>
             </p>
             <p class="case__row">
               <span class="case__label" data-i18n="label.stack">Инструменты</span>
@@ -1988,16 +1997,35 @@ setTimeout(function () {
             </p>
             <p class="case__row case__row--result">
               <span class="case__label" data-i18n="label.result">Результат</span>
-              <span class="case__value" data-i18n="case3.result">Отвечал за закреплённый участок с группой около 15 стюардов на матчах РПЛ, Кубка России и КХЛ. Работа шла по схемам объекта и на радиосвязи с остальными участками.</span>
+              <span class="case__value" data-i18n="case4.result">Отвечал за закреплённый участок с группой около 15 стюардов на матчах РПЛ, Кубка России и КХЛ. Работа шла по схемам объекта и на радиосвязи с остальными участками.</span>
             </p>
           </div>
 
-          <a class="case__link" href="#contact"><span data-i18n="case3.link">Расскажу подробнее</span>
+          <a class="case__link" href="#contact"><span data-i18n="case4.link">Расскажу подробнее</span>
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </article>
 
       </div>
+
+      <div class="creds" id="education" data-reveal>
+        <h3 class="creds__title" data-i18n="creds.title">Образование и документы</h3>
+        <dl class="creds__list">
+          <div class="creds__row">
+            <dt class="creds__label" data-i18n="creds.1.label">Высшее образование</dt>
+            <dd class="creds__value" data-i18n="creds.1.value">Финансовый университет при Правительстве РФ, «Менеджмент в спорте», 2026. Тема диплома — роль букмекерских компаний в российском спорте</dd>
+          </div>
+          <div class="creds__row">
+            <dt class="creds__label" data-i18n="creds.2.label">Дополнительное обучение</dt>
+            <dd class="creds__value" data-i18n="creds.2.value">Курс «Путь в спорте: обзор индустрии», Факультет, 2026</dd>
+          </div>
+          <div class="creds__row">
+            <dt class="creds__label" data-i18n="creds.3.label">Водительские права</dt>
+            <dd class="creds__value" data-i18n="creds.3.value">Категория B</dd>
+          </div>
+        </dl>
+      </div>
+
     </div>
   </section>
 
@@ -2040,7 +2068,6 @@ setTimeout(function () {
         </form>
 
         <p class="request__status" id="ref-status" role="status" aria-live="polite"></p>
-        <p class="request__hint" data-i18n="req.hint">Кнопка откроет почтовый клиент с готовым письмом. Можно и напрямую: ivandemidov18@icloud.com или @demidov_ivan1 в Telegram.</p>
       </div>
 
       <div class="docs">
@@ -2269,101 +2296,6 @@ setTimeout(function () {
     </div>
   </section>
 
-  <!-- ========== 6. ОПЫТ ========== -->
-  <section class="section" id="experience">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="kicker" data-i18n="exp.kicker">Опыт</p>
-        <h2 class="section__title" data-i18n="exp.title">Путь: от трибуны к управлению процессами</h2>
-      </div>
-
-      <div class="timeline">
-
-        <article class="tl" data-reveal>
-          <p class="tl__period" data-i18n="exp1.period">Декабрь 2025 — Май 2026</p>
-          <h3 class="tl__role" data-i18n="exp1.role">Стажёр департамента цифровизации</h3>
-          <div class="tl__meta">
-            <span class="tl__org" data-i18n="exp1.org">Ассоциация профессиональных футбольных клубов «Футбольная национальная лига» (ФНЛ)</span>
-            <span class="tl__dur" data-i18n="exp1.dur">6 месяцев</span>
-          </div>
-          <ul class="tl__points">
-            <li data-i18n="exp1.p1">Провёл исследование ассортимента и каналов продаж атрибутики 73 клубов ФНЛ.</li>
-            <li data-i18n="exp1.p2">Подготовил функциональные требования и техническое задание для подрядчиков по проекту «Маркетплейс ФНЛ».</li>
-            <li data-i18n="exp1.p3">Вёл документооборот и отчётность по проекту через Битрикс24.</li>
-            <li data-i18n="exp1.p4">Взаимодействовал с подрядчиками, заказчиками и командой разработки.</li>
-            <li data-i18n="exp1.p5">Готовил и представлял результаты исследований и требований.</li>
-            <li data-i18n="exp1.p6">По итогам стажировки получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.</li>
-          </ul>
-        </article>
-
-        <article class="tl" data-reveal>
-          <p class="tl__period" data-i18n="exp2.period">Июнь 2025 — Январь 2026</p>
-          <h3 class="tl__role" data-i18n="exp2.role">Администратор спортивного пространства WIN BOX</h3>
-          <div class="tl__meta">
-            <span class="tl__org" data-i18n="exp2.org">Эй Энд Эй Спортс (Рус)</span>
-            <span class="tl__dur" data-i18n="exp2.dur">8 месяцев</span>
-          </div>
-          <ul class="tl__points">
-            <li data-i18n="exp2.p1">Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию.</li>
-            <li data-i18n="exp2.p2">Выдавал спортивное оборудование и инвентарь, отвечал за его сохранность и оборот.</li>
-            <li data-i18n="exp2.p3">Координировал мероприятия на площадке: трансляции Формулы-1, автограф-сессии, шоу-программы.</li>
-            <li data-i18n="exp2.p4">Сопровождал VIP-гостей.</li>
-            <li data-i18n="exp2.p5">Управлял бронированием через собственную админ-панель площадки.</li>
-            <li data-i18n="exp2.p6">Вёл отчётность по посещаемости для компании-партнёра площадки.</li>
-          </ul>
-        </article>
-
-
-        <article class="tl" data-reveal>
-          <p class="tl__period" data-i18n="exp3.period">Сентябрь 2023 — Январь 2025</p>
-          <h3 class="tl__role" data-i18n="exp3.role">Администратор</h3>
-          <div class="tl__meta">
-            <span class="tl__org" data-i18n="exp3.org">Московская федерация футбола</span>
-            <span class="tl__dur" data-i18n="exp3.dur">1 год 5 месяцев</span>
-          </div>
-          <ul class="tl__points">
-            <li data-i18n="exp3.p1">Организовывал детские и студенческие футбольные турниры.</li>
-            <li data-i18n="exp3.p2">Вёл учёт спортивного инвентаря.</li>
-            <li data-i18n="exp3.p3">Развивал медиаприсутствие студенческого турнира: готовил контент для Telegram-канала.</li>
-          </ul>
-        </article>
-
-        <article class="tl" data-reveal>
-          <p class="tl__period" data-i18n="exp4.period">Февраль 2022 — Июнь 2023</p>
-          <h3 class="tl__role" data-i18n="exp4.role">Старший стюард</h3>
-          <div class="tl__meta">
-            <span class="tl__org" data-i18n="exp4.org">Ивент-Сэйфети</span>
-            <span class="tl__dur" data-i18n="exp4.dur">1 год 5 месяцев</span>
-          </div>
-          <ul class="tl__points">
-            <li data-i18n="exp4.p1">Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка.</li>
-            <li data-i18n="exp4.p2">Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.</li>
-            <li data-i18n="exp4.p3">Работал в условиях большого потока людей и строгого тайминга мероприятий.</li>
-          </ul>
-        </article>
-
-      </div>
-
-      <div class="creds" id="education" data-reveal>
-        <h3 class="creds__title" data-i18n="creds.title">Образование и документы</h3>
-        <dl class="creds__list">
-          <div class="creds__row">
-            <dt class="creds__label" data-i18n="creds.1.label">Высшее образование</dt>
-            <dd class="creds__value" data-i18n="creds.1.value">Финансовый университет при Правительстве РФ, «Менеджмент в спорте», 2026. Тема диплома — роль букмекерских компаний в российском спорте</dd>
-          </div>
-          <div class="creds__row">
-            <dt class="creds__label" data-i18n="creds.2.label">Дополнительное обучение</dt>
-            <dd class="creds__value" data-i18n="creds.2.value">Курс «Путь в спорте: обзор индустрии», Факультет, 2026</dd>
-          </div>
-          <div class="creds__row">
-            <dt class="creds__label" data-i18n="creds.3.label">Водительские права</dt>
-            <dd class="creds__value" data-i18n="creds.3.value">Категория B</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== 7. СТЕК И ИНСТРУМЕНТЫ ========== -->
   <section class="section" id="stack">
     <div class="wrap">
@@ -2440,7 +2372,7 @@ setTimeout(function () {
   <section class="section" id="next">
     <div class="wrap">
       <div class="section__head" data-reveal>
-        <p class="kicker" data-i18n="next.kicker">Куда двигаюсь</p>
+        <p class="kicker" data-i18n="next.kicker">Мои цели</p>
         <h2 class="section__title" data-i18n="next.title">Что ищу дальше</h2>
       </div>
 
@@ -2492,7 +2424,15 @@ setTimeout(function () {
         <p class="section__lead" data-i18n="photos.lead">Езжу на матчи и турниры не только как болельщик: смотрю, как устроены зрительский опыт, навигация, мерч-зоны и работа персонала. Каждая поездка — материал для работы.</p>
       </div>
 
-      <div class="gallery">
+      <div class="gallery-panel" id="gallery-panel">
+
+        <button class="btn btn--ghost gallery__toggle" type="button" id="gallery-toggle"
+                aria-expanded="false" aria-controls="gallery-grid">
+          <span data-i18n="photos.show">Показать 17 фотографий</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+
+      <div class="gallery" id="gallery-grid">
 
         <figure class="shot" data-reveal>
           <img src="assets/photos/real-almeria-2024.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Вид на поле и трибуны стадиона перед матчем Реал Мадрид — Альмерия" data-i18n-alt="ph1.alt">
@@ -2580,6 +2520,7 @@ setTimeout(function () {
         </figure>
 
       </div>
+      </div>
     </div>
   </section>
 
@@ -2665,16 +2606,16 @@ setTimeout(function () {
       "a11y.lang": "Язык сайта",
       "a11y.menu": "Открыть меню",
       "a11y.footernav": "Контакты в подвале",
+      "a11y.brand": "Иван Демидов — на главную",
 
       "brand": "Иван Демидов",
       "nav.about": "О себе",
       "nav.services": "Чем занимаюсь",
-      "nav.work": "Работы",
       "nav.docs": "Материалы",
       "nav.experience": "Опыт",
       "nav.education": "Образование",
       "nav.stack": "Инструменты",
-      "nav.next": "Куда двигаюсь",
+      "nav.next": "Мои цели",
       "nav.photos": "Стадионы",
       "nav.cta": "Связаться",
 
@@ -2687,7 +2628,7 @@ setTimeout(function () {
       "hero.portrait.alt": "Портрет Ивана Демидова",
       "hero.fact1.value": "73",
       "hero.fact1.label": "клуба ФНЛ в исследовании ассортимента и каналов продаж",
-      "hero.fact2.value": "3,8",
+      "hero.fact2.value": "3+",
       "hero.fact2.label": "года опыта в спортивной индустрии — от стюардинга до цифровизации лиги",
       "hero.fact3.value": "80",
       "hero.fact3.label": "страниц функциональных требований к «Маркетплейсу ФНЛ»",
@@ -2695,7 +2636,7 @@ setTimeout(function () {
       "about.kicker": "О себе",
       "about.title": "Спорт как индустрия: продукт, процессы, площадка",
       "about.p1": "Я работаю в спортивной индустрии со стороны организации: отвечаю за процессы на своём участке и довожу задачи до результата. Мне одинаково интересны и продуктовая часть — что и как продавать болельщику, — и операционная: как сделать так, чтобы в день матча всё работало по таймингу.",
-      "about.p2": "За последние годы прошёл три разные роли: стажировку в департаменте цифровизации ФНЛ, администрирование спортивного пространства WIN BOX и руководство группой стюардов на матчах РПЛ, Кубка России и КХЛ. Это дало мне и штабной опыт — исследование, требования, документооборот, — и полевой, где ошибки видны сразу.",
+      "about.p2": "За последние годы прошёл четыре разные роли: стажировку в департаменте цифровизации ФНЛ, администрирование спортивного пространства WIN BOX, организацию детских и студенческих турниров в Московской федерации футбола и руководство группой стюардов на матчах РПЛ, Кубка России и КХЛ. Это дало мне и штабной опыт — исследование, требования, документооборот, — и полевой, где ошибки видны сразу.",
       "about.p3": "Многозадачный и целеустремлённый: спокойно веду несколько направлений параллельно и не бросаю задачу на середине. Люблю футбол и теннис — езжу на матчи и турниры, чтобы смотреть, как устроен зрительский опыт изнутри. В работе активно использую ИИ: он закрывает рутину с документами, аналитикой и подготовкой материалов.",
       "about.photo.alt": "Иван Демидов за столом пресс-конференции на стадионе Сан-Мамес",
       "about.photo.caption": "Сан-Мамес, экскурсия по стадиону, 2024",
@@ -2711,8 +2652,8 @@ setTimeout(function () {
       "svc.4.title": "Операционка площадок и мероприятий",
       "svc.4.text": "Отвечаю за то, чтобы в день события всё шло по плану: бронирование, инвентарь, гости, тайминг, работа команды на участке и отчётность по итогам.",
 
-      "work.kicker": "Работы",
-      "work.title": "Три задачи и что из них вышло",
+      "work.kicker": "Опыт",
+      "work.title": "Где работал и что сделал",
       "label.task": "Задача",
       "label.did": "Что сделал",
       "label.stack": "Инструменты",
@@ -2720,27 +2661,39 @@ setTimeout(function () {
 
       "case1.num": "01",
       "case1.title": "Маркетплейс ФНЛ: атрибутика 73 клубов в одном месте",
-      "case1.org": "ФНЛ, 2025–2026",
-      "case1.task": "73 клуба лиги продавали атрибутику разрозненно: у лиги не было единой картины по ассортименту и каналам продаж, а значит, не на чем было строить общий маркетплейс.",
-      "case1.did": "Провёл исследование ассортимента и каналов продаж всех 73 клубов ФНЛ. На его основе подготовил функциональные требования и техническое задание для подрядчиков, вёл документооборот и отчётность по проекту, взаимодействовал с подрядчиками, заказчиками и командой разработки, готовил и представлял результаты.",
-      "case1.result": "Написаны функциональные требования к будущему «Маркетплейсу ФНЛ» — около 80 страниц документации. Требования и ТЗ переданы подрядчикам и команде разработки, начало разработки запланировано на следующий сезон. По итогам работы получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.",
+      "case1.org": "ФНЛ · Стажёр департамента цифровизации",
+      "case1.period": "Декабрь 2025 — Май 2026 · 6 месяцев",
+      "case1.task": "73 клуба лиги продавали атрибутику разрозненно: у лиги не было единой картины по ассортименту и каналам продаж, а значит, не на чем было строить общий маркетплейс. Параллельно у лиги шли собственные цифровые продукты — сайт, мобильное приложение, BI-система и «Трансферхаб», — которым нужны были понятные приоритеты в бэклоге и проверка релизов.",
+      "case1.did": "Провёл исследование ассортимента и каналов продаж всех 73 клубов ФНЛ и на его основе подготовил функциональные требования и техническое задание для подрядчиков. Формировал и приоритизировал бэклог сайта и мобильного приложения лиги по методике RICE — отбирал гипотезы по охвату, влиянию и трудозатратам. Вёл QA цифровых продуктов лиги: писал тест-кейсы, тестировал релизы, вёл отчётность по дефектам. Вёл документооборот и отчётность по проекту в Битрикс24, взаимодействовал с подрядчиками, заказчиками и командой разработки, готовил и представлял результаты.",
+      "case1.result": "Написаны функциональные требования к будущему «Маркетплейсу ФНЛ» — около 80 страниц документации. Требования и ТЗ переданы подрядчикам и команде разработки, начало разработки запланировано на следующий сезон. Бэклог сайта и приложения выстроен по приоритетам, релизы цифровых продуктов проходили через проверку. По итогам работы получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.",
       "case1.link": "Запросить материалы и рекомендацию",
 
       "case2.num": "02",
       "case2.title": "WIN BOX: спортивное пространство в режиме нон-стоп",
-      "case2.org": "Эй Энд Эй Спортс (Рус), 2025–2026",
-      "case2.task": "Площадка одновременно работала на поток клиентов, партнёров и событий: брони, инвентарь, показы для потенциальных заказчиков, VIP-гости и отчётность — всё это нужно было держать под контролем в одни и те же часы.",
-      "case2.did": "Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию, выдавал спортивное оборудование и инвентарь. Координировал мероприятия — трансляции Формулы-1, автограф-сессии, шоу-программы — и сопровождал VIP-гостей. Управлял бронированием через админ-панель и вёл отчётность по посещаемости для компании-партнёра площадки.",
-      "case2.result": "Провёл более 200 мероприятий на площадке. Посещаемость стабильно росла всё лето, к осени пошла на спад.",
+      "case2.org": "Эй Энд Эй Спортс (Рус) · Администратор спортивного пространства WIN BOX",
+      "case2.period": "Июнь 2025 — Январь 2026 · 8 месяцев",
+      "case2.task": "Площадка одновременно работала на поток клиентов, партнёров и событий: брони, инвентарь, показы для потенциальных заказчиков, VIP-гости, подрядные команды и отчётность — всё это нужно было держать под контролем в одни и те же часы.",
+      "case2.did": "Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию и вёл брони через админ-панель, интегрированную с сайтом: клиентские записи, статусы, загрузка зон. Выдавал спортивное оборудование и инвентарь, отвечал за его сохранность и оборот. Координировал мероприятия — трансляции Формулы-1, автограф-сессии, шоу-программы — и работу нескольких подрядных команд одновременно, сопровождал VIP-гостей. Собирал и обрабатывал статистику посещаемости и загрузки зон, готовил по ней отчётность для руководства и компании-партнёра площадки.",
+      "case2.result": "Провёл более 200 мероприятий на площадке. Посещаемость стабильно росла всё лето.",
       "case2.link": "Расскажу подробнее",
 
       "case3.num": "03",
-      "case3.title": "Старший стюард на матчах РПЛ, Кубка России и КХЛ",
-      "case3.org": "Ивент-Сэйфети, 2022–2023",
-      "case3.task": "На матчах с большим потоком зрителей и жёстким таймингом нужен не набор людей на позициях, а управляемый участок, за который кто-то отвечает головой.",
-      "case3.did": "Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка. Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.",
-      "case3.result": "Отвечал за закреплённый участок с группой около 15 стюардов на матчах РПЛ, Кубка России и КХЛ. Работа шла по схемам объекта и на радиосвязи с остальными участками.",
+      "case3.title": "Детские и студенческие турниры Московской федерации футбола",
+      "case3.org": "Московская федерация футбола · Администратор",
+      "case3.period": "Сентябрь 2023 — Январь 2025 · 1 год 5 месяцев",
+      "case3.task": "Турниры идут сериями весь сезон: расписание, инвентарь, десятки команд-участников. Нужен человек, который держит и соревновательные дни, и связь с участниками между ними.",
+      "case3.did": "Организовывал детские и студенческие футбольные турниры: формировал расписание, рассылал информацию участникам, сопровождал соревновательные дни. Вёл учёт спортивного инвентаря — приёмку, выдачу, контроль состояния, планирование замены и дозакупки. Развивал медиаприсутствие студенческого турнира: вёл Telegram-канал, планировал контент и коммуникацию с командами.",
+      "case3.result": "Турниры проходили по расписанию весь сезон — от детских соревнований до студенческой лиги. Telegram-канал студенческого турнира стал рабочим каналом связи с командами: расписание, результаты и организационные объявления шли через него.",
       "case3.link": "Расскажу подробнее",
+
+      "case4.num": "04",
+      "case4.title": "Старший стюард на матчах РПЛ, Кубка России и КХЛ",
+      "case4.org": "Ивент-Сэйфети · Старший стюард",
+      "case4.period": "Февраль 2022 — Июнь 2023 · 1 год 5 месяцев",
+      "case4.task": "На матчах с большим потоком зрителей и жёстким таймингом нужен не набор людей на позициях, а управляемый участок, за который кто-то отвечает головой.",
+      "case4.did": "Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка. Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ. Работал в условиях большого потока людей и строгого тайминга мероприятий.",
+      "case4.result": "Отвечал за закреплённый участок с группой около 15 стюардов на матчах РПЛ, Кубка России и КХЛ. Работа шла по схемам объекта и на радиосвязи с остальными участками.",
+      "case4.link": "Расскажу подробнее",
 
       "tag.bitrix": "Битрикс24",
       "tag.ai": "ИИ-инструменты",
@@ -2767,6 +2720,14 @@ setTimeout(function () {
       "tag.aianalysis": "Разбор и сведение данных",
       "tag.airesearch": "Поиск и структурирование информации",
       "tag.vip": "Сопровождение VIP-гостей",
+      "tag.rice": "Приоритизация по RICE",
+      "tag.qa": "QA и тест-кейсы",
+      "tag.bi": "BI-система лиги",
+      "tag.tournaments": "Организация турниров",
+      "tag.schedule": "Расписание соревнований",
+      "tag.inventory": "Учёт инвентаря",
+      "tag.telegram": "Telegram-канал",
+      "tag.contentplan": "Контент-план",
       "tag.ru": "Русский — родной",
       "tag.en": "Английский — C1",
       "tag.de": "Немецкий — A1",
@@ -2791,7 +2752,6 @@ setTimeout(function () {
       "req.company": "Компания",
       "req.contact": "Email или телефон",
       "req.submit": "Запросить отзыв",
-      "req.hint": "Кнопка откроет почтовый клиент с готовым письмом. Можно и напрямую: ivandemidov18@icloud.com или @demidov_ivan1 в Telegram.",
       "req.subject": "Запрос отзыва о стажировке в ФНЛ",
       "req.intro": "Здравствуйте, Иван! Прошу прислать отзыв о стажировке в ФНЛ.",
       "req.sent": "Письмо сформировано — осталось отправить его из почтового клиента.",
@@ -2814,42 +2774,6 @@ setTimeout(function () {
       "u5": "Разбор БК «Зенит» Санкт-Петербург",
       "u6": "Менеджмент качества спортивного проекта: US Open 2025",
       "u7": "Разбор ФК «Гамбург» (HSV)",
-      "exp.kicker": "Опыт",
-      "exp.title": "Путь: от трибуны к управлению процессами",
-      "exp1.period": "Декабрь 2025 — Май 2026",
-      "exp1.role": "Стажёр департамента цифровизации",
-      "exp1.org": "Ассоциация профессиональных футбольных клубов «Футбольная национальная лига» (ФНЛ)",
-      "exp1.dur": "6 месяцев",
-      "exp1.p1": "Провёл исследование ассортимента и каналов продаж атрибутики 73 клубов ФНЛ.",
-      "exp1.p2": "Подготовил функциональные требования и техническое задание для подрядчиков по проекту «Маркетплейс ФНЛ».",
-      "exp1.p3": "Вёл документооборот и отчётность по проекту через Битрикс24.",
-      "exp1.p4": "Взаимодействовал с подрядчиками, заказчиками и командой разработки.",
-      "exp1.p5": "Готовил и представлял результаты исследований и требований.",
-      "exp1.p6": "По итогам стажировки получил рекомендацию исполнительного директора ФНЛ — предоставлю по запросу.",
-      "exp2.period": "Июнь 2025 — Январь 2026",
-      "exp2.role": "Администратор спортивного пространства WIN BOX",
-      "exp2.org": "Эй Энд Эй Спортс (Рус)",
-      "exp2.dur": "8 месяцев",
-      "exp2.p1": "Проводил презентации площадки для клиентов и партнёров, консультировал по бронированию.",
-      "exp2.p2": "Выдавал спортивное оборудование и инвентарь, отвечал за его сохранность и оборот.",
-      "exp2.p3": "Координировал мероприятия на площадке: трансляции Формулы-1, автограф-сессии, шоу-программы.",
-      "exp2.p4": "Сопровождал VIP-гостей.",
-      "exp2.p5": "Управлял бронированием через собственную админ-панель площадки.",
-      "exp2.p6": "Вёл отчётность по посещаемости для компании-партнёра площадки.",
-      "exp3.period": "Сентябрь 2023 — Январь 2025",
-      "exp3.role": "Администратор",
-      "exp3.org": "Московская федерация футбола",
-      "exp3.dur": "1 год 5 месяцев",
-      "exp3.p1": "Организовывал детские и студенческие футбольные турниры.",
-      "exp3.p2": "Вёл учёт спортивного инвентаря.",
-      "exp3.p3": "Развивал медиаприсутствие студенческого турнира: готовил контент для Telegram-канала.",
-      "exp4.period": "Февраль 2022 — Июнь 2023",
-      "exp4.role": "Старший стюард",
-      "exp4.org": "Ивент-Сэйфети",
-      "exp4.dur": "1 год 5 месяцев",
-      "exp4.p1": "Руководил группой стюардов на закреплённом участке спортивного объекта: ставил задачи, контролировал выполнение, отвечал за результат участка.",
-      "exp4.p2": "Координировал процессы обеспечения безопасности и организации зрительского опыта на матчах РПЛ, Кубка России и КХЛ.",
-      "exp4.p3": "Работал в условиях большого потока людей и строгого тайминга мероприятий.",
 
       "stack.kicker": "Стек и инструменты",
       "stack.title": "Чем работаю каждый день",
@@ -2859,7 +2783,7 @@ setTimeout(function () {
       "stack.g4.title": "Операционка мероприятий",
       "stack.g5.title": "Языки",
 
-      "next.kicker": "Куда двигаюсь",
+      "next.kicker": "Мои цели",
       "next.title": "Что ищу дальше",
       "next.1.title": "Роль",
       "next.1.text": "Менеджер спортивных проектов / менеджер по спортивной атрибутике",
@@ -2876,6 +2800,8 @@ setTimeout(function () {
       "next.task7": "Тестирование и приёмка цифровых продуктов: сайт, приложение, BI-система.",
       "next.task8": "Аналитика посещаемости и подготовка данных для решений.",
 
+      "photos.show": "Показать 17 фотографий",
+      "photos.hide": "Свернуть фотографии",
       "photos.kicker": "Стадионы",
       "photos.title": "Смотрю индустрию с трибуны и изнутри",
       "photos.lead": "Езжу на матчи и турниры не только как болельщик: смотрю, как устроены зрительский опыт, навигация, мерч-зоны и работа персонала. Каждая поездка — материал для работы.",
@@ -2952,16 +2878,16 @@ setTimeout(function () {
       "a11y.lang": "Site language",
       "a11y.menu": "Open menu",
       "a11y.footernav": "Footer contacts",
+      "a11y.brand": "Ivan Demidov — back to top",
 
       "brand": "Ivan Demidov",
       "nav.about": "About",
       "nav.services": "What I do",
-      "nav.work": "Work",
       "nav.docs": "Materials",
       "nav.experience": "Experience",
       "nav.education": "Education",
       "nav.stack": "Tools",
-      "nav.next": "What's next",
+      "nav.next": "My goals",
       "nav.photos": "Stadiums",
       "nav.cta": "Get in touch",
 
@@ -2974,7 +2900,7 @@ setTimeout(function () {
       "hero.portrait.alt": "Portrait of Ivan Demidov",
       "hero.fact1.value": "73",
       "hero.fact1.label": "FNL clubs covered in my merchandise and sales-channel study",
-      "hero.fact2.value": "3.8",
+      "hero.fact2.value": "3+",
       "hero.fact2.label": "years in the sports industry — from stewarding to league digitalisation",
       "hero.fact3.value": "80",
       "hero.fact3.label": "pages of functional requirements written for the FNL Marketplace",
@@ -2982,7 +2908,7 @@ setTimeout(function () {
       "about.kicker": "About",
       "about.title": "Sport as an industry: product, process, venue",
       "about.p1": "I work in sport from the organiser's side: I own the processes on my patch and see tasks through to a result. The product side interests me as much as the operational one — what you sell a supporter and how, and how to make matchday run to the minute.",
-      "about.p2": "Over the past few years I have held three very different roles: an internship in the FNL digitalisation department, running the WIN BOX sports venue, and leading a steward team at Russian Premier League, Russian Cup and KHL matches. That gave me both the desk side — research, requirements, paperwork — and the field side, where mistakes show up immediately.",
+      "about.p2": "Over the past few years I have held four very different roles: an internship in the FNL digitalisation department, running the WIN BOX sports venue, organising children’s and student tournaments at the Moscow Football Federation, and leading a steward team at Russian Premier League, Russian Cup and KHL matches. That gave me both the desk side — research, requirements, paperwork — and the field side, where mistakes show up immediately.",
       "about.p3": "I handle several tracks at once and I do not drop a task halfway. Football and tennis are what I genuinely follow — I travel to matches and tournaments to study the spectator experience from the inside. And I use AI heavily in my work: it clears the routine around documents, analysis and preparing materials.",
       "about.photo.alt": "Ivan Demidov at the press conference desk at San Mamés stadium",
       "about.photo.caption": "San Mamés, stadium tour, 2024",
@@ -2998,8 +2924,8 @@ setTimeout(function () {
       "svc.4.title": "Venue and event operations",
       "svc.4.text": "I make sure event day goes to plan: bookings, equipment, guests, timing, the team on my section, and the reporting afterwards.",
 
-      "work.kicker": "Work",
-      "work.title": "Three problems and what came out of them",
+      "work.kicker": "Experience",
+      "work.title": "Where I worked and what I did",
       "label.task": "Problem",
       "label.did": "What I did",
       "label.stack": "Tools",
@@ -3007,27 +2933,39 @@ setTimeout(function () {
 
       "case1.num": "01",
       "case1.title": "FNL Marketplace: merchandise from 73 clubs in one place",
-      "case1.org": "FNL, 2025–2026",
-      "case1.task": "The league's 73 clubs sold merchandise separately. There was no single picture of what was on sale or through which channels — and therefore nothing to build a shared marketplace on.",
-      "case1.did": "I ran a study of the merchandise range and sales channels of all 73 FNL clubs. On that basis I wrote the functional requirements and the technical specification for vendors, maintained project documentation and reporting, worked with vendors, clients and the development team, and prepared and presented the findings.",
-      "case1.result": "The functional requirements for the future FNL Marketplace were written out in full — around 80 pages of documentation. Requirements and the spec went to the vendors and the development team, and development is scheduled to start next season. The work earned me a written recommendation from the FNL executive director — available on request.",
+      "case1.org": "FNL · Intern, Digitalisation Department",
+      "case1.period": "December 2025 — May 2026 · 6 months",
+      "case1.task": "The league’s 73 clubs sold merchandise separately. There was no single picture of what was on sale or through which channels — and therefore nothing to build a shared marketplace on. In parallel the league was running its own digital products — website, mobile app, BI system and the Transfer Hub — which needed a clearly prioritised backlog and release testing.",
+      "case1.did": "I ran a study of the merchandise range and sales channels of all 73 FNL clubs and used it to write the functional requirements and the technical specification for vendors. I built and prioritised the backlog for the league’s website and mobile app using the RICE method, weighing reach, impact and effort. I ran QA on the league’s digital products: writing test cases, testing releases and keeping defect reporting. I maintained project documentation and reporting in Bitrix24, worked with vendors, clients and the development team, and prepared and presented the findings.",
+      "case1.result": "The functional requirements for the future FNL Marketplace were written out in full — around 80 pages of documentation. Requirements and the spec went to the vendors and the development team, and development is scheduled to start next season. The website and app backlog was ordered by priority, and releases went through testing. The work earned me a written recommendation from the FNL executive director — available on request.",
       "case1.link": "Request the materials and recommendation",
 
       "case2.num": "02",
       "case2.title": "WIN BOX: a sports venue running non-stop",
-      "case2.org": "A&A Sports (Rus), 2025–2026",
-      "case2.task": "The venue served a stream of clients, partners and events at the same time: bookings, equipment, walkthroughs for prospective clients, VIP guests and reporting all had to be held together within the same hours.",
-      "case2.did": "I gave venue walkthroughs to clients and partners, advised on bookings, and issued sports equipment and gear. I coordinated on-site events — Formula 1 screenings, autograph sessions and show programmes — and looked after VIP guests. I managed bookings through the venue's own admin panel and kept attendance reporting for the venue's partner company.",
-      "case2.result": "Ran more than 200 events at the venue. Attendance grew steadily through the summer and tailed off towards autumn.",
+      "case2.org": "A&A Sports (Rus) · Venue Administrator, WIN BOX sports space",
+      "case2.period": "June 2025 — January 2026 · 8 months",
+      "case2.task": "The venue served a stream of clients, partners and events at the same time: bookings, equipment, walkthroughs for prospective clients, VIP guests, contractor crews and reporting all had to be held together within the same hours.",
+      "case2.did": "I gave venue walkthroughs to clients and partners, advised on bookings and managed them through the admin panel wired into the website: client records, statuses, zone load. I issued sports equipment and gear and was accountable for its condition and turnover. I coordinated on-site events — Formula 1 screenings, autograph sessions and show programmes — along with several contractor crews at once, and looked after VIP guests. I collected and processed attendance and zone-load statistics and turned them into reporting for management and the venue’s partner company.",
+      "case2.result": "Ran more than 200 events at the venue. Attendance grew steadily through the summer.",
       "case2.link": "Happy to walk you through it",
 
       "case3.num": "03",
-      "case3.title": "Senior steward at Russian Premier League, Cup and KHL matches",
-      "case3.org": "Event Safety, 2022–2023",
-      "case3.task": "At matches with heavy crowd flow and a strict schedule, what you need is not people standing at posts but a managed section that somebody is personally accountable for.",
-      "case3.did": "I led a steward team on an assigned section of the venue: setting tasks, checking they were done, and owning the result for that section. I coordinated crowd safety and spectator experience at Russian Premier League, Russian Cup and KHL matches.",
-      "case3.result": "I owned an assigned section with a team of around 15 stewards at Russian Premier League, Russian Cup and KHL matches, working from the venue plans and on radio with the other sections.",
+      "case3.title": "Children’s and student tournaments at the Moscow Football Federation",
+      "case3.org": "Moscow Football Federation · Administrator",
+      "case3.period": "September 2023 — January 2025 · 1 year 5 months",
+      "case3.task": "Tournaments run in series all season long: schedules, equipment, dozens of competing teams. Somebody has to hold both the match days themselves and the contact with participants in between.",
+      "case3.did": "I organised children’s and student football tournaments: building the schedule, sending information out to participants and running the competition days on site. I kept track of sports equipment — intake, issue, condition checks, and planning replacements and additional purchases. I grew the student tournament’s media presence: running its Telegram channel, planning content and communication with the teams.",
+      "case3.result": "Tournaments ran to schedule through the whole season, from children’s competitions to the student league. The student tournament’s Telegram channel became the working line to the teams: schedules, results and organisational announcements all went through it.",
       "case3.link": "Happy to walk you through it",
+
+      "case4.num": "04",
+      "case4.title": "Senior steward at Russian Premier League, Cup and KHL matches",
+      "case4.org": "Event Safety · Senior Steward",
+      "case4.period": "February 2022 — June 2023 · 1 year 5 months",
+      "case4.task": "At matches with heavy crowd flow and a strict schedule, what you need is not people standing at posts but a managed section that somebody is personally accountable for.",
+      "case4.did": "I led a steward team on an assigned section of the venue: setting tasks, checking they were done, and owning the result for that section. I coordinated crowd safety and spectator experience at Russian Premier League, Russian Cup and KHL matches, working under heavy crowd flow and a strict event schedule.",
+      "case4.result": "I owned an assigned section with a team of around 15 stewards at Russian Premier League, Russian Cup and KHL matches, working from the venue plans and on radio with the other sections.",
+      "case4.link": "Happy to walk you through it",
 
       "tag.bitrix": "Bitrix24",
       "tag.ai": "AI tools",
@@ -3054,6 +2992,14 @@ setTimeout(function () {
       "tag.aianalysis": "Parsing and consolidating data",
       "tag.airesearch": "Research and structuring",
       "tag.vip": "VIP guest hosting",
+      "tag.rice": "RICE prioritisation",
+      "tag.qa": "QA and test cases",
+      "tag.bi": "League BI system",
+      "tag.tournaments": "Tournament organisation",
+      "tag.schedule": "Competition scheduling",
+      "tag.inventory": "Equipment tracking",
+      "tag.telegram": "Telegram channel",
+      "tag.contentplan": "Content planning",
       "tag.ru": "Russian — native",
       "tag.en": "English — C1",
       "tag.de": "German — A1",
@@ -3078,7 +3024,6 @@ setTimeout(function () {
       "req.company": "Company",
       "req.contact": "Email or phone",
       "req.submit": "Request the reference",
-      "req.hint": "The button opens your mail client with the message ready. Or write directly: ivandemidov18@icloud.com or @demidov_ivan1 on Telegram.",
       "req.subject": "Request for the FNL internship reference",
       "req.intro": "Hello Ivan, could you send me your FNL internship reference?",
       "req.sent": "The message is ready — send it from your mail client.",
@@ -3101,42 +3046,6 @@ setTimeout(function () {
       "u5": "Case study: Zenit Saint Petersburg basketball club",
       "u6": "Quality management of a sports project: US Open 2025",
       "u7": "Case study: Hamburger SV",
-      "exp.kicker": "Experience",
-      "exp.title": "From the stands to running the process",
-      "exp1.period": "December 2025 — May 2026",
-      "exp1.role": "Intern, Digitalisation Department",
-      "exp1.org": "Association of Professional Football Clubs \"Football National League\" (FNL)",
-      "exp1.dur": "6 months",
-      "exp1.p1": "Ran a study of the merchandise range and sales channels of 73 FNL clubs.",
-      "exp1.p2": "Wrote the functional requirements and technical specification for vendors on the FNL Marketplace project.",
-      "exp1.p3": "Maintained project documentation and reporting in Bitrix24.",
-      "exp1.p4": "Worked with vendors, clients and the development team.",
-      "exp1.p5": "Prepared and presented research findings and requirements.",
-      "exp1.p6": "Finished the internship with a written recommendation from the FNL executive director — available on request.",
-      "exp2.period": "June 2025 — January 2026",
-      "exp2.role": "Venue Administrator, WIN BOX sports space",
-      "exp2.org": "A&A Sports (Rus)",
-      "exp2.dur": "8 months",
-      "exp2.p1": "Gave venue walkthroughs to clients and partners and advised on bookings.",
-      "exp2.p2": "Issued sports equipment and gear, and was accountable for its condition and turnover.",
-      "exp2.p3": "Coordinated on-site events: Formula 1 screenings, autograph sessions, show programmes.",
-      "exp2.p4": "Hosted VIP guests.",
-      "exp2.p5": "Managed bookings through the venue's own admin panel.",
-      "exp2.p6": "Kept attendance reporting for the venue's partner company.",
-      "exp3.period": "September 2023 — January 2025",
-      "exp3.role": "Administrator",
-      "exp3.org": "Moscow Football Federation",
-      "exp3.dur": "1 year 5 months",
-      "exp3.p1": "Organised children's and student football tournaments.",
-      "exp3.p2": "Kept track of sports equipment.",
-      "exp3.p3": "Grew the student tournament's media presence: produced content for its Telegram channel.",
-      "exp4.period": "February 2022 — June 2023",
-      "exp4.role": "Senior Steward",
-      "exp4.org": "Event Safety",
-      "exp4.dur": "1 year 5 months",
-      "exp4.p1": "Led a steward team on an assigned section of the venue: setting tasks, checking delivery, owning the section's result.",
-      "exp4.p2": "Coordinated crowd safety and spectator experience at Russian Premier League, Russian Cup and KHL matches.",
-      "exp4.p3": "Worked under heavy crowd flow and a strict event schedule.",
 
       "stack.kicker": "Tools",
       "stack.title": "What I work with day to day",
@@ -3146,7 +3055,7 @@ setTimeout(function () {
       "stack.g4.title": "Event operations",
       "stack.g5.title": "Languages",
 
-      "next.kicker": "What's next",
+      "next.kicker": "My goals",
       "next.title": "What I'm looking for",
       "next.1.title": "Role",
       "next.1.text": "Sports project manager / sports merchandise manager",
@@ -3163,6 +3072,8 @@ setTimeout(function () {
       "next.task7": "Testing and acceptance of digital products: website, mobile app, BI system.",
       "next.task8": "Attendance analytics and preparing data for decisions.",
 
+      "photos.show": "Show 17 photos",
+      "photos.hide": "Hide photos",
       "photos.kicker": "Stadiums",
       "photos.title": "I study the industry from the stands and from the inside",
       "photos.lead": "I go to matches and tournaments as more than a supporter: I look at how the spectator experience, wayfinding, merch areas and staff operations are put together. Every trip is material for the job.",
@@ -3573,6 +3484,43 @@ setTimeout(function () {
     for (var k = 0; k < revealables.length; k++) {
       observer.observe(revealables[k]);
     }
+  }
+
+  /* --- Галерея на телефоне: раскрытие по кнопке --- */
+  var galleryPanel = document.getElementById("gallery-panel");
+  var galleryToggle = document.getElementById("gallery-toggle");
+
+  if (galleryPanel && galleryToggle) {
+    var galleryLabel = galleryToggle.querySelector("[data-i18n]");
+
+    galleryToggle.addEventListener("click", function () {
+      var open = galleryPanel.classList.toggle("is-open");
+      galleryToggle.setAttribute("aria-expanded", String(open));
+
+      /* Пока галерея была свёрнута, фотографии стояли в display:none, и
+         наблюдатель скролла для них не срабатывал — без этого они остались
+         бы прозрачными. Раскрытие и так сделано руками, так что показываем
+         их сразу, без ожидания скролла. */
+      if (open) {
+        var shots = galleryPanel.querySelectorAll("[data-reveal]");
+        for (var i = 0; i < shots.length; i++) shots[i].classList.add("is-visible");
+      }
+
+      /* Ключ словаря меняем вместе с текстом: тогда переключение языка
+         подставит подпись, соответствующую текущему состоянию. */
+      if (galleryLabel) {
+        var key = open ? "photos.hide" : "photos.show";
+        galleryLabel.setAttribute("data-i18n", key);
+        galleryLabel.textContent = t(key, currentLangCode);
+      }
+
+      /* При сворачивании страница резко укорачивается — возвращаем
+         кнопку в поле зрения, чтобы не выбросило в конец документа. */
+      if (!open) {
+        var top = galleryToggle.getBoundingClientRect().top;
+        if (top < 0) galleryToggle.scrollIntoView({ block: "center" });
+      }
+    });
   }
 
   /* --- Подсветка активного пункта навигации --- */
