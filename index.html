@@ -910,6 +910,13 @@ figure.photo figcaption{
   font-size: .9375rem;
   line-height: 1.6;
 }
+/* «Чем занимаюсь»: все пять карточек в один ряд на десктопе */
+@media (min-width: 1080px){
+  #services .cards{ grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-3); }
+  #services .card{ padding: var(--s-5); }
+  #services .card__title{ font-size: 1.0625rem; }
+  #services .card__text{ font-size: .875rem; }
+}
 
 /* ============================================================
    РАБОТЫ
